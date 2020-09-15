@@ -1,0 +1,20 @@
+# 微博国际版去除开屏广告及时间线广告
+URL-REGEX,^https://weibointl.api.weibo.cn/portal.php\?a=get_coopen_ads,REJECT-TINYGIF
+
+# 哔哩哔哩APP去广告简化
+URL-REGEX,^https:\/\/ap(p|i)\.bilibili\.com\/(pgc\/season\/rank\/cn|x\/v2\/(dm\/ad|rank.*rid=(168|5)|dataflow\/report|search\/(defaultword|trending|recommend|resource)|splash)),REJECT
+
+# 油管去广告
+URL-REGEX,https?:\/\/.+.googlevideo.com\/ptracking\?pltype=adhost,REJECT
+URL-REGEX,https?:\/\/.+.youtube.com\/api\/stats\/ads,REJECT
+URL-REGEX,https?:\/\/.+.youtube.com\/get_midroll_,REJECT
+URL-REGEX,https?:\/\/.+.youtube.com\/pagead\/,REJECT
+URL-REGEX,https?:\/\/.+.youtube.com\/ptracking\?,REJECT
+URL-REGEX,https?:\/\/.+.youtube.com\/_get_ads,REJECT
+URL-REGEX,https?:\/\/premiumyva.appspot.com\/vmclickstoadvertisersite,REJECT
+URL-REGEX,https?:\/\/s0.2mdn.net\/ads\/,REJECT
+URL-REGEX,https?:\/\/stats.tubemogul.com\/stats\/,REJECT
+URL-REGEX,https?:\/\/youtubei.googleapis.com\/.+ad_break,REJECT
+URL-REGEX,https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log),REJECT
+URL-REGEX,https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat,REJECT
+URL-REGEX,https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT
