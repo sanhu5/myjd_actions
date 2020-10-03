@@ -1,5 +1,4 @@
 # 自用直连规则
-GEOIP,CN
 DOMAIN-KEYWORD,jisu
 DOMAIN-KEYWORD,freemycloud
 IP-CIDR,120.78.228.92/443
