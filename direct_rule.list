@@ -1,7 +1,2 @@
 # 自用直连规则
-DOMAIN-KEYWORD,jisu
-DOMAIN-KEYWORD,apple
-DOMAIN-KEYWORD,icloud
-DOMAIN-KEYWORD,freemycloud
-DOMAIN-SUFFIX,raw.githubusercontent.com
 IP-CIDR,120.78.228.92/443
