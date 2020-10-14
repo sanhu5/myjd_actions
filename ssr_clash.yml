@@ -1,6 +1,6 @@
 port: 7890
 socks-port: 7891
-allow-lan: true
+allow-lan: false
 mode: Rule
 ipv6: false
 log-level: info
@@ -163,7 +163,7 @@ proxy-groups:
 rules:
   - DOMAIN-KEYWORD,lanhuapp,🎯 全球直连
   - DOMAIN-KEYWORD,51zhaoyou,🎯 全球直连
-  - IP-CIDR,120.78.228.92/443,🎯 全球直连,no-resolve
+  - IP-CIDR,120.78.228.92/32,🎯 全球直连,no-resolve
   - DOMAIN-SUFFIX,tg.lanfanyun.top,🎯 全球直连
   - DOMAIN-SUFFIX,acl4ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
