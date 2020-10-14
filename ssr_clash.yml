@@ -13,18 +13,32 @@ dns:
     - https://dns.adguard.com/dns-query
 
 proxies:
-  - {name: heroku, server: heroku.lensu.workers.dev, port: 443, type: vmess, uuid: c95ef1d4-f3ac-4586-96e9-234a37dda068, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: heroku.lensu.workers.dev}}
-  - {name: heroku2, server: heroku.lensu.workers.dev, port: 80, type: vmess, uuid: c95ef1d4-f3ac-4586-96e9-234a37dda068, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: heroku.lensu.workers.dev}}
-  - {name: 影享者1, server: 45.58.145.196, port: 443, type: vmess, uuid: 07f413fb-297d-48e2-be17-138d5b25e18c, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.78592.xyz}}
-  - {name: 影享者2, server: 154.84.1.29, port: 443, type: vmess, uuid: b2dc1153-c64b-48ea-af9f-16039048d999, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.ocazuxhi.xyz}}
-  - {name: 影享者3, server: 154.84.1.30, port: 443, type: vmess, uuid: b2dc1153-c64b-48ea-af9f-16039048d999, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.ocazuxhi.xyz}}
-  - {name: 影享者4, server: 154.84.1.11, port: 443, type: vmess, uuid: a0c5a96b-a0d9-4686-8eb8-b932051c79cd, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.5189462.xyz}}
-  - {name: 影享者5, server: 154.84.1.61, port: 443, type: vmess, uuid: fdbe9497-8585-4c0d-b2c3-cc344f435c47, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6089793.xyz}}
-  - {name: 影享者6, server: 154.84.1.41, port: 443, type: vmess, uuid: 3a869a5b-5bf0-4276-a1d0-d840c0664bea, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6460649.xyz}}
-  - {name: 影享者7, server: 154.84.1.42, port: 443, type: vmess, uuid: 3a869a5b-5bf0-4276-a1d0-d840c0664bea, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6460649.xyz}}
-  - {name: 影享者8, server: 154.84.1.38, port: 443, type: vmess, uuid: 5c9f4ee0-499e-4524-98b6-2e195630f813, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.0656333.xyz}}
-  - {name: 影享者9, server: 154.84.1.103, port: 443, type: vmess, uuid: ee595b2d-ffc2-4a83-bf74-09c121ffa239, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.1898870.xyz}}
-  - {name: 影享者10, server: 154.84.1.234, port: 443, type: vmess, uuid: 38059d25-42f8-49af-a234-e3b880256014, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.9142674173.xyz}}
+ - {name: heroku, server: heroku.lensu.workers.dev, port: 443, type: vmess, uuid: c95ef1d4-f3ac-4586-96e9-234a37dda068, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: heroku.lensu.workers.dev}}
+ - {name: heroku2, server: heroku.lensu.workers.dev, port: 80, type: vmess, uuid: c95ef1d4-f3ac-4586-96e9-234a37dda068, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: heroku.lensu.workers.dev}}
+ - {name: 🇭🇰 JiSuMaX&Free · 香港01 - Direct|V2Ray, server: hk.free.01.jisumax.xyz, port: 55201, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.01.jisumax.xyz}, udp: true}
+ - {name: 🇭🇰 JiSuMaX&Free · 香港02 - Direct|V2Ray, server: hk.free.02.jisumax.xyz, port: 55202, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.02.jisumax.xyz}, udp: true}
+ - {name: 🇭🇰 JiSuMaX&Free · 香港03 - Direct|V2Ray, server: hk.free.03.jisumax.xyz, port: 55203, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.03.jisumax.xyz}, udp: true}
+ - {name: 🇭🇰 JiSuMaX&Free · 香港04 - Direct|V2Ray, server: hk.free.04.jisumax.xyz, port: 55204, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.04.jisumax.xyz}, udp: true}
+ - {name: 🇭🇰 JiSuMaX&Free · 香港05 - Direct|V2Ray, server: hk.free.05.jisumax.xyz, port: 55205, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.05.jisumax.xyz}, udp: true}
+ - {name: 🇨🇳 JiSuMaX&Free · 台湾01 - Direct|V2Ray, server: tw.free.01.jisumax.xyz, port: 65201, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.01.jisumax.xyz}, udp: true}
+ - {name: 🇨🇳 JiSuMaX&Free · 台湾02 - Direct|V2Ray, server: tw.free.02.jisumax.xyz, port: 65202, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.02.jisumax.xyz}, udp: true}
+ - {name: 🇨🇳 JiSuMaX&Free · 台湾03 - Direct|V2Ray, server: tw.free.06.jisumax.xyz, port: 65203, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.06.jisumax.xyz}, udp: true}
+ - {name: 🇨🇳 JiSuMaX&Free · 台湾04 - Direct|V2Ray, server: tw.free.04.jisumax.xyz, port: 65204, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.04.jisumax.xyz}, udp: true}
+ - {name: 🇨🇳 JiSuMaX&Free · 台湾05 - Direct|V2Ray, server: tw.free.05.jisumax.xyz, port: 65205, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.05.jisumax.xyz}, udp: true}
+ - {name: 🇭🇰 香港 01 | NF, server: zs.relay.baipiaoyun.xyz, port: 12319, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
+ - {name: 🇭🇰 香港 02 | NF, server: zs.relay.baipiaoyun.xyz, port: 12320, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
+ - {name: 🇭🇰 香港 03 | NF, server: zs.relay.baipiaoyun.xyz, port: 12321, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
+ - {name: 🇭🇰 香港 04 | NF, server: zs.relay.baipiaoyun.xyz, port: 12322, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
+ - {name: 影享者1, server: 45.58.145.196, port: 443, type: vmess, uuid: 07f413fb-297d-48e2-be17-138d5b25e18c, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.78592.xyz}}
+ - {name: 影享者2, server: 154.84.1.29, port: 443, type: vmess, uuid: b2dc1153-c64b-48ea-af9f-16039048d999, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.ocazuxhi.xyz}}
+ - {name: 影享者3, server: 154.84.1.30, port: 443, type: vmess, uuid: b2dc1153-c64b-48ea-af9f-16039048d999, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.ocazuxhi.xyz}}
+ - {name: 影享者4, server: 154.84.1.11, port: 443, type: vmess, uuid: a0c5a96b-a0d9-4686-8eb8-b932051c79cd, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.5189462.xyz}}
+ - {name: 影享者5, server: 154.84.1.61, port: 443, type: vmess, uuid: fdbe9497-8585-4c0d-b2c3-cc344f435c47, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6089793.xyz}}
+ - {name: 影享者6, server: 154.84.1.41, port: 443, type: vmess, uuid: 3a869a5b-5bf0-4276-a1d0-d840c0664bea, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6460649.xyz}}
+ - {name: 影享者7, server: 154.84.1.42, port: 443, type: vmess, uuid: 3a869a5b-5bf0-4276-a1d0-d840c0664bea, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6460649.xyz}}
+ - {name: 影享者8, server: 154.84.1.38, port: 443, type: vmess, uuid: 5c9f4ee0-499e-4524-98b6-2e195630f813, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.0656333.xyz}}
+ - {name: 影享者9, server: 154.84.1.103, port: 443, type: vmess, uuid: ee595b2d-ffc2-4a83-bf74-09c121ffa239, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.1898870.xyz}}
+ - {name: 影享者10, server: 154.84.1.234, port: 443, type: vmess, uuid: 38059d25-42f8-49af-a234-e3b880256014, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.9142674173.xyz}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -36,6 +50,22 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - heroku
+      - heroku2
+      - 🇭🇰 JiSuMaX&Free · 香港01 - Direct|V2Ray
+      - 🇭🇰 JiSuMaX&Free · 香港02 - Direct|V2Ray
+      - 🇭🇰 JiSuMaX&Free · 香港03 - Direct|V2Ray
+      - 🇭🇰 JiSuMaX&Free · 香港04 - Direct|V2Ray
+      - 🇭🇰 JiSuMaX&Free · 香港05 - Direct|V2Ray
+      - 🇨🇳 JiSuMaX&Free · 台湾01 - Direct|V2Ray
+      - 🇨🇳 JiSuMaX&Free · 台湾02 - Direct|V2Ray
+      - 🇨🇳 JiSuMaX&Free · 台湾03 - Direct|V2Ray
+      - 🇨🇳 JiSuMaX&Free · 台湾04 - Direct|V2Ray
+      - 🇨🇳 JiSuMaX&Free · 台湾05 - Direct|V2Ray
+      - 🇭🇰 香港 01 | NF
+      - 🇭🇰 香港 02 | NF
+      - 🇭🇰 香港 03 | NF
+      - 🇭🇰 香港 04 | NF
       - 影享者1
       - 影享者2
       - 影享者3
@@ -51,16 +81,32 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 影享者1
-      - 影享者2
-      - 影享者3
-      - 影享者4
-      - 影享者5
-      - 影享者6
-      - 影享者7
-      - 影享者8
-      - 影享者9
-      - 影享者10
+     - heroku
+     - heroku2
+     - 🇭🇰 JiSuMaX&Free · 香港01 - Direct|V2Ray
+     - 🇭🇰 JiSuMaX&Free · 香港02 - Direct|V2Ray
+     - 🇭🇰 JiSuMaX&Free · 香港03 - Direct|V2Ray
+     - 🇭🇰 JiSuMaX&Free · 香港04 - Direct|V2Ray
+     - 🇭🇰 JiSuMaX&Free · 香港05 - Direct|V2Ray
+     - 🇨🇳 JiSuMaX&Free · 台湾01 - Direct|V2Ray
+     - 🇨🇳 JiSuMaX&Free · 台湾02 - Direct|V2Ray
+     - 🇨🇳 JiSuMaX&Free · 台湾03 - Direct|V2Ray
+     - 🇨🇳 JiSuMaX&Free · 台湾04 - Direct|V2Ray
+     - 🇨🇳 JiSuMaX&Free · 台湾05 - Direct|V2Ray
+     - 🇭🇰 香港 01 | NF
+     - 🇭🇰 香港 02 | NF
+     - 🇭🇰 香港 03 | NF
+     - 🇭🇰 香港 04 | NF
+     - 影享者1
+     - 影享者2
+     - 影享者3
+     - 影享者4
+     - 影享者5
+     - 影享者6
+     - 影享者7
+     - 影享者8
+     - 影享者9
+     - 影享者10
   - name: 📹 油管视频
     type: select
     proxies:
