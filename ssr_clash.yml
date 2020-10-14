@@ -44,9 +44,40 @@ proxy-groups:
     type: select
     proxies:
       - 🔮 负载均衡
-      - 🎯 全球直连
       - ♻️ 自动选择
       - 🚀 手动选择
+      - 🎯 全球直连
+  - name: 🔮 负载均衡
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - heroku
+      - heroku2
+      - 🇭🇰 JiSuMaX&Free · 香港01 - Direct|V2Ray
+      - 🇭🇰 JiSuMaX&Free · 香港02 - Direct|V2Ray
+      - 🇭🇰 JiSuMaX&Free · 香港03 - Direct|V2Ray
+      - 🇭🇰 JiSuMaX&Free · 香港04 - Direct|V2Ray
+      - 🇭🇰 JiSuMaX&Free · 香港05 - Direct|V2Ray
+      - 🇨🇳 JiSuMaX&Free · 台湾01 - Direct|V2Ray
+      - 🇨🇳 JiSuMaX&Free · 台湾02 - Direct|V2Ray
+      - 🇨🇳 JiSuMaX&Free · 台湾03 - Direct|V2Ray
+      - 🇨🇳 JiSuMaX&Free · 台湾04 - Direct|V2Ray
+      - 🇨🇳 JiSuMaX&Free · 台湾05 - Direct|V2Ray
+      - 🇭🇰 香港 01 | NF
+      - 🇭🇰 香港 02 | NF
+      - 🇭🇰 香港 03 | NF
+      - 🇭🇰 香港 04 | NF
+      - 影享者1
+      - 影享者2
+      - 影享者3
+      - 影享者4
+      - 影享者5
+      - 影享者6
+      - 影享者7
+      - 影享者8
+      - 影享者9
+      - 影享者10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -80,37 +111,6 @@ proxy-groups:
       - 影享者10
   - name: 🚀 手动选择
     type: select
-    proxies:
-      - heroku
-      - heroku2
-      - 🇭🇰 JiSuMaX&Free · 香港01 - Direct|V2Ray
-      - 🇭🇰 JiSuMaX&Free · 香港02 - Direct|V2Ray
-      - 🇭🇰 JiSuMaX&Free · 香港03 - Direct|V2Ray
-      - 🇭🇰 JiSuMaX&Free · 香港04 - Direct|V2Ray
-      - 🇭🇰 JiSuMaX&Free · 香港05 - Direct|V2Ray
-      - 🇨🇳 JiSuMaX&Free · 台湾01 - Direct|V2Ray
-      - 🇨🇳 JiSuMaX&Free · 台湾02 - Direct|V2Ray
-      - 🇨🇳 JiSuMaX&Free · 台湾03 - Direct|V2Ray
-      - 🇨🇳 JiSuMaX&Free · 台湾04 - Direct|V2Ray
-      - 🇨🇳 JiSuMaX&Free · 台湾05 - Direct|V2Ray
-      - 🇭🇰 香港 01 | NF
-      - 🇭🇰 香港 02 | NF
-      - 🇭🇰 香港 03 | NF
-      - 🇭🇰 香港 04 | NF
-      - 影享者1
-      - 影享者2
-      - 影享者3
-      - 影享者4
-      - 影享者5
-      - 影享者6
-      - 影享者7
-      - 影享者8
-      - 影享者9
-      - 影享者10
-  - name: 🔮 负载均衡
-    type: load-balance
-    url: http://www.gstatic.com/generate_204
-    interval: 300
     proxies:
       - heroku
       - heroku2
