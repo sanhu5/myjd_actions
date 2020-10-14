@@ -138,15 +138,6 @@ proxy-groups:
       - 影享者8
       - 影享者9
       - 影享者10
-  - name: 📹 油管视频
-    type: select
-    proxies:
-      - 🚀 节点选择
-  - name: 📲 电报消息
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -8173,4 +8164,4 @@ rules:
   - IP-CIDR,101.198.192.0/19,🎯 全球直连,no-resolve
   - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
   - GEOIP,CN,🎯 全球直连
-  - MATCH,🎯 全球直连
+  - MATCH,🚀 节点选择
