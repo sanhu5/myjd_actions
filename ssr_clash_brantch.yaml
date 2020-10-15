@@ -333,8 +333,8 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: select
     proxies:
-      - 🎯 全球直连
       - 🚀 节点选择
+      - 🎯 全球直连
 rules:
   - DOMAIN-KEYWORD,lanhuapp,🎯 全球直连
   - DOMAIN-KEYWORD,51zhaoyou,🎯 全球直连
