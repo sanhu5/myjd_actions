@@ -1,7 +1,7 @@
 var body = $response.body;
 let obj = JSON.parse(body);
-console.log(obj);
 obj.data.vip.isVip = 1;
-obj.data.coin=9999;
+obj.data.vip.vipStart = "2020-01-01";
+obj.data.vip.vipEnd = "2022-01-31";
 body = JSON.stringify(obj);
 $done({body})
