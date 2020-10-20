@@ -1,0 +1,4 @@
+# 直连规则
+DOMAIN-KEYWORD,51zhaoyou
+IP-CIDR,120.78.228.92/32
+DOMAIN-SUFFIX,api.wolong.tv
