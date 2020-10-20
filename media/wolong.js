@@ -1,5 +1,7 @@
-let body = $response.body
-body=JSON.parse(body)
-body['data']['vip']['isVip']=1
-body=JSON.stringify(body)
-$done({body})
+var body = $response.body;
+if (url.indexOf(vip) != -1) {
+    let obj = JSON.parse(body);
+    obj.data.vip.isVip = 1;
+	body = JSON.stringify(obj);
+ }
+ $done({body})
