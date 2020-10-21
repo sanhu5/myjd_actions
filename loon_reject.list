@@ -49,4 +49,81 @@ acs.wapa.taobao.com
 .shouji.360.cn
 .shouji.sougou.com
 ad.12306.cn
+# (A)
+# > Apple
+DOMAIN-SUFFIX,iadsdk.apple.com
+DOMAIN-SUFFIX,ads.internal.unity3d.com
+DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
+DOMAIN-SUFFIX,unityads.unity3d.com
+# --- (Alibaba) ---
+DOMAIN,tunion-api.m.taobao.com
+# > YOUKU
+DOMAIN-SUFFIX,atm.youku.com
+DOMAIN,ad.mobile.youku.com
+DOMAIN,iyes.youku.com
+DOMAIN,pl.cp31.ott.cibntv.net
+# > AMap
+DOMAIN,optimus-ads.amap.com
+DOMAIN,optimus-ads.amap.com.w.alikunlun.com
+# (B)
+# --- (Baidu) ---
+DOMAIN-SUFFIX,cpro.baidu.com
+DOMAIN-SUFFIX,pos.baidu.com
+DOMAIN,afd.baidu.com
+DOMAIN,als.baidu.com
+DOMAIN,duclick.baidu.com
+DOMAIN,mobads.baidu.com
+DOMAIN,mobads-logs.baidu.com
+DOMAIN,nsclick.baidu.com
+# (G)
+# > Google
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,googleadsserving.cn
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googletagservices.com
+DOMAIN,ads.youtube.com
+# (S)
+# > Sina
+DOMAIN-SUFFIX,beacon.sina.com.cn
+DOMAIN,adimg.uve.weibo.com
+DOMAIN,adimg.vue.weibo.com
+DOMAIN,u1.img.mobile.sina.cn
+DOMAIN,sax.sina.com.cn
+DOMAIN,saxs.sina.com.cn
+DOMAIN,saxn.sina.com.cn
+# > SOHU
+DOMAIN-SUFFIX,ad.sohu.com
+DOMAIN-SUFFIX,ads.sohu.com
+DOMAIN-SUFFIX,aty.sohu.com
+DOMAIN,imp.optaim.com
+DOMAIN,v2.reachmax.cn
+DOMAIN,hui.sohu.com
+
+# (T)
+# --- (Tencent) ---
+DOMAIN-SUFFIX,e.qq.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN-SUFFIX,l.qq.com
+DOMAIN,adsmind.apdcdn.tc.qq.com
+DOMAIN,adsmind.gdtimg.com
+DOMAIN,adsmind.tc.qq.com
+DOMAIN,pgdt.gtimg.cn
+DOMAIN,pgdt.gtimg.com
+DOMAIN,pgdt.ugdtimg.com
+DOMAIN,splashqqlive.gtimg.com
+DOMAIN,wa.gtimg.com
+DOMAIN,wxsnsdy.wxs.qq.com
+DOMAIN,wxsnsdythumb.wxs.qq.com
+# > Tencent Music (TME)
+DOMAIN,ad.tencentmusic.com
+DOMAIN,adserviceretry.kugou.com
+DOMAIN,ads.service.kugou.com
+DOMAIN,adsfile.bssdlbig.kugou.com
+DOMAIN,g.koowo.com
+DOMAIN,kgmobilestat.kugou.com
+DOMAIN,kgmobilestatbak.kugou.com
+DOMAIN,mobilelog.kugou.com
+DOMAIN,mobilead.kuwo.cn
+DOMAIN,rich.kuwo.cn
 
