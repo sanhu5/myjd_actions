@@ -24,8 +24,6 @@ proxies:
   - {name: 冰河圈子2020101509, server: 154.84.1.192, port: 443, type: vmess, uuid: bb2840dd-c606-4af9-bdd6-23453a026ab8, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.13612617.xyz}}
   - {name: 冰河圈子2020101510, server: 23.225.57.205, port: 443, type: vmess, uuid: e2266c08-96aa-4ccb-b918-163db05abffa, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.4198659.xyz}}
   - {name: 影享者1, server: 45.58.145.196, port: 443, type: vmess, uuid: 07f413fb-297d-48e2-be17-138d5b25e18c, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.78592.xyz}}
-  - {name: 影享者2, server: 154.84.1.29, port: 443, type: vmess, uuid: b2dc1153-c64b-48ea-af9f-16039048d999, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.ocazuxhi.xyz}}
-  - {name: 影享者3, server: 154.84.1.30, port: 443, type: vmess, uuid: b2dc1153-c64b-48ea-af9f-16039048d999, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.ocazuxhi.xyz}}
   - {name: 影享者4, server: 154.84.1.11, port: 443, type: vmess, uuid: a0c5a96b-a0d9-4686-8eb8-b932051c79cd, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.5189462.xyz}}
   - {name: 影享者5, server: 154.84.1.61, port: 443, type: vmess, uuid: fdbe9497-8585-4c0d-b2c3-cc344f435c47, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6089793.xyz}}
   - {name: 影享者6, server: 154.84.1.41, port: 443, type: vmess, uuid: 3a869a5b-5bf0-4276-a1d0-d840c0664bea, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6460649.xyz}}
@@ -54,8 +52,6 @@ proxy-groups:
       - 冰河圈子2020101509
       - 冰河圈子2020101510
       - 影享者1
-      - 影享者2
-      - 影享者3
       - 影享者4
       - 影享者5
       - 影享者6
