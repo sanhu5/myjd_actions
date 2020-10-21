@@ -1,6 +1,18 @@
 # NAME: blockAd
 # GITHUB: https://github.com/blackmatrix7/ios_rule_script
 
+.ios.bugly.qq.com
+.aexception.bugly.qq.com
+.tingyun.com
+.tingyunfenxi.com
+toblog.ctobsnssdk.com
+toblog.snssdk.com
+ug.snssdk.com
+.abtest-ch.snssdk.com
+.abtest.alibaba.com
+.acookie.alibaba.com
+.acookie.alimama.com
+.logs.amap.com
 .mtrace.play.aiseet.atianqi.com
 .mtrace.qq.com
 .analy.qq.com
@@ -19,9 +31,21 @@
 .ulogs.umengcloud.com
 .plbslog.umeng.com
 .w.m.taobao.com
+.m-adash.m.taobao.com
+.mclick.simba.taobao.com
+.nbsdk-baichuan.alicdn.com
+.nbsdk-baichuan.taobao.com
 accscdn.m.taobao.com
 acs.wapa.taobao.com
+.openjmacs.m.taobao.com
+.openkatalog.com
+.openmsf.3g.qq.com
+.openrcv.baidu.com
 .mtj.baidu.cn
 .mtj.baidu.com
 .nlog.baidu.com
 .pimlog.baidu.com
+.shouji.360.cn
+.shouji.sougou.com
+ad.12306.cn
+
