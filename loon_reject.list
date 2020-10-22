@@ -1,6 +1,15 @@
 # NAME: blockAd
 # GITHUB: https://github.com/blackmatrix7/ios_rule_script
 
+hostname =  api.wolong.tv,analytics.95516.com,tysdk.95516.com,ads.95516.com
+
+# 卧龙影视启动广告
+^https?+:\/\/api\.wolong\.tv\/wolong\/ad\/(splash|banner) _ reject-dict
+# 云闪付
+^https?+:\/\/(analytics|tysdk|ads)\.95516\.com _ reject-dict
+# 抖音去广告
+^https?:\/\/[\w-]+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ - reject-img
+
 .ios.bugly.qq.com
 .aexception.bugly.qq.com
 .tingyun.com
@@ -8,6 +17,7 @@
 toblog.ctobsnssdk.com
 toblog.snssdk.com
 log.snssdk.com
+log-hl.snssdk.com
 ug.snssdk.com
 .abtest-ch.snssdk.com
 .abtest.alibaba.com
