@@ -13,26 +13,10 @@ dns:
     - https://dns.adguard.com/dns-query
 
 proxies:
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君）, server: pczvmt55.qrtb8gkpjv.buzz, port: 80, type: vmess, uuid: 8b784f8f-5c33-5a23-4c6b-ad3a8c859727, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /hmi5n2ka5mqo9vkw, ws-headers: {Host: lcyjtrhwrkot7b1u.traveludream.com}}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 2, server: ec4r43ii.qrtb8gkpjv.buzz, port: 80, type: vmess, uuid: 8b784f8f-5c33-5a23-4c6b-ad3a8c859727, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /hmi5n2ka5mqo9vkq, ws-headers: {Host: t2.feimengboxing.com}}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 3, server: ec4r43ii.qrtb8gkpjv.buzz, port: 80, type: vmess, uuid: 8b784f8f-5c33-5a23-4c6b-ad3a8c859727, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /hmi5n2ka5mqo9vky, ws-headers: {Host: t2.feimengboxing.com}}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 4, server: gdsw.lanfanyun.top, port: 80, type: vmess, uuid: 77c0284e-8f91-4344-8560-14bec511d922, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /lanfan, ws-headers: {Host: udhk03.zhangwu.shop}}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 5, server: 183.232.136.231, port: 100, type: ss, cipher: aes-128-gcm, password: uuB6RE2}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 6, server: pczvmt55.qrtb8gkpjv.buzz, port: 80, type: vmess, uuid: 8b784f8f-5c33-5a23-4c6b-ad3a8c859727, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /hmi5n2ka5mqo9vkq, ws-headers: {Host: r0b68s3754emae88.traveludream.com}}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 7, server: gxdx.lanfanyun.top, port: 80, type: vmess, uuid: 77c0284e-8f91-4344-8560-14bec511d922, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /lanfan, ws-headers: {Host: agajp03.zhangwu.shop}}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 8, server: gdgz.starlink.cx, port: 1005, type: vmess, uuid: 845cf1f1-5cda-4281-aa8f-ee2dbbfaf8ce, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: gdgz.starlink.cx}}
-  - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君）, server: jp-6.azure.vip5.v2ray.backend.ikuuu.pro, port: 666, type: vmess, uuid: 0303ab78-20be-3639-9cb4-bb01635b5546, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /hls/cctv5phd.m3u8, ws-headers: {Host: jp-6.azure.vip5.v2ray.backend.ikuuu.pro}}
-  - {name: 🇺🇲 美国（欢迎订阅Youtube破解资源君）, server: 13.248.144.184, port: 39728, type: vmess, uuid: e8cb7c3f-4b56-4aa5-b965-6242965213d8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /dwn, ws-headers: {Host: http://wap.hb.189.cn}}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 9, server: jsdx.lanfanyun.top, port: 80, type: vmess, uuid: 77c0284e-8f91-4344-8560-14bec511d922, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /lanfan, ws-headers: {Host: agajp03.zhangwu.shop}}
-  - {name: 🇸🇬 新加坡（欢迎订阅Youtube破解资源君）, server: 84.247.49.21, port: 34762, type: ss, cipher: aes-256-gcm, password: yxGY7A5MczQYg6UqSFx9u78V}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 10, server: us1.lanfanyun.top, port: 8888, type: vmess, uuid: 77c0284e-8f91-4344-8560-14bec511d922, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /lanfan, ws-headers: {Host: us1.lanfanyun.top}}
-  - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 2, server: 45.87.213.23, port: 34762, type: ss, cipher: aes-256-gcm, password: yxGY7A5MczQYg6UqSFx9u78V}
-  - {name: 🇳🇱 荷兰（欢迎订阅Youtube破解资源君）, server: 154.84.1.226, port: 51658, type: vmess, uuid: 784d3c84-e5d5-443b-888f-519553fb9ea9, alterId: 64, cipher: auto, tls: false}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 11, server: zjdx.lanfanyun.top, port: 80, type: vmess, uuid: 77c0284e-8f91-4344-8560-14bec511d922, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /lanfan, ws-headers: {Host: agajp03.zhangwu.shop}}
-  - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 3, server: 45.87.213.21, port: 34762, type: ss, cipher: aes-256-gcm, password: yxGY7A5MczQYg6UqSFx9u78V}
-  - {name: 🇨🇳 台湾（欢迎订阅Youtube破解资源君）, server: 2.58.242.43, port: 38033, type: ss, cipher: aes-256-gcm, password: xpQwyV4W5FdA6NMANJJx73US}
-  - {name: 🇨🇦 加拿大（欢迎订阅Youtube破解资源君）, server: v2-05.ssrsub.one, port: 45688, type: vmess, uuid: 55bb447f-13eb-b495-c766-ebd9c9dae7cb, alterId: 1, cipher: auto, tls: false}
-  - {name: 🇺🇲 美国（欢迎订阅Youtube破解资源君） 2, server: v2-06.ssrsub.one, port: 45688, type: vmess, uuid: 55bb447f-13eb-b495-c766-ebd9c9dae7cb, alterId: 1, cipher: auto, tls: false}
+  - {name: 🇭🇰 香港 01 | NF, server: zsrelay.nonsense.cloud, port: 12319, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
+  - {name: 🇭🇰 香港 02 | NF, server: zsrelay.nonsense.cloud, port: 12320, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
+  - {name: 🇭🇰 香港 03 | NF, server: zsrelay.nonsense.cloud, port: 12321, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
+  - {name: 🇭🇰 香港 04 | NF, server: zsrelay.nonsense.cloud, port: 12322, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -43,26 +27,10 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君）
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 2
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 3
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 4
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 5
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 6
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 7
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 8
-      - 🇯🇵 日本（欢迎订阅Youtube破解资源君）
-      - 🇺🇲 美国（欢迎订阅Youtube破解资源君）
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 9
-      - 🇸🇬 新加坡（欢迎订阅Youtube破解资源君）
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 10
-      - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 2
-      - 🇳🇱 荷兰（欢迎订阅Youtube破解资源君）
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 11
-      - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 3
-      - 🇨🇳 台湾（欢迎订阅Youtube破解资源君）
-      - 🇨🇦 加拿大（欢迎订阅Youtube破解资源君）
-      - 🇺🇲 美国（欢迎订阅Youtube破解资源君） 2
+      - 🇭🇰 香港 01 | NF
+      - 🇭🇰 香港 02 | NF
+      - 🇭🇰 香港 03 | NF
+      - 🇭🇰 香港 04 | NF
   - name: 🎯 全球直连
     type: select
     proxies:
