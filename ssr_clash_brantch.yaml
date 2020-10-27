@@ -13,24 +13,26 @@ dns:
     - https://dns.adguard.com/dns-query
 
 proxies:
-  - {name: 冰河圈子2020101501, server: 154.84.1.41, port: 443, type: vmess, uuid: 3a869a5b-5bf0-4276-a1d0-d840c0664bea, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6460649.xyz}}
-  - {name: 冰河圈子2020101502, server: 154.84.1.181, port: 443, type: vmess, uuid: 01d207e9-c633-4164-a3ce-a5d1061865d7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.49836114.xyz}}
-  - {name: 冰河圈子2020101503, server: 154.84.1.101, port: 443, type: vmess, uuid: ee595b2d-ffc2-4a83-bf74-09c121ffa239, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.1898870.xyz}}
-  - {name: 冰河圈子2020101504, server: 154.84.1.67, port: 443, type: vmess, uuid: e28ebaf5-b734-4b11-93b4-0eeb7a433de1, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.32429678.xyz}}
-  - {name: 冰河圈子2020101505, server: 154.84.1.115, port: 443, type: vmess, uuid: f6d5a64e-c03e-4312-b395-0de496bae596, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.amisxdgq.xyz}}
-  - {name: 冰河圈子2020101506, server: 154.84.1.74, port: 443, type: vmess, uuid: ff658ff4-eb4c-4c42-9511-350d26d955e7, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.20800980.xyz}}
-  - {name: 冰河圈子2020101507, server: 154.84.1.191, port: 443, type: vmess, uuid: 5ab81ce0-c5f4-4d17-87f2-0b9ee442eae0, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.44985428.xyz}}
-  - {name: 冰河圈子2020101508, server: 154.84.1.225, port: 443, type: vmess, uuid: 72201ac4-2fcc-4609-a7a8-8ac9e5334d38, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.hxmuuqim.xyz}}
-  - {name: 冰河圈子2020101509, server: 154.84.1.192, port: 443, type: vmess, uuid: bb2840dd-c606-4af9-bdd6-23453a026ab8, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.13612617.xyz}}
-  - {name: 冰河圈子2020101510, server: 23.225.57.205, port: 443, type: vmess, uuid: e2266c08-96aa-4ccb-b918-163db05abffa, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.4198659.xyz}}
-  - {name: 影享者1, server: 45.58.145.196, port: 443, type: vmess, uuid: 07f413fb-297d-48e2-be17-138d5b25e18c, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.78592.xyz}}
-  - {name: 影享者4, server: 154.84.1.11, port: 443, type: vmess, uuid: a0c5a96b-a0d9-4686-8eb8-b932051c79cd, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.5189462.xyz}}
-  - {name: 影享者5, server: 154.84.1.61, port: 443, type: vmess, uuid: fdbe9497-8585-4c0d-b2c3-cc344f435c47, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6089793.xyz}}
-  - {name: 影享者6, server: 154.84.1.41, port: 443, type: vmess, uuid: 3a869a5b-5bf0-4276-a1d0-d840c0664bea, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6460649.xyz}}
-  - {name: 影享者7, server: 154.84.1.42, port: 443, type: vmess, uuid: 3a869a5b-5bf0-4276-a1d0-d840c0664bea, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.6460649.xyz}}
-  - {name: 影享者8, server: 154.84.1.38, port: 443, type: vmess, uuid: 5c9f4ee0-499e-4524-98b6-2e195630f813, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.0656333.xyz}}
-  - {name: 影享者9, server: 154.84.1.103, port: 443, type: vmess, uuid: ee595b2d-ffc2-4a83-bf74-09c121ffa239, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.1898870.xyz}}
-  - {name: 影享者10, server: 154.84.1.234, port: 443, type: vmess, uuid: 38059d25-42f8-49af-a234-e3b880256014, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.9142674173.xyz}}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君）, server: pczvmt55.qrtb8gkpjv.buzz, port: 80, type: vmess, uuid: 8b784f8f-5c33-5a23-4c6b-ad3a8c859727, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /hmi5n2ka5mqo9vkw, ws-headers: {Host: lcyjtrhwrkot7b1u.traveludream.com}}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 2, server: ec4r43ii.qrtb8gkpjv.buzz, port: 80, type: vmess, uuid: 8b784f8f-5c33-5a23-4c6b-ad3a8c859727, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /hmi5n2ka5mqo9vkq, ws-headers: {Host: t2.feimengboxing.com}}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 3, server: ec4r43ii.qrtb8gkpjv.buzz, port: 80, type: vmess, uuid: 8b784f8f-5c33-5a23-4c6b-ad3a8c859727, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /hmi5n2ka5mqo9vky, ws-headers: {Host: t2.feimengboxing.com}}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 4, server: gdsw.lanfanyun.top, port: 80, type: vmess, uuid: 77c0284e-8f91-4344-8560-14bec511d922, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /lanfan, ws-headers: {Host: udhk03.zhangwu.shop}}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 5, server: 183.232.136.231, port: 100, type: ss, cipher: aes-128-gcm, password: uuB6RE2}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 6, server: pczvmt55.qrtb8gkpjv.buzz, port: 80, type: vmess, uuid: 8b784f8f-5c33-5a23-4c6b-ad3a8c859727, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /hmi5n2ka5mqo9vkq, ws-headers: {Host: r0b68s3754emae88.traveludream.com}}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 7, server: gxdx.lanfanyun.top, port: 80, type: vmess, uuid: 77c0284e-8f91-4344-8560-14bec511d922, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /lanfan, ws-headers: {Host: agajp03.zhangwu.shop}}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 8, server: gdgz.starlink.cx, port: 1005, type: vmess, uuid: 845cf1f1-5cda-4281-aa8f-ee2dbbfaf8ce, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: gdgz.starlink.cx}}
+  - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君）, server: jp-6.azure.vip5.v2ray.backend.ikuuu.pro, port: 666, type: vmess, uuid: 0303ab78-20be-3639-9cb4-bb01635b5546, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /hls/cctv5phd.m3u8, ws-headers: {Host: jp-6.azure.vip5.v2ray.backend.ikuuu.pro}}
+  - {name: 🇺🇲 美国（欢迎订阅Youtube破解资源君）, server: 13.248.144.184, port: 39728, type: vmess, uuid: e8cb7c3f-4b56-4aa5-b965-6242965213d8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /dwn, ws-headers: {Host: http://wap.hb.189.cn}}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 9, server: jsdx.lanfanyun.top, port: 80, type: vmess, uuid: 77c0284e-8f91-4344-8560-14bec511d922, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /lanfan, ws-headers: {Host: agajp03.zhangwu.shop}}
+  - {name: 🇸🇬 新加坡（欢迎订阅Youtube破解资源君）, server: 84.247.49.21, port: 34762, type: ss, cipher: aes-256-gcm, password: yxGY7A5MczQYg6UqSFx9u78V}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 10, server: us1.lanfanyun.top, port: 8888, type: vmess, uuid: 77c0284e-8f91-4344-8560-14bec511d922, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /lanfan, ws-headers: {Host: us1.lanfanyun.top}}
+  - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 2, server: 45.87.213.23, port: 34762, type: ss, cipher: aes-256-gcm, password: yxGY7A5MczQYg6UqSFx9u78V}
+  - {name: 🇳🇱 荷兰（欢迎订阅Youtube破解资源君）, server: 154.84.1.226, port: 51658, type: vmess, uuid: 784d3c84-e5d5-443b-888f-519553fb9ea9, alterId: 64, cipher: auto, tls: false}
+  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 11, server: zjdx.lanfanyun.top, port: 80, type: vmess, uuid: 77c0284e-8f91-4344-8560-14bec511d922, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /lanfan, ws-headers: {Host: agajp03.zhangwu.shop}}
+  - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 3, server: 45.87.213.21, port: 34762, type: ss, cipher: aes-256-gcm, password: yxGY7A5MczQYg6UqSFx9u78V}
+  - {name: 🇨🇳 台湾（欢迎订阅Youtube破解资源君）, server: 2.58.242.43, port: 38033, type: ss, cipher: aes-256-gcm, password: xpQwyV4W5FdA6NMANJJx73US}
+  - {name: 🇨🇦 加拿大（欢迎订阅Youtube破解资源君）, server: v2-05.ssrsub.one, port: 45688, type: vmess, uuid: 55bb447f-13eb-b495-c766-ebd9c9dae7cb, alterId: 1, cipher: auto, tls: false}
+  - {name: 🇺🇲 美国（欢迎订阅Youtube破解资源君） 2, server: v2-06.ssrsub.one, port: 45688, type: vmess, uuid: 55bb447f-13eb-b495-c766-ebd9c9dae7cb, alterId: 1, cipher: auto, tls: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -41,24 +43,26 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 冰河圈子2020101501
-      - 冰河圈子2020101502
-      - 冰河圈子2020101503
-      - 冰河圈子2020101504
-      - 冰河圈子2020101505
-      - 冰河圈子2020101506
-      - 冰河圈子2020101507
-      - 冰河圈子2020101508
-      - 冰河圈子2020101509
-      - 冰河圈子2020101510
-      - 影享者1
-      - 影享者4
-      - 影享者5
-      - 影享者6
-      - 影享者7
-      - 影享者8
-      - 影享者9
-      - 影享者10
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君）
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 2
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 3
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 4
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 5
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 6
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 7
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 8
+      - 🇯🇵 日本（欢迎订阅Youtube破解资源君）
+      - 🇺🇲 美国（欢迎订阅Youtube破解资源君）
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 9
+      - 🇸🇬 新加坡（欢迎订阅Youtube破解资源君）
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 10
+      - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 2
+      - 🇳🇱 荷兰（欢迎订阅Youtube破解资源君）
+      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 11
+      - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 3
+      - 🇨🇳 台湾（欢迎订阅Youtube破解资源君）
+      - 🇨🇦 加拿大（欢迎订阅Youtube破解资源君）
+      - 🇺🇲 美国（欢迎订阅Youtube破解资源君） 2
   - name: 🎯 全球直连
     type: select
     proxies:
