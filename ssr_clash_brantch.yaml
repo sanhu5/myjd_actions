@@ -13,10 +13,10 @@ dns:
     - https://dns.adguard.com/dns-query
 
 proxies:
-  - {name: 🇭🇰 香港 01 | NF, server: zsrelay.nonsense.cloud, port: 12319, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
-  - {name: 🇭🇰 香港 02 | NF, server: zsrelay.nonsense.cloud, port: 12320, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
-  - {name: 🇭🇰 香港 03 | NF, server: zsrelay.nonsense.cloud, port: 12321, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
-  - {name: 🇭🇰 香港 04 | NF, server: zsrelay.nonsense.cloud, port: 12322, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 065a74564.download.windowsupdate.com}}
+  - {name: 🇭🇰 香港 01 | NF, server: zsrelay.nonsense.cloud, port: 12319, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 5411d5343.download.windowsupdate.com}}
+  - {name: 🇭🇰 香港 02 | NF, server: zsrelay.nonsense.cloud, port: 12320, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 5411d5343.download.windowsupdate.com}}
+  - {name: 🇭🇰 香港 03 | NF, server: zsrelay.nonsense.cloud, port: 12321, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 5411d5343.download.windowsupdate.com}}
+  - {name: 🇭🇰 香港 04 | NF, server: zsrelay.nonsense.cloud, port: 12322, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 5411d5343.download.windowsupdate.com}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
