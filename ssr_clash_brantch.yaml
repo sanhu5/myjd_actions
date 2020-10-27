@@ -21,11 +21,12 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
-  - name: ♻️ 自动选择
-    type: url-test
+      - 🔮 负载均衡
+      - 🎯 全球直连
+  - name: 🔮 负载均衡
+    type: load-balance
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 180
     proxies:
       - 🇭🇰 香港 01 | NF
       - 🇭🇰 香港 02 | NF
