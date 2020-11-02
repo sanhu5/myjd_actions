@@ -13,14 +13,44 @@ dns:
     - https://dns.adguard.com/dns-query
 
 proxies:
-  - {name: 🇭🇰 香港 01 | NF, server: zsrelay.nonsense.cloud, port: 12319, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 5411d5343.download.windowsupdate.com}}
-  - {name: 🇭🇰 香港 02 | NF, server: zsrelay.nonsense.cloud, port: 12320, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 5411d5343.download.windowsupdate.com}}
-  - {name: 🇭🇰 香港 03 | NF, server: zsrelay.nonsense.cloud, port: 12321, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 5411d5343.download.windowsupdate.com}}
-  - {name: 🇭🇰 香港 04 | NF, server: zsrelay.nonsense.cloud, port: 12322, type: ss, cipher: aes-256-gcm, password: XZ3pyiterww, plugin: obfs, plugin-opts: {mode: http, host: 5411d5343.download.windowsupdate.com}}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君）, server: 18.162.147.210, port: 40086, type: vmess, uuid: 8f47a763-f2d4-44cd-f67f-2f6beda5c902, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /dwn, ws-headers: {Host: 18.162.147.210}}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 2, server: l1-aws-hk-19.mugun.xyz, port: 80, type: vmess, uuid: d388ac06-a595-3802-a8fa-5f22aa27d4ad, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-19.mugun.xyz}}
-  - {name: 🇭🇰 香港（欢迎订阅Youtube破解资源君） 3, server: l1-aws-hk-20.mugun.xyz, port: 80, type: vmess, uuid: d388ac06-a595-3802-a8fa-5f22aa27d4ad, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-20.mugun.xyz}}
-proxy-groups:
+  - {name: 🇨🇳 注册 木瓜云.com 更多超高速节点等你来嫖！, server: xn--9kq521dyvj.com, port: 10086, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 0, cipher: auto, tls: false}
+  - {name: 🏳️‍🌈 过期时间：2020-11-22, server: xn--9kq521dyvj.com, port: 10086, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 0, cipher: auto, tls: false}
+  - {name: 🇮🇳 V1-印度Linode 01 高速 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25064, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇮🇳 V1-印度Linode 02 高速 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25065, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇮🇳 V1-印度Linode 03 高速 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25066, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇮🇳 V1-印度Linode 04 高速 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25067, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: "🇸🇬 V1-新加坡SG 01 Linode Netflix 1x\t", server: shanghai-cn2-nat.mugun.xyz, port: 25068, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇸🇬 V1-新加坡SG 02 Linode Netflix 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25069, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇸🇬 V1-新加坡SG 03 Linode Netflix 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25072, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇸🇬 V1-新加坡SG 04 Linode Netflix 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25073, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇯🇵 V1-日本 AWS 01 Netflix 1x, server: l1-aws-jp-01.mugun.xyz, port: 443, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-jp-01.mugun.xyz}}
+  - {name: 🇯🇵 V1-日本 AWS 02 Netflix 1x, server: l1-aws-jp-02.mugun.xyz, port: 443, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-jp-02.mugun.xyz}}
+  - {name: 🇯🇵 V1-日本 AWS 03 Netflix 1x, server: l1-aws-jp-03.mugun.xyz, port: 443, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-jp-03.mugun.xyz}}
+  - {name: 🇯🇵 V1-日本 AWS 04 Netflix 1x, server: l1-aws-jp-04.mugun.xyz, port: 443, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-jp-04.mugun.xyz}}
+  - {name: 🇯🇵 V1-日本JP 01 Linode Netflix 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25060, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇯🇵 V1-日本JP 02 Linode Netflix 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25061, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇯🇵 V1-日本JP 03 Linode Netflix 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25062, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇯🇵 V1-日本JP 04 Linode Netflix 1x, server: shanghai-cn2-nat.mugun.xyz, port: 25063, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 01 超高速 1x, server: l1-aws-hk-01.mugun.xyz, port: 443, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-01.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 02 超高速 1x, server: l1-aws-hk-02.mugun.xyz, port: 443, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-02.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 03 超高速 1x, server: l1-aws-hk-03.mugun.xyz, port: 443, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-03.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 04 超高速 1x, server: l1-aws-hk-04.mugun.xyz, port: 443, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-04.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 05 超高速 1x, server: l1-aws-hk-05.mugun.xyz, port: 443, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-05.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 06 超高速 1x, server: l1-aws-hk-06.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-06.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 07 超高速 1x, server: l1-aws-hk-07.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-07.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 08 超高速 1x, server: l1-aws-hk-08.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-08.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 09 超高速 1x, server: l1-aws-hk-09.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-09.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 10 超高速 1x, server: l1-aws-hk-10.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-10.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 11 超高速 1x, server: l1-aws-hk-11.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-11.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 12 超高速 1x, server: l1-aws-hk-12.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-12.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 13 超高速 1x, server: l1-aws-hk-13.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-13.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 14 超高速 1x, server: l1-aws-hk-14.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-14.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 15 超高速 1x, server: l1-aws-hk-15.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-15.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 16 超高速 1x, server: l1-aws-hk-16.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-16.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 17 超高速 1x, server: l1-aws-hk-17.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-17.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 18 超高速 1x, server: l1-aws-hk-18.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-18.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 19 超高速 1x, server: l1-aws-hk-19.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-19.mugun.xyz}}
+  - {name: 🇭🇰 V1-香港 AWS 20 超高速 1x, server: l1-aws-hk-20.mugun.xyz, port: 80, type: vmess, uuid: a192107d-cfd1-3b0c-8a4a-f1241e9ec2a8, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: l1-aws-hk-20.mugun.xyz}}proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
@@ -31,13 +61,42 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 🇭🇰 香港 01 | NF
-      - 🇭🇰 香港 02 | NF
-      - 🇭🇰 香港 03 | NF
-      - 🇭🇰 香港 04 | NF
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君）
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 2
-      - 🇭🇰 香港（欢迎订阅Youtube破解资源君） 3
+      - 🇮🇳 V1-印度Linode 01 高速 1x
+      - 🇮🇳 V1-印度Linode 02 高速 1x
+      - 🇮🇳 V1-印度Linode 03 高速 1x
+      - 🇮🇳 V1-印度Linode 04 高速 1x
+      - "🇸🇬 V1-新加坡SG 01 Linode Netflix 1x\t"
+      - 🇸🇬 V1-新加坡SG 02 Linode Netflix 1x
+      - 🇸🇬 V1-新加坡SG 03 Linode Netflix 1x
+      - 🇸🇬 V1-新加坡SG 04 Linode Netflix 1x
+      - 🇯🇵 V1-日本 AWS 01 Netflix 1x
+      - 🇯🇵 V1-日本 AWS 02 Netflix 1x
+      - 🇯🇵 V1-日本 AWS 03 Netflix 1x
+      - 🇯🇵 V1-日本 AWS 04 Netflix 1x
+      - 🇯🇵 V1-日本JP 01 Linode Netflix 1x
+      - 🇯🇵 V1-日本JP 02 Linode Netflix 1x
+      - 🇯🇵 V1-日本JP 03 Linode Netflix 1x
+      - 🇯🇵 V1-日本JP 04 Linode Netflix 1x
+      - 🇭🇰 V1-香港 AWS 01 超高速 1x
+      - 🇭🇰 V1-香港 AWS 02 超高速 1x
+      - 🇭🇰 V1-香港 AWS 03 超高速 1x
+      - 🇭🇰 V1-香港 AWS 04 超高速 1x
+      - 🇭🇰 V1-香港 AWS 05 超高速 1x
+      - 🇭🇰 V1-香港 AWS 06 超高速 1x
+      - 🇭🇰 V1-香港 AWS 07 超高速 1x
+      - 🇭🇰 V1-香港 AWS 08 超高速 1x
+      - 🇭🇰 V1-香港 AWS 09 超高速 1x
+      - 🇭🇰 V1-香港 AWS 10 超高速 1x
+      - 🇭🇰 V1-香港 AWS 11 超高速 1x
+      - 🇭🇰 V1-香港 AWS 12 超高速 1x
+      - 🇭🇰 V1-香港 AWS 13 超高速 1x
+      - 🇭🇰 V1-香港 AWS 14 超高速 1x
+      - 🇭🇰 V1-香港 AWS 15 超高速 1x
+      - 🇭🇰 V1-香港 AWS 16 超高速 1x
+      - 🇭🇰 V1-香港 AWS 17 超高速 1x
+      - 🇭🇰 V1-香港 AWS 18 超高速 1x
+      - 🇭🇰 V1-香港 AWS 19 超高速 1x
+      - 🇭🇰 V1-香港 AWS 20 超高速 1x
   - name: 🎯 全球直连
     type: select
     proxies:
