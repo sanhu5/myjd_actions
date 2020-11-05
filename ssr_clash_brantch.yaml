@@ -19,7 +19,6 @@ proxies:
   - {name: 🇺🇲 美国（欢迎订阅Youtube破解资源君） 2, server: 184.170.243.197, port: 31572, type: ss, cipher: aes-256-gcm, password: n8w4StnbVD9dmXYn4Ajt87EA}
   - {name: 🇺🇲 美国（欢迎订阅Youtube破解资源君） 4, server: 172.67.199.187, port: 443, type: vmess, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: llajv.rebldp.tech}}
   - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 2, server: 40.81.210.59, port: 443, type: vmess, uuid: adbece96-40a8-3d29-a05f-fda5e696f67f, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /hls/cctv5phd.m3u8, ws-headers: {Host: jp-5.azure.vip5.v2ray.ikuuu.pro}}
-  - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 3, server: shanghai-cn2-nat.mugun.xyz, port: 25060, type: vmess, uuid: d388ac06-a595-3802-a8fa-5f22aa27d4ad, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
   - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 4, server: shanghai-cn2-nat.mugun.xyz, port: 25062, type: vmess, uuid: d388ac06-a595-3802-a8fa-5f22aa27d4ad, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
   - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 5, server: shanghai-cn2-nat.mugun.xyz, port: 25063, type: vmess, uuid: d388ac06-a595-3802-a8fa-5f22aa27d4ad, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
   - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 6, server: 116.80.41.17, port: 50548, type: vmess, uuid: 39f9a172-f8a0-4819-95e2-8fbbb455fd3c, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 116.80.41.17}}
@@ -40,7 +39,6 @@ proxy-groups:
       - 🇺🇲 美国（欢迎订阅Youtube破解资源君） 2
       - 🇺🇲 美国（欢迎订阅Youtube破解资源君） 4
       - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 2
-      - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 3
       - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 4
       - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 5
       - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 6
