@@ -23,16 +23,6 @@ proxies:
   - {name: 🇨🇳 JiSuMaX&Free · 台湾03 - Direct|V2Ray, server: tw.free.06.jisumax.xyz, port: 65203, type: vmess, uuid: 10f57509-6c92-4af5-9460-511a25d13e21, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.06.jisumax.xyz}}
   - {name: 🇨🇳 JiSuMaX&Free · 台湾04 - Direct|V2Ray, server: tw.free.04.jisumax.xyz, port: 65204, type: vmess, uuid: 10f57509-6c92-4af5-9460-511a25d13e21, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.04.jisumax.xyz}}
   - {name: 🇨🇳 JiSuMaX&Free · 台湾05 - Direct|V2Ray, server: tw.free.05.jisumax.xyz, port: 65205, type: vmess, uuid: 10f57509-6c92-4af5-9460-511a25d13e21, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.05.jisumax.xyz}}
-  - {name: 🇭🇰 JiSuMaX&Free · 香港01 - Direct|V2Ray 2, server: hk.free.01.jisumax.xyz, port: 55201, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.01.jisumax.xyz}}
-  - {name: 🇭🇰 JiSuMaX&Free · 香港02 - Direct|V2Ray 2, server: hk.free.02.jisumax.xyz, port: 55202, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.02.jisumax.xyz}}
-  - {name: 🇭🇰 JiSuMaX&Free · 香港03 - Direct|V2Ray 2, server: hk.free.03.jisumax.xyz, port: 55203, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.03.jisumax.xyz}}
-  - {name: 🇭🇰 JiSuMaX&Free · 香港04 - Direct|V2Ray 2, server: hk.free.04.jisumax.xyz, port: 55204, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.04.jisumax.xyz}}
-  - {name: 🇭🇰 JiSuMaX&Free · 香港05 - Direct|V2Ray 2, server: hk.free.05.jisumax.xyz, port: 55205, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.05.jisumax.xyz}}
-  - {name: 🇨🇳 JiSuMaX&Free · 台湾01 - Direct|V2Ray 2, server: tw.free.01.jisumax.xyz, port: 65201, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.01.jisumax.xyz}}
-  - {name: 🇨🇳 JiSuMaX&Free · 台湾02 - Direct|V2Ray 2, server: tw.free.02.jisumax.xyz, port: 65202, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.02.jisumax.xyz}}
-  - {name: 🇨🇳 JiSuMaX&Free · 台湾03 - Direct|V2Ray 2, server: tw.free.06.jisumax.xyz, port: 65203, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.06.jisumax.xyz}}
-  - {name: 🇨🇳 JiSuMaX&Free · 台湾04 - Direct|V2Ray 2, server: tw.free.04.jisumax.xyz, port: 65204, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.04.jisumax.xyz}}
-  - {name: 🇨🇳 JiSuMaX&Free · 台湾05 - Direct|V2Ray 2, server: tw.free.05.jisumax.xyz, port: 65205, type: vmess, uuid: 23230ff8-a35e-4e48-a0e7-4b38d0da6b06, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: tw.free.05.jisumax.xyz}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -53,16 +43,6 @@ proxy-groups:
       - 🇨🇳 JiSuMaX&Free · 台湾03 - Direct|V2Ray
       - 🇨🇳 JiSuMaX&Free · 台湾04 - Direct|V2Ray
       - 🇨🇳 JiSuMaX&Free · 台湾05 - Direct|V2Ray
-      - 🇭🇰 JiSuMaX&Free · 香港01 - Direct|V2Ray 2
-      - 🇭🇰 JiSuMaX&Free · 香港02 - Direct|V2Ray 2
-      - 🇭🇰 JiSuMaX&Free · 香港03 - Direct|V2Ray 2
-      - 🇭🇰 JiSuMaX&Free · 香港04 - Direct|V2Ray 2
-      - 🇭🇰 JiSuMaX&Free · 香港05 - Direct|V2Ray 2
-      - 🇨🇳 JiSuMaX&Free · 台湾01 - Direct|V2Ray 2
-      - 🇨🇳 JiSuMaX&Free · 台湾02 - Direct|V2Ray 2
-      - 🇨🇳 JiSuMaX&Free · 台湾03 - Direct|V2Ray 2
-      - 🇨🇳 JiSuMaX&Free · 台湾04 - Direct|V2Ray 2
-      - 🇨🇳 JiSuMaX&Free · 台湾05 - Direct|V2Ray 2
   - name: 🎯 全球直连
     type: select
     proxies:
