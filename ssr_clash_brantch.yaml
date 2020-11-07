@@ -13,9 +13,6 @@ dns:
     - https://dns.adguard.com/dns-query
 proxies:
   - {name: 🇭🇰 香港 04, server: 13.75.88.246, port: 4334, type: vmess, uuid: 6c51df45-f76c-3985-bbcf-f1de8388f3fc, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /index, ws-headers: {Host: onedrive.com}}
-  - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 2, server: 40.81.210.59, port: 443, type: vmess, uuid: adbece96-40a8-3d29-a05f-fda5e696f67f, alterId: 1, cipher: auto, tls: false, network: ws, ws-path: /hls/cctv5phd.m3u8, ws-headers: {Host: jp-5.azure.vip5.v2ray.ikuuu.pro}}
-  - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 4, server: shanghai-cn2-nat.mugun.xyz, port: 25062, type: vmess, uuid: d388ac06-a595-3802-a8fa-5f22aa27d4ad, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
-  - {name: 🇯🇵 日本（欢迎订阅Youtube破解资源君） 5, server: shanghai-cn2-nat.mugun.xyz, port: 25063, type: vmess, uuid: d388ac06-a595-3802-a8fa-5f22aa27d4ad, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: shanghai-cn2-nat.mugun.xyz}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -27,9 +24,6 @@ proxy-groups:
     interval: 300
     proxies:
       - 🇭🇰 香港 04
-      - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 2
-      - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 4
-      - 🇯🇵 日本（欢迎订阅Youtube破解资源君） 5
   - name: 🎯 全球直连
     type: select
     proxies:
