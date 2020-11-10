@@ -12,7 +12,8 @@ dns:
   nameserver:
     - https://dns.adguard.com/dns-query
 proxies:
-  - {name: 🇭🇰 香港 04, server: 13.75.88.246, port: 4334, type: vmess, uuid: 6c51df45-f76c-3985-bbcf-f1de8388f3fc, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /index, ws-headers: {Host: onedrive.com}}
+  - {name: 🇭🇰 香港 03, server: 13.75.88.246, port: 4334, type: vmess, uuid: 6c51df45-f76c-3985-bbcf-f1de8388f3fc, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /index, ws-headers: {Host: onedrive.com}}
+  - {name: 🇭🇰 香港 04, server: 13.75.88.246, port: 4334, type: vmess, uuid: d8f2e313-4ef0-38b2-b7a3-842e9a4eaad4, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /index, ws-headers: {Host: onedrive.com}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -23,6 +24,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 🇭🇰 香港 03
       - 🇭🇰 香港 04
   - name: 🎯 全球直连
     type: select

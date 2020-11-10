@@ -1,8 +1,12 @@
+# 直连规则
+
 DOMAIN-KEYWORD,apple
 DOMAIN-KEYWORD,itunes
 DOMAIN-KEYWORD,testflight
 DOMAIN-KEYWORD,51zhaoyou
 DOMAIN-SUFFIX,api.wolong.tv
+DOMAIN-SUFFIX,tg.lanfanyun.top
+
 # apple服务
 USER-AGENT,com.apple.appstored*
 IP-CIDR,139.178.128.0/18,no-resolve
