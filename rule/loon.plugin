@@ -1,0 +1,25 @@
+[Rule]
+
+# 油管去广告
+URL-REGEX,https:\/\/[\s\S]*\.googlevideo\.com/.*&(oad|ctier),REJECT
+
+[URL Rewrite]
+# 油管去广告
+ctier=[A-Z] citer=A 302
+# Tikto解锁区域
+(?<=_region=)CN(?=&) US 307
+
+# 卧龙影视去广告
+^https?+:\/\/api\.(wolong|tgmmvip)\.(tv|com)\/wolong\/ad\/(splash|banner|play) _ reject-dict
+# ^https?+:\/\/api\.(wolong|tgmmvip)\.(tv|com)\/wolong\/app\/banner\/home\/list _ reject-dict
+^https?+:\/\/api\.(wolong|tgmmvip)\.(tv|com)\/wolong\/(app|user|gae)\/(ad|favorites|video)\/(config|status|suggest) _ reject
+# 云闪付
+^https?+:\/\/(analytics|tysdk|ads)\.95516\.com _ reject-dict
+# 向日葵去广告
+^https?+:\/\/slapi\.oray\.net\/adver _ reject-dict
+^https?+:\/\/slapi\.oray\.net\/adver\/promotion _ reject-dict
+# 去抖音广告
+^https?+:\/\/aweme-hl\.snssdk\.com\/api\/ad _ reject-dict
+
+[MITM]
+hostname =  *.googlevideo.com,api.wolong.tv,api.tgmmvip.com,analytics.95516.com,tysdk.95516.com,ads.95516.com,slapi.oray.net,aweme-hl.snssdk.com
