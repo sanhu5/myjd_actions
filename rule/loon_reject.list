@@ -16,6 +16,8 @@ ug.snssdk.com
 .acookie.alimama.com
 .logs.amap.com
 .mtrace.play.aiseet.atianqi.com
+.trace.qq.com
+.btrace.qq.com
 .mtrace.qq.com
 .analy.qq.com
 .w.l.qq.com
@@ -49,12 +51,22 @@ acs.wapa.taobao.com
 .pimlog.baidu.com
 .shouji.360.cn
 .shouji.sougou.com
-ad.12306.cn
+.ad.12306.cn
 .cm.baichuan.baidu.com
 .cm.baidu.com
 .cm.bilibili.com
 .ylog.huya.com
 .log.umsns.com
+.adsmind.ugdtimg.com
+.g1.tagtic.cn
+.img.adnyg.com
+.w.kunlungr.com
+.log.tagtic.cn
+.pgdt.ugdtimg.com
+.sdownload.stargame.com
+.unilog.wostore.cn
+
+
 # (A)
 # > Apple
 DOMAIN-SUFFIX,iadsdk.apple.com
