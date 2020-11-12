@@ -23,10 +23,10 @@ jobs:
                   python-version: 3.7
 
             - name: "安装依赖包"
-              run: pip install -r ./requirements.txt
+              run: pip install -r ./workflow/requirements.txt
 
             - name: "运行 喜马拉雅极速版"
-              run: python3 xmly_speed.py
+              run: python3 ./workflow/xmly_speed.py
               env:
                   XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE }}
                   XMLY_ACCUMULATE_TIME: ${{ secrets.XMLY_ACCUMULATE_TIME }}
