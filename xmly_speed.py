@@ -24,7 +24,7 @@ def readSecret(key):
         return os.environ[key]
     else:
         return None
-    
+
 def isOver():
     hourLimit = readSecret("XMLY_ACCUMULATE_HOURS")
     print("HOURS:"+str(safe_cast(hourLimit,int,-1)))
@@ -82,6 +82,6 @@ def run():
         writeFile(executeContent,'execute'+str(idx)+'.py')
         os.system('python ./'+'execute'+str(idx)+'.py')
     print("\n***************************\n文件全部执行完毕")
-    exit(0) 
+    exit(0)
 
 run()
