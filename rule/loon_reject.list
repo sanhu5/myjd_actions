@@ -65,7 +65,17 @@ acs.wapa.taobao.com
 .pgdt.ugdtimg.com
 .sdownload.stargame.com
 .unilog.wostore.cn
-
+.t7z.cupid.iqiyi.com
+.msg.71.am
+.agn.aty.sohu.com
+.ad.api.3g.tudou.com
+.ark.letv.com
+.dc.letv.com
+.g3.letv.cn
+.pic.fastapi.net
+.x.da.hunantv.com
+.y.da.hunantv.com
+aeventlog.beacon.qq.com
 
 # (A)
 # > Apple
@@ -80,6 +90,7 @@ DOMAIN-SUFFIX,atm.youku.com
 DOMAIN,ad.mobile.youku.com
 DOMAIN,iyes.youku.com
 DOMAIN,pl.cp31.ott.cibntv.net
+DOMAIN,ad.api.3g.youku.com
 # > AMap
 DOMAIN,optimus-ads.amap.com
 DOMAIN,optimus-ads.amap.com.w.alikunlun.com
@@ -133,6 +144,30 @@ DOMAIN,splashqqlive.gtimg.com
 DOMAIN,wa.gtimg.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
+DOMAIN,c.l.qq.com
+DOMAIN,bs.l.qq.com
+DOMAIN,c2.l.qq.com
+DOMAIN,cb.l.qq.com
+DOMAIN,cm.l.qq.com
+DOMAIN,hm.l.qq.com
+DOMAIN,l.qq.com
+DOMAIN,l2.l.qq.com
+DOMAIN,lb.l.qq.com
+DOMAIN,livec.l.qq.com
+DOMAIN,livem.l.qq.com
+DOMAIN,livep.l.qq.com
+DOMAIN,lives.l.qq.com
+DOMAIN,ls.l.qq.com
+DOMAIN,p2.l.qq.com
+DOMAIN,p3.l.qq.com
+DOMAIN,t.l.qq.com
+DOMAIN,vd.l.qq.com
+DOMAIN,w.l.qq.com
+DOMAIN,news.l.qq.com
+DOMAIN,mcgi.v.qq.com
+DOMAIN,soup.v.qq.com
+DOMAIN,bksoup.v.qq.com
+
 # > Tencent Music (TME)
 DOMAIN,ad.tencentmusic.com
 DOMAIN,adserviceretry.kugou.com
@@ -144,4 +179,19 @@ DOMAIN,kgmobilestatbak.kugou.com
 DOMAIN,mobilelog.kugou.com
 DOMAIN,mobilead.kuwo.cn
 DOMAIN,rich.kuwo.cn
-
+# (X)
+# > 喜马拉雅
+DOMAIN,ad.ximalaya.com
+DOMAIN,adbs.ximalaya.com
+DOMAIN,adse.ximalaya.com
+DOMAIN,adse.wsa.ximalaya.com
+DOMAIN,adbehavior.wsa.ximalaya.com
+DOMAIN,adsebs.ximalaya.com
+# > 小红书
+DOMAIN,ads-img-qc.xhscdn.com
+DOMAIN,ads-video-qc.xhscdn.com
+DOMAIN,t-ads.xiaohongshu.com
+# (Z)
+# > ZOL
+DOMAIN,apppv.zol.com.cn
+DOMAIN,pvnapp.zol.com.cn

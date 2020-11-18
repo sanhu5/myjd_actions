@@ -6,14 +6,22 @@ ipv6: false
 log-level: silent
 external-controller: 127.0.0.1:9090
 
-dns:
-  enable: true
-  ipv6: false
-  nameserver:
-    - https://dns.adguard.com/dns-query
 proxies:
-  - {name: 🇭🇰 香港 03, server: 13.75.88.246, port: 4334, type: vmess, uuid: 6c51df45-f76c-3985-bbcf-f1de8388f3fc, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /index, ws-headers: {Host: onedrive.com}}
-  - {name: 🇭🇰 香港 04, server: 13.75.88.246, port: 4334, type: vmess, uuid: d8f2e313-4ef0-38b2-b7a3-842e9a4eaad4, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /index, ws-headers: {Host: onedrive.com}}
+  - {name: 1, server: 154.84.1.75, port: 443, type: vmess, uuid: 8ac091ac-cf62-4a09-903d-1b98109d86a5, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.00779979.xyz}}
+  - {name: 2, server: 172.247.0.230, port: 443, type: vmess, uuid: 66edfc1f-caee-4a27-8ed6-c4c637550392, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.41171.xyz}}
+  - {name: 3, server: 154.84.1.84, port: 443, type: vmess, uuid: cb9337f7-3617-4591-a8c0-0bc173723e8e, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.98868925.xyz}}
+  - {name: 4, server: 23.225.178.210, port: 443, type: vmess, uuid: 6f467adb-e8d0-418d-8a57-d01731993268, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.43642.xyz}}
+  - {name: 5, server: 154.84.1.236, port: 443, type: vmess, uuid: 0b2c5769-f81c-4471-a625-c44f6ffd730f, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.9996013755.xyz}}
+  - {name: 6, server: 172.247.199.245, port: 443, type: vmess, uuid: fa822afc-170c-412b-a876-cd077812a5b3, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.01902367.xyz}}
+  - {name: 7, server: 154.84.1.78, port: 443, type: vmess, uuid: 4842ff94-b7f9-4e44-8680-3275c6318638, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.76043239.xyz}}
+  - {name: 8, server: 154.84.1.143, port: 443, type: vmess, uuid: 2886122d-02ab-4790-ac94-2bb32818a686, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.49836114.xyz}}
+  - {name: 9, server: 23.225.57.203, port: 443, type: vmess, uuid: 7e3bc49c-7c05-424d-adba-6458c7e1f492, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.4198659.xyz}}
+  - {name: 10, server: 154.84.1.22, port: 443, type: vmess, uuid: 44ea9c85-ab73-4024-b8f4-0b1ca0d57f71, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.9134162.xyz}}
+  - {name: 11, server: v2-12.ssrsub.one, port: 443, type: vmess, uuid: 9c6a715a-9707-42c3-8ff6-9737bd456cf2, alterId: 32, cipher: auto, tls: true, network: ws, ws-path: /, ws-headers: {Host: v2-12.ssrsub.one}}
+  - {name: 12, server: 23.224.69.4, port: 443, type: vmess, uuid: c73ea85e-757d-4596-860c-3d03046fb191, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /footers, ws-headers: {Host: www.7586616.xyz}}
+  - {name: 13, server: 89.163.212.34, port: 443, type: vmess, uuid: e5a59c58-d055-428e-b191-95fb5dcb7539, alterId: 16, cipher: auto, tls: true, network: ws, ws-path: /ray, ws-headers: {Host: good.free9999.net}}
+  - {name: 14, server: 91.245.227.135, port: 6666, type: vmess, uuid: df1c069f-e97c-4580-adf2-e2b4186a5589, alterId: 64, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: 91.245.227.135}}
+  - {name: 15, server: 172.67.200.229, port: 443, type: vmess, uuid: 14744d6a-5323-484b-af61-a3ff19bdea04, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /debian, ws-headers: {Host: server5.tmzrmmeh0matamn9.xyz}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -24,8 +32,21 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇭🇰 香港 03
-      - 🇭🇰 香港 04
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
   - name: 🎯 全球直连
     type: select
     proxies:
