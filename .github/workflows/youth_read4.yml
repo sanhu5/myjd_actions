@@ -24,7 +24,7 @@ jobs:
           npm install
       - name: '运行 【中青看点自动阅读】'
         run: |
-          node ./youth/Task/Youth_Read.js
+          node ./workflow/Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ4 }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
