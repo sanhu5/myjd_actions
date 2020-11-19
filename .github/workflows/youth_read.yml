@@ -6,13 +6,22 @@ name: youth_read
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/29 19-23 * * *'
+    - cron: '6 1,4,7 * * *'
   watch:
     types: started
 jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
+    env:
+      YOUTH_READ: ${{ secrets.YOUTH_READ }}
+      YOUTH_READ2: ${{ secrets.YOUTH_READ2 }}
+      YOUTH_READ3: ${{ secrets.YOUTH_READ3 }}
+      YOUTH_READ4: ${{ secrets.YOUTH_READ4 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ5 }}
+      YOUTH_READ6: ${{ secrets.YOUTH_READ6 }}
+      YOUTH_READ7: ${{ secrets.YOUTH_READ7 }}
+      YOUTH_READ8: ${{ secrets.YOUTH_READ8 }}
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 10.x
@@ -22,17 +31,59 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【中青看点自动阅读】'
+
+      - name: '运行 【中青看点自动阅读一】'
+        if: env.YOUTH_READ
         run: |
-          node ./workflow/Youth_Read.js
+          node workflow/Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ }}
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-          BARK_SOUND: ${{ secrets.BARK_SOUND }}
-          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
-          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
 
-    
+      - name: '运行 【中青看点自动阅读二】'
+        if: env.YOUTH_READ2
+        run: |
+          node workflow/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ2 }}
+
+      - name: '运行 【中青看点自动阅读三】'
+        if: env.YOUTH_READ3
+        run: |
+          node workflow/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ3 }}
+
+      - name: '运行 【中青看点自动阅读四】'
+        if: env.YOUTH_READ4
+        run: |
+          node workflow/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ4 }}
+
+      - name: '运行 【中青看点自动阅读5】'
+        if: env.YOUTH_READ5
+        run: |
+          node workflow/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ5 }}
+
+      - name: '运行 【中青看点自动阅读6】'
+        if: env.YOUTH_READ6
+        run: |
+          node workflow/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ6 }}
+
+      - name: '运行 【中青看点自动阅读7】'
+        if: env.YOUTH_READ7
+        run: |
+          node workflow/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ7 }}
+
+      - name: '运行 【中青看点自动阅读8】'
+        if: env.YOUTH_READ8
+        run: |
+          node workflow/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ8 }}
