@@ -8,32 +8,32 @@
 const scripts = [
  {
     moduleName: "Env",
-    url:"https://raw.githubusercontent.com/1217079729/myloon/master/scriptable//Env.js",
+    url:"https://raw.githubusercontent.com/1217079729/myloon/master/scriptable/Env.js",
   },
   {
     moduleName: "Install Scripts",
     url:"https://raw.githubusercontent.com/1217079729/myloon/master/scriptable/Install%20Scripts.js",
-    },
-  {
-    moduleName: "WeiboMonitor",
-    url:"https://raw.githubusercontent.com/evilbutcher/Scriptables/master/WeiboMonitor.js",
-  },
-  {
-    moduleName: "ZhihuMonitor",
-    url:"https://raw.githubusercontent.com/evilbutcher/Scriptables/master/ZhihuMonitor.js",
-  },
-  {
-    moduleName: "ZhihuMonitor",
-    url:"https://raw.githubusercontent.com/evilbutcher/Scriptables/master/ZhihuMonitor.js",
    },
    {
-    moduleName: "DmYY",
-    url:"https://raw.githubusercontent.com/dompling/Scriptable/master/Scripts/DmYY.js",
+     moduleName: "DmYY",
+     url:"https://raw.githubusercontent.com/dompling/Scriptable/master/Scripts/DmYY.js",
    },
    {
-    moduleName: "京豆",
-    url:"https://raw.githubusercontent.com/dompling/Scriptable/master/Scripts/JDDou.js",
+    moduleName: "京豆图",
+    url:"https://raw.githubusercontent.com/1217079729/myloon/master/scriptable/JDDouK.js",
    },
+   {
+    moduleName: "京豆收支",
+    url:"https://raw.githubusercontent.com/1217079729/myloon/master/scriptable/JDDou.js",
+   },
+//   {
+//    moduleName: "京豆物流",
+//    url:"https://raw.githubusercontent.com/dompling/Scriptable/master/Scripts/JDWuLiu.js",
+//   },
+//   {
+//    moduleName: "微博热搜",
+//    url:"https://raw.githubusercontent.com/Juniorchen2012/scriptable/master/weibo.js",
+//   },
 ];
 // Install Scripts.js
 const $ = importModule("Env");

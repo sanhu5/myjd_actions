@@ -7,12 +7,8 @@ log-level: silent
 external-controller: 127.0.0.1:9090
 
 proxies:
-  - {name: 🇭🇰 JiSuMaX&Free · 香港01 - Direct|V2Ray, server: hk.free.01.jisumax.xyz, port: 55201, type: vmess, uuid: 10f57509-6c92-4af5-9460-511a25d13e21, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.01.jisumax.xyz}}
-  - {name: 🇭🇰 JiSuMaX&Free · 香港02 - Direct|V2Ray, server: hk.free.02.jisumax.xyz, port: 55202, type: vmess, uuid: 10f57509-6c92-4af5-9460-511a25d13e21, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.02.jisumax.xyz}}
-  - {name: 🇭🇰 JiSuMaX&Free · 香港03 - Direct|V2Ray, server: hk.free.03.jisumax.xyz, port: 55203, type: vmess, uuid: 10f57509-6c92-4af5-9460-511a25d13e21, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.03.jisumax.xyz}}
-  - {name: 🇭🇰 JiSuMaX&Free · 香港04 - Direct|V2Ray, server: hk.free.01.jisumax.xyz, port: 55201, type: vmess, uuid: edd4609f-2c13-4c10-9237-4319e482ed24, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.01.jisumax.xyz}}
-  - {name: 🇭🇰 JiSuMaX&Free · 香港05 - Direct|V2Ray, server: hk.free.02.jisumax.xyz, port: 55202, type: vmess, uuid: edd4609f-2c13-4c10-9237-4319e482ed24, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.02.jisumax.xyz}}
-  - {name: 🇭🇰 JiSuMaX&Free · 香港06 - Direct|V2Ray, server: hk.free.03.jisumax.xyz, port: 55203, type: vmess, uuid: edd4609f-2c13-4c10-9237-4319e482ed24, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: hk.free.03.jisumax.xyz}}
+  - {name: 🇭🇰 香港 03, server: azhk4.ssrcloud.co, port: 4334, type: vmess, uuid: 6c51df45-f76c-3985-bbcf-f1de8388f3fc, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /index, ws-headers: {Host: onedrive.com}}
+  - {name: 🇭🇰 香港 04, server: azhk4.ssrcloud.co, port: 4334, type: vmess, uuid: d8f2e313-4ef0-38b2-b7a3-842e9a4eaad4, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /index, ws-headers: {Host: onedrive.com}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -23,12 +19,8 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇭🇰 JiSuMaX&Free · 香港01 - Direct|V2Ray
-      - 🇭🇰 JiSuMaX&Free · 香港02 - Direct|V2Ray
-      - 🇭🇰 JiSuMaX&Free · 香港03 - Direct|V2Ray
-      - 🇭🇰 JiSuMaX&Free · 香港04 - Direct|V2Ray
-      - 🇭🇰 JiSuMaX&Free · 香港05 - Direct|V2Ray
-      - 🇭🇰 JiSuMaX&Free · 香港06 - Direct|V2Ray
+      - 🇭🇰 香港 03
+      - 🇭🇰 香港 04
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -97,7 +89,8 @@ rule-providers:
 rules:
   - DOMAIN-KEYWORD,lanhuapp,🎯 全球直连
   - DOMAIN-KEYWORD,51zhaoyou,🎯 全球直连
-  - DOMAIN-SUFFIX,tg.lanfanyun.top,🎯 全球直连
+  - DOMAIN,tg.lanfanyun.top,🎯 全球直连
+  - DOMAIN,MTProxy-JP.mnssr.cc,🎯 全球直连
   - RULE-SET,reject,REJECT
   - RULE-SET,icloud,🎯 全球直连
   - RULE-SET,apple,🎯 全球直连
