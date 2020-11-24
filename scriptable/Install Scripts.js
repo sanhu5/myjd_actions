@@ -8,39 +8,32 @@
 const scripts = [
  {
     moduleName: "Env",
-    url:
-      "https://raw.githubusercontent.com/1217079729/myloon/master/scriptable//Env.js",
+    url:"https://raw.githubusercontent.com/1217079729/myloon/master/scriptable//Env.js",
   },
   {
-      moduleName: "Install Scripts",
-      url:
-        "https://raw.githubusercontent.com/1217079729/myloon/master/scriptable/Install%20Scripts.js",
+    moduleName: "Install Scripts",
+    url:"https://raw.githubusercontent.com/1217079729/myloon/master/scriptable/Install%20Scripts.js",
     },
   {
     moduleName: "WeiboMonitor",
-    url:
-      "https://raw.githubusercontent.com/evilbutcher/Scriptables/master/WeiboMonitor.js",
+    url:"https://raw.githubusercontent.com/evilbutcher/Scriptables/master/WeiboMonitor.js",
   },
   {
     moduleName: "ZhihuMonitor",
-    url:
-      "https://raw.githubusercontent.com/evilbutcher/Scriptables/master/ZhihuMonitor.js",
+    url:"https://raw.githubusercontent.com/evilbutcher/Scriptables/master/ZhihuMonitor.js",
   },
   {
-        moduleName: "ZhihuMonitor",
-        url:
-          "https://raw.githubusercontent.com/evilbutcher/Scriptables/master/ZhihuMonitor.js",
-      },
-      {
-      		moduleName: "DmYY",
-      		url:
-      		 "https://raw.githubusercontent.com/dompling/Scriptable/master/Scripts/DmYY.js",
-      	},
-      	{
-      		moduleName: "京豆",
-      		url:
-      		 "https://raw.githubusercontent.com/dompling/Scriptable/master/Scripts/JDDou.js",
-      	},
+    moduleName: "ZhihuMonitor",
+    url:"https://raw.githubusercontent.com/evilbutcher/Scriptables/master/ZhihuMonitor.js",
+   },
+   {
+    moduleName: "DmYY",
+    url:"https://raw.githubusercontent.com/dompling/Scriptable/master/Scripts/DmYY.js",
+   },
+   {
+    moduleName: "京豆",
+    url:"https://raw.githubusercontent.com/dompling/Scriptable/master/Scripts/JDDou.js",
+   },
 ];
 // Install Scripts.js
 const $ = importModule("Env");
