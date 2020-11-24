@@ -17,16 +17,6 @@ const scripts = [
         "https://raw.githubusercontent.com/1217079729/myloon/master/scriptable/Install%20Scripts.js",
     },
   {
-    moduleName: "10010",
-    url:
-      "https://raw.githubusercontent.com/1217079729/myloon/master/scriptable/10010.js",
-  },
-  {
-    moduleName: "10086",
-    url:
-      "https://raw.githubusercontent.com/1217079729/myloon/master/scriptable/10086.js",
-  },
-  {
     moduleName: "WeiboMonitor",
     url:
       "https://raw.githubusercontent.com/evilbutcher/Scriptables/master/WeiboMonitor.js",
@@ -36,6 +26,21 @@ const scripts = [
     url:
       "https://raw.githubusercontent.com/evilbutcher/Scriptables/master/ZhihuMonitor.js",
   },
+  {
+        moduleName: "ZhihuMonitor",
+        url:
+          "https://raw.githubusercontent.com/evilbutcher/Scriptables/master/ZhihuMonitor.js",
+      },
+      {
+      		moduleName: "DmYY",
+      		url:
+      		 "https://raw.githubusercontent.com/dompling/Scriptable/master/Scripts/DmYY.js",
+      	},
+      	{
+      		moduleName: "京豆",
+      		url:
+      		 "https://raw.githubusercontent.com/dompling/Scriptable/master/Scripts/JDDou.js",
+      	},
 ];
 // Install Scripts.js
 const $ = importModule("Env");
