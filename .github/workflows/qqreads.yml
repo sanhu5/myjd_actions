@@ -6,7 +6,7 @@ name: 企鹅读书
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/11 * * * *'
+    - cron: '*/11 * * * *'
   watch:
     types: started
 
@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        QQREAD_HEADER: ${{ secrets.QQREAD_HEADER }}
-        QQREAD_TIMEURL: ${{ secrets.QQREAD_TIMEURL }}
-        QQREAD_TIMEHD: ${{ secrets.QQREAD_TIMEHD }}         
+      QQREAD_HEADER: ${{ secrets.QQREAD_HEADER }}
+      QQREAD_TIMEURL: ${{ secrets.QQREAD_TIMEURL }}
+      QQREAD_TIMEHD: ${{ secrets.QQREAD_TIMEHD }}
 
     steps:
       - uses: actions/checkout@v1
