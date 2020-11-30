@@ -17,28 +17,22 @@ jobs:
     env:
         QQREAD_HEADER: ${{ secrets.QQREAD_HEADER }}
         QQREAD_TIMEURL: ${{ secrets.QQREAD_TIMEURL }}
-        QQREAD_TIMEHD: ${{ secrets.QQREAD_TIMEHD }}
-        
+        QQREAD_TIMEHD: ${{ secrets.QQREAD_TIMEHD }}         
+
     steps:
-      - name: Checkout
-        run: |
-          git clone https://github.com/1217079729/xmly.git ~/xmly
-      - name: Use Node.js 12.x
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 10.x
       - name: npm install
-        if: env.QQREAD_HEADER
         run: |
-          cd ~/xmly
           npm install
       - name: '运行 【企鹅读书】'
         if: env.QQREAD_HEADER
         run: |
-          cd ~/xmly
-          node workflow/qqreads.js
+          node ./workflow/qqreads.js
         env:
-          
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
