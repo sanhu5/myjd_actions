@@ -25,9 +25,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: npm install
+      - name: npm install and build
         run: |
           npm install
+          npm run build
       - name: '运行 【企鹅读书】'
         if: env.QQREAD_HEADER
         run: |

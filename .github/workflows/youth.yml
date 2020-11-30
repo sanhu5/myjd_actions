@@ -6,7 +6,7 @@ name: 中青看点极速版
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '1 * * * *'
   watch:
     types: started
 
@@ -20,9 +20,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: npm install
+      - name: npm install and build
         run: |
           npm install
+          npm run build
       - name: '运行 【中青看点】'
         run: |
           node ./workflow/youth.js
