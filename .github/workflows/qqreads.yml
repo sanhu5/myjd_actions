@@ -34,9 +34,7 @@ jobs:
           npm install
       - name: '运行 【企鹅读书】'
         if: env.QQREAD_HEADER
-        run: |
-          cd ~/JavaScript
-          node Task/qqreads.js
+        run: node /workflow/qqreads.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
