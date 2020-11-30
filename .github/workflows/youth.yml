@@ -20,10 +20,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: npm install and build
+      - name: npm install
         run: |
           npm install
-          npm run build
       - name: '运行 【中青看点】'
         run: |
           node ./workflow/youth.js
