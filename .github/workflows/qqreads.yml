@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/ziye12/JavaScript.git ~/JavaScript
+          git clone https://github.com/1217079729/xmly.git ~/xmly
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -30,7 +30,7 @@ jobs:
       - name: npm install
         if: env.QQREAD_HEADER
         run: |
-          cd ~xmly
+          cd ~/xmly
           npm install
       - name: '运行 【企鹅读书】'
         if: env.QQREAD_HEADER
