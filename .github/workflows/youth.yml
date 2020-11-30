@@ -6,7 +6,7 @@ name: youth
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/11 * * * *'
+     - cron: '*/30 * * * *'
   watch:
     types: started
 
@@ -25,7 +25,7 @@ jobs:
           npm install
       - name: '运行 【中青看点】'
         run: |
-          node ./workflows/youth.js
+          node ./workflow/youth.js
         env:
           YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
           YOUTH_ARTBODY: ${{ secrets.YOUTH_ARTBODY }}
