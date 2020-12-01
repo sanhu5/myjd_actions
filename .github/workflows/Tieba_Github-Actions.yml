@@ -1,4 +1,4 @@
-name: Tieba_Github-Actions
+name: 百度贴吧签到
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
           echo "倒计时 $[${random_time}-$i] 分钟"
           sleep 1m
           done
-          
+
           old_bduss=xxxxx
           for new_bduss in ${BDUSS[*]}
           do
