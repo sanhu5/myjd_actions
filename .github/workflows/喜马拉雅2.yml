@@ -21,7 +21,7 @@ jobs:
         run: pip install -r ./workflow/requirements.txt
         
       - name: 'run 喜马拉雅极速版' 
-        run: python3 xmly_speed2.py
+        run: python3 ./workflow/xmly_speed2.py
         env:
             XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE2 }}  #必须
             # XMLY_ACCUMULATE_TIME: ${{ secrets.XMLY_ACCUMULATE_TIME }} #非私密信息，去掉
