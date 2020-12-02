@@ -1,4 +1,4 @@
-name: 百度贴吧签到
+name: 贴吧一键签到
 
 on:
   push:
