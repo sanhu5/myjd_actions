@@ -10,7 +10,7 @@ import os
 import re
 
 
-# 喜马拉雅极速版 自己修改了设置和UserAgent
+# 喜马拉雅极速版
 # 使用参考 https://github.com/Zero-S1/xmly_speed/blob/master/xmly_speed.md
 
 ###################################################
@@ -55,11 +55,10 @@ if "XMLY_SPEED_COOKIE" in os.environ:
 ###################################################
 # 可选项
 # 自定义设备命名,非必须 ;devices=["iPhone7P","huawei"];与cookiesList对应
-devices = [PACM00]
+devices = []
 notify_time = 19                            # 通知时间,24小时制,默认19
 XMLY_ACCUMULATE_TIME = 1                    # 希望刷时长的,此处置1,默认打开;关闭置0
-# UserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 13_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 iting/1.0.12 kdtunion_iting/1.0 iting(main)/1.0.12/ios_1"
-UserAgent = "ting_1.8.42(PACM00,Android29)"
+UserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 13_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 iting/1.0.12 kdtunion_iting/1.0 iting(main)/1.0.12/ios_1"
 # 非iOS设备的需要的自行修改,自己抓包 与cookie形式类似
 
 
