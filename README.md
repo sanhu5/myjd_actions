@@ -5,3 +5,7 @@
 [@Zero-S1](https://github.com/Zero-S1/xmly_speed) - 喜马拉雅极速版签到
 
 [@Sunert](https://github.com/Sunert/Scripts) - 中青看点极速版
+
+[@bebestmaple](https://github.com/bebestmaple/Tieba_Github-Actions) - 贴吧签到
+
+
