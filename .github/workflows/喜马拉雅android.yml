@@ -19,7 +19,7 @@ jobs:
       - name: 'Install requirements'
         run: pip install -r ./workflow/requirements.txt
 
-      - name: 'run 喜马拉雅极速版'
+      - name: 'run 喜马拉雅极速版android'
         run: python3 ./workflow/xmly_speed_android.py
         env:
           XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE_ANDROID }}  #必须
