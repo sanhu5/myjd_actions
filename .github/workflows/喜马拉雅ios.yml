@@ -1,7 +1,7 @@
 name: 喜马拉雅极速版ios
 on:
   schedule:
-    - cron: '*/30 * * * * '
+    - cron: '*/30 * * * *'
   watch:
     types: [started]
 jobs:
