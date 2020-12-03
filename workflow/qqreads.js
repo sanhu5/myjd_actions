@@ -12,7 +12,9 @@
 11.26 增加结束命令
 11.27 调整通知为，成功开启宝箱再通知
 11.28 修复错误
-11.29 更新 支持action.默认每天第1次 第35次推送通知
+11.29 更新 支持action.默认每天21点到21点20通知
+12.2 修复打卡问题
+12.3 缩短运行时间，由于企鹅读书版本更新.请手动进去看一次书
 
 ⚠️cookie获取方法：
 
@@ -56,7 +58,12 @@ http-request https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid? script-
 const jsname='企鹅读书'
 const $ = Env(jsname)
 const notify = $.isNode() ? require('./sendNotify') : '';
-var tz=''
+var tz='';
+var kz='';
+var task='';
+var config='';
+
+var COOKIES_SPLIT='\n'  //自定义多cookie之间连接的分隔符，默认为\n换行分割，不熟悉的不要改动和配置，为了兼容本地node执行
 
 const logs = 0;   //0为关闭日志，1为开启
 const notifyInterval=3
@@ -74,20 +81,24 @@ let qqreadhdArr = [], qqreadheaderVal = '',
     qqreadHD = [], qqreadtimeURL = [], 
     qqreadtimeHD = [];    
   if ($.isNode()) {
-  if (process.env.QQREAD_HEADER && process.env.QQREAD_HEADER.indexOf('\n') > -1) {
-  qqreadHD = process.env.QQREAD_HEADER.split('\n');
+  if (process.env.COOKIES_SPLIT){
+      COOKIES_SPLIT = process.env.COOKIES_SPLIT;
+  };
+  console.log(`============ cookies分隔符为：${COOKIES_SPLIT} =============\n`);
+  if (process.env.QQREAD_HEADER && process.env.QQREAD_HEADER.indexOf(COOKIES_SPLIT) > -1) {
+  qqreadHD = process.env.QQREAD_HEADER.split(COOKIES_SPLIT);
   } else {
       qqreadHD = process.env.QQREAD_HEADER.split()
   };
        
-  if (process.env.QQREAD_TIMEURL && process.env.QQREAD_TIMEURL.indexOf('\n') > -1) {
-  qqreadtimeURL = process.env.QQREAD_TIMEURL.split('\n');
+  if (process.env.QQREAD_TIMEURL && process.env.QQREAD_TIMEURL.indexOf(COOKIES_SPLIT) > -1) {
+  qqreadtimeURL = process.env.QQREAD_TIMEURL.split(COOKIES_SPLIT);
   } else {
       qqreadtimeURL = process.env.QQREAD_TIMEURL.split()
   };
   
-  if (process.env.QQREAD_TIMEHD && process.env.QQREAD_TIMEHD.indexOf('\n') > -1) {
-  qqreadtimeHD = process.env.QQREAD_TIMEHD.split('\n');
+  if (process.env.QQREAD_TIMEHD && process.env.QQREAD_TIMEHD.indexOf(COOKIES_SPLIT) > -1) {
+  qqreadtimeHD = process.env.QQREAD_TIMEHD.split(COOKIES_SPLIT);
   } else {
       qqreadtimeHD = process.env.QQREAD_TIMEHD.split()
   }; 
@@ -152,68 +163,60 @@ function all(){
       qqreadheaderVal = qqreadhdArr[K];
       qqreadtimeurlVal = qqreadtimeurlArr[K];
       qqreadtimeheaderVal = qqreadtimehdArr[K];
-   for(var i=0;i<17;i++)
+   for(var i=0;i<14;i++)
  { (function(i) {
             setTimeout(function() {
 
-     if (i==0)
-qqreadinfo();//用户名
-
- else if (i==1)
+          if (i==0){
+qqreadinfo();//用户名 
+qqreadwktime();//周时长查询		  
 qqreadconfig();//时长查询
+}		    
 
-else if (i==2)
+else if (i==1)
 qqreadtask();//任务列表
-
-else if (i==3&&task.data.taskList[0].doneFlag==0)
-qqreadsign();//金币签到
-
-else if (i==4&&task.data.treasureBox.doneFlag==0)
-qqreadbox();//宝箱
-
-else if (i==5&&task.data.taskList[2].doneFlag==0)
-qqreadssr1();//阅读金币1
-
-else if (i==6&&config.data.pageParams.todayReadSeconds/3600<=maxtime)
-qqreadtime();//上传时长
-
-else if (i==7&&task.data.taskList[0].doneFlag==0)
-qqreadtake();//阅豆签到
-
-else if (i==8&&task.data.taskList[1].doneFlag==0)
-qqreaddayread();//阅读任务
-
-else if (i==9&&task.data.taskList[2].doneFlag==0)
-qqreadssr2();//阅读金币2
-
-else if (i==10&&task.data.taskList[3].doneFlag==0)
-qqreadvideo();//视频任务
-
-else if(i==11&&task.data.taskList[0].doneFlag==0)
-qqreadsign2();//签到翻倍
-
-else if (i==12&&task.data.treasureBox.videoDoneFlag==0)
-qqreadbox2();//宝箱翻倍
-
-else if (i==13&&task.data.taskList[2].doneFlag==0)
-qqreadssr3();//阅读金币3
-
-else if (i==14)
-qqreadwktime();//周时长查询
-
-else if (i==15)
+		    
+else if (i==2)
 qqreadpick();//领周时长奖励
 
+else if (i==3&&task.data.taskList[1].doneFlag==0)
+qqreadssr1();//阅读金币1		    
+		    
+else if (i==4&&task.data.taskList[2].doneFlag==0){
+qqreadsign();//金币签到
+qqreadtake();//阅豆签到	  
+}
+			    
+else if (i==5&&task.data.treasureBox.doneFlag==0)
+qqreadbox();//宝箱
 
+else if (i==6&&task.data.taskList[0].doneFlag==0)
+qqreaddayread();//阅读任务
 
+else if (i==7&&task.data.taskList[1].doneFlag==0)
+qqreadssr2();//阅读金币2
+
+else if (i==8&&config.data.pageParams.todayReadSeconds/3600<=maxtime)
+qqreadtime();//上传时长
+
+else if (i==9&&task.data.taskList[3].doneFlag==0)
+qqreadvideo();//视频任务		    
+		    
+else if(i==10&&task.data.taskList[2].doneFlag==0)
+qqreadsign2();//签到翻倍
+
+else if (i==11&&task.data.treasureBox.videoDoneFlag==0)
+qqreadbox2();//宝箱翻倍
+
+else if (i==12&&task.data.taskList[1].doneFlag==0)
+qqreadssr3();//阅读金币3
 		 
-else if (i == 16 && K < qqreadhdArr.length - 1) {
+else if (i == 13 && K < qqreadhdArr.length - 1) {
 K += 1;
 all();
- } else if (i == 16 && K == qqreadhdArr.length - 1) {
+ } else if (i == 13 && K == qqreadhdArr.length - 1) {
 	 showmsg();//通知
-	 console.log(tz)
-if ($.isNode()&&task.data.treasureBox.count==0||task.data.treasureBox.count==35)notify.sendNotify(jsname,tz)  
+	 console.log(tz)  
             $.done();
           }
         },
@@ -236,16 +239,24 @@ return new Promise((resolve, reject) => {
    $.get(toqqreadtaskurl,(error, response, data) =>{
      if(logs) $.log(`${jsname}, 任务列表: ${data}`)
      task =JSON.parse(data)
+	   kz+=
+    '【现金余额】:'+
+    (task.data.user.amount/10000).toFixed(2)+
+	'元\n'+
+    '【已开宝箱】:'+
+    task.data.treasureBox.count+
+	'个\n'
+    
 tz+=
-    '【任务列表】:余额'+
-    task.data.user.amount+
-	'金币\n'+
+    '【现金余额】:'+
+    (task.data.user.amount/10000).toFixed(2)+
+	'元\n'+
     '【第'+
 	task.data.invite.issue+
 	'期】:时间'+
     task.data.invite.dayRange+
 	'\n'+
-    '已邀请'+
+    ' 已邀请'+
 	task.data.invite.inviteCount+
     '人，再邀请'+
 	task.data.invite.nextInviteConfig.count+
@@ -313,7 +324,8 @@ return new Promise((resolve, reject) => {
    $.get(toqqreadinfourl,(error, response, data) =>{
      if(logs) $.log(`${jsname}, 用户名: ${data}`)
      info =JSON.parse(data)
-
+kz+=
+'\n========== 【'+info.data.user.nickName+'】 ==========\n'
 tz+=
 '\n========== 【'+info.data.user.nickName+'】 ==========\n'
 
@@ -633,7 +645,12 @@ tz+='【周时长奖励'+(i+1)+'】:领取'+Packageid[i]+'阅豆\n'
 
 
 function showmsg() {      
-tz += `\n\n========= 脚本执行时间(TM)：${new Date(new Date().getTime() + 0 * 60 * 60 * 1000).toLocaleString('zh', {hour12: false})} \n\n`;
+tz += `\n\n========= 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()} \n\n`;
+	
+let d = new Date(new Date().getTime() + 8 * 60 * 60 * 1000);
+if (d.getHours()==21 && d.getMinutes()<=20 ) {
+         notify.sendNotify(jsname,kz)
+ }
 	
 if (notifyInterval==1)
 $.msg(jsname,'',tz)//显示所有通知
