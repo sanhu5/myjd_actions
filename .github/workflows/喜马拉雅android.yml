@@ -1,4 +1,4 @@
-name: 喜马拉雅极速版ios2
+name: 喜马拉雅极速版android
 on:
   schedule:
     - cron: '*/30 * * * * '
@@ -19,10 +19,10 @@ jobs:
       - name: 'Install requirements'
         run: pip install -r ./workflow/requirements.txt
 
-      - name: 'run 喜马拉雅极速版'
-        run: python3 ./workflow/xmly_speed_ios2.py
+      - name: 'run 喜马拉雅极速版android'
+        run: python3 ./workflow/xmly_speed_android.py
         env:
-          XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE_IOS2 }}  #必须
+          XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE_ANDROID }}  #必须
           # XMLY_ACCUMULATE_TIME: ${{ secrets.XMLY_ACCUMULATE_TIME }} #非私密信息，去掉
           BARK: ${{ secrets.BARK }}     # bark服务
           SCKEY: ${{ secrets.SCKEY }}   # server酱服务
