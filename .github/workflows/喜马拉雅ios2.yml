@@ -20,9 +20,9 @@ jobs:
         run: pip install -r ./workflow/requirements.txt
 
       - name: 'run 喜马拉雅极速版'
-        run: python3 ./workflow/xmly_speed_android.py
+        run: python3 ./workflow/xmly_speed_ios2.py
         env:
-          XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE_ANDROID }}  #必须
+          XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE_IOS2 }}  #必须
           # XMLY_ACCUMULATE_TIME: ${{ secrets.XMLY_ACCUMULATE_TIME }} #非私密信息，去掉
           BARK: ${{ secrets.BARK }}     # bark服务
           SCKEY: ${{ secrets.SCKEY }}   # server酱服务
