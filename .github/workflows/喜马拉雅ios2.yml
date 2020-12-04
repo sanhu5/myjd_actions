@@ -1,4 +1,4 @@
-name: 喜马拉雅极速版android
+name: 喜马拉雅极速版ios2
 on:
   schedule:
     - cron: '*/30 * * * * '
