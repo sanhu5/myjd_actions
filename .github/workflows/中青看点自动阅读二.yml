@@ -6,7 +6,7 @@ name: 中青看点自动阅读二
 on:
   workflow_dispatch:
   schedule:
-    - cron: '20 *2 * * *'
+    - cron: '20 */2 * * *'
   watch:
     types: started
 jobs:
