@@ -1,4 +1,4 @@
-薅羊毛：企鹅读书、中青看点极速版、喜马拉雅极速版、贴吧签到
+薅羊毛：
 
 [@ziye12](https://github.com/ziye12/JavaScript) - 企鹅读书
 
