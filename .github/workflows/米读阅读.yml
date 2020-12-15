@@ -6,12 +6,11 @@ name: 米读阅读
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '*/15 * * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-      if: github.event.repository.owner.id == github.event.sender.id
     env:
       MIDU_TOKEN: ${{ secrets.MIDU_TOKEN }}
       MIDU_TIME: ${{ secrets.MIDU_TIME }}
