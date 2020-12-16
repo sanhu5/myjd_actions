@@ -14,7 +14,7 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 const body  = $.isNode() ? require('./remoteBody') : '';
 let ReadArr = [], YouthBody = "",readscore = 0;
 if(body!=''){
- YouthBody = body.getBody.split('&');
+ YouthBody = body.getBody().split('&');
 }else{
   if (process.env.YOUTH_READ && process.env.YOUTH_READ.indexOf('&') > -1) {
   YouthBody = process.env.YOUTH_READ.split('&');
