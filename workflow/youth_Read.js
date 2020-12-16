@@ -45,9 +45,6 @@ let ReadArr = [], YouthBody = remoteBody.split('&'),readscore = 0;
     }
       await AutoRead();
  }
-  if ($.isNode() && readscore>0) {
-   await notify.sendNotify(`中青看点共完成${$.index}次阅读，共计获得${readscore}个青豆，阅读请求全部结束`)
-   }
    console.log(`-------------------------\n\n中青看点共完成${$.index}次阅读，共计获得${readscore}个青豆，阅读请求全部结束`)
 })()
   .catch((e) => $.logErr(e))
