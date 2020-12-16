@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@master
       - name: PHP-Install
         uses: peng4740/gh-action-php@5.6
-      - name: Tieba-Checkin
+      - name: 贴吧一键签到
         env:
           BDUSS: ${{ secrets.BDUSS }}
         run: |
