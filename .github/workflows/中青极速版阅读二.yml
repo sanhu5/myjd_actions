@@ -25,4 +25,4 @@ jobs:
           npm install
       - name: '运行 【中青极速版阅读二】'
         run: |
-          node ./workflow/Youth_Read.js
+          node ./workflow/youth_Read.js
