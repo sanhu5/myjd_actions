@@ -6,7 +6,7 @@ name: 米读阅读
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/15 16-23 * * *'
 
 jobs:
   build:
