@@ -7,3 +7,5 @@
 [@Sunert](https://github.com/Sunert/Scripts) - 中青看点极速版，米读自动阅读，电视家，腾讯新闻
 
 [@bebestmaple](https://github.com/bebestmaple/Tieba_Github-Actions) - 贴吧签到
+
+[@ZhiYi-N](https://github.com/ZhiYi-N/Private-Script) - 今日头条极速版
