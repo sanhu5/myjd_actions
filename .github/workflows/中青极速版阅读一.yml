@@ -23,8 +23,17 @@ jobs:
       - name: npm install
         run: |
           npm install
+
+
       - name: '运行 【中青极速版阅读一】'
         run: |
           node ./workflow/youth_Read.js
         env:
             PUSH_KEY: ${{ secrets.PUSH_KEY }}
+
+
+      - name: '运行 【中青极速版阅读一小号】'
+        run: |
+          node ./workflow/youth_Read2.js
+        env:
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
