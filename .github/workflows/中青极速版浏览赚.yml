@@ -28,4 +28,6 @@ jobs:
         run: |
           node ./workflow/youth_gain.js
         env:
+            YOUTH_START: ${{ secrets.YOUTH_START }}
+            YOUTH_END: ${{ secrets.YOUTH_END }}
             PUSH_KEY: ${{ secrets.PUSH_KEY }}
