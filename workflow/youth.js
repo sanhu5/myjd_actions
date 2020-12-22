@@ -569,6 +569,7 @@ function readArticle() {
         }
         $.post(url, (error, response, data) => {
            readres = JSON.parse(data);
+          console.log(`阅读奖励：`+ readres)
          try {
             if (typeof readres.items.read_score === 'number')  {
               detail += `【阅读奖励】+${readres.items.read_score}个青豆\n`;
@@ -579,7 +580,7 @@ function readArticle() {
 
             resolve()
             }catch(e){
-            $.logErr(e, resp);
+            $.logErr(e, response);
             }
         })
     })
