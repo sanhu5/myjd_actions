@@ -1,5 +1,5 @@
 /*
-更新时间: 2020-12-10 23:00
+更新时间: 2020-12-12 23:00
 赞赏:中青邀请码`46308484`,农妇山泉 -> 有点咸，万分感谢
 本脚本仅适用于中青看点极速版领取青豆
 
@@ -7,7 +7,7 @@
 1.将下方[rewrite_local]和[MITM]地址复制的相应的区域
 下，运行时间自行配置
 2. 获取Cookie方法，可随时更新
- ① 进入app，进入任务中心或者签到一次,即可获取Cookie.
+ ① 进入app，进入任务中心或者签到一次,即可获取Cookie. 
  ② 阅读一篇文章，获取阅读请求body，
  ③ 同时获取阅读时长，
  ④ 在阅读文章最下面有个惊喜红包，点击获取惊喜红包请求
@@ -56,7 +56,7 @@ https:\/\/ios\.baertt\.com\/v5\/user\/app_stay\.json url script-request-body you
 
 ~~~~~~~~~~~~~~~~
 [MITM]
-hostname = *.youth.cn, ios.baertt.com
+hostname = *.youth.cn, ios.baertt.com 
 ~~~~~~~~~~~~~~~~
 
 */
@@ -66,13 +66,13 @@ const $ = new Env("中青看点")
 let notifyInterval = $.getdata("notifytimes")||50 //通知间隔，默认抽奖每50次通知一次，如需关闭全部通知请设为0
 const YOUTH_HOST = "https://kd.youth.cn/WebApi/";
 const notify = $.isNode() ? require('./sendNotify') : '';
-let logs = $.getdata('zqlogs')||false, signresult;
+let logs = $.getdata('zqlogs')||false, rotaryscore=0,doublerotary=0,signresult; 
 let cookiesArr = [], signheaderVal = '',
     readArr = [], articlebodyVal ='',
     timeArr = [], timebodyVal = '',
     redpArr = [], redpbodyVal = '',
     detail = ``, subTitle = ``;
-let CookieYouth = [], ARTBODYs = [],
+let CookieYouth = [], ARTBODYs = [], 
     REDBODYs  = [], READTIME = [];
 if ($.isNode()) {
   if (process.env.YOUTH_HEADER && process.env.YOUTH_HEADER.indexOf('#') > -1) {
@@ -80,26 +80,26 @@ if ($.isNode()) {
   } else {
       CookieYouth = process.env.YOUTH_HEADER.split()
   };
-
+  
   if (process.env.YOUTH_ARTBODY && process.env.YOUTH_ARTBODY.indexOf('&') > -1) {
   ARTBODYs = process.env.YOUTH_ARTBODY.split('&');
   } else {
       ARTBODYs = process.env.YOUTH_ARTBODY.split()
   };
-
+  
   if (process.env.YOUTH_REDBODY && process.env.YOUTH_REDBODY.indexOf('&') > -1) {
   REDBODYs = process.env.YOUTH_REDBODY.split('&');
   } else {
       REDBODYs = process.env.YOUTH_REDBODY.split()
   };
-
+  
   if (process.env.YOUTH_TIME && process.env.YOUTH_TIME.indexOf('&') > -1) {
   READTIME = process.env.YOUTH_TIME.split('&');
   }else {
       READTIME = process.env.YOUTH_TIME.split()
   };
 }
-
+    
 if ($.isNode()) {
     Object.keys(CookieYouth).forEach((item) => {
         if (CookieYouth[item]) {
@@ -138,7 +138,7 @@ const opboxtime = $.getdata('opbox');
 if (isGetCookie = typeof $request !== 'undefined') {
    GetCookie();
    $.done()
-}
+} 
 
  !(async () => {
   if (!cookiesArr[0]) {
@@ -175,12 +175,35 @@ else if ($.time('HH')>4&&$.time('HH')<8){
   await readArticle();
   await Articlered();
   await readTime();
+for ( k=0;k<5;k++){
+ console.log("等待5s进行下一次任务")
+  await $.wait(5000);
   await rotary();
+if (rotaryres.status == 0) {
+      rotarynum = ` 转盘${rotaryres.msg}🎉`;
+      break
+   } else if(rotaryres.status == 1){
+      rotaryscore += rotaryres.data.score
+     rotarytimes = rotaryres.data.remainTurn
+  }
+ if (rotaryres.status == 1 && rotaryres.data.doubleNum !== 0) {
+              await TurnDouble();
+           if (Doubleres.status == 1) {
+              doublerotary += Doubleres.data.score
+           }
+      }
+}
+if (rotaryres.status == 1) {
+  detail += `【转盘抽奖】+${rotaryscore}个青豆 剩余${rotaryres.data.remainTurn}次\n`
+}
+if (rotaryres.status !== 0&&rotaryres.data.doubleNum !== 0){
+  detail += `【转盘双倍】+${doublerotary}青豆 剩余${rotaryres.data.doubleNum}次\n`
+}
   await rotaryCheck();
   await earningsInfo();
   await showmsg();
   if ($.isNode()&&rotaryres.code !== '10010')
-    if( rotarytimes && rotarytimes%50 == 0 && cash >= 10){
+    if( rotarytimes && rotarytimes%90 == 0 && cash >= 10){
        await notify.sendNotify($.name + " " + nick, "您的余额约为"+cash+"元，已可以提现"+'\n'+`【收益总计】${signinfo.data.user.score}青豆  现金约${cash}元\n${detail}`)
     }
  }
@@ -240,14 +263,14 @@ function sign() {
                 signresult = `【签到结果】重复`;
                 detail = "";
               if(runtimes!==undefined){
-              $.setdata(`${parseInt(runtimes)+1}`,'times')
+              $.setdata(`${parseInt(runtimes)+1}`,'times')  
               }
             }
-           resolve()
+           resolve() 
         })
     })
 }
-
+      
 function signInfo() {
     return new Promise((resolve, reject) => {
         const infourl = {
@@ -357,9 +380,9 @@ function SevCont() {
             }, async(error, response, data) => {
                 sevres = JSON.parse(data)
                 if (sevres.code == 1) {
-
+          
                     detail += `【七日签到】+${sevres.data.score}青豆 \n`
-
+          
                 }else if (sevres.code == 0){
                      //detail += `【七日签到】${sevres.msg}\n`
                    // $.log(`${boxres.msg}`)
@@ -420,7 +443,7 @@ function boxshare() {
                 headers: JSON.parse(signheaderVal),
             }
             $.post(url, (error, response, data) => {
-
+   
                 shareres = JSON.parse(data)
                 if (shareres.code == 1) {
                     detail += `【宝箱分享】+${shareres.data.score}青豆\n`
@@ -549,7 +572,7 @@ function readArticle() {
          try {
             if (typeof readres.items.read_score === 'number')  {
               detail += `【阅读奖励】+${readres.items.read_score}个青豆\n`;
-            }
+            } 
     //else if (readres.items.max_notice == '\u770b\u592a\u4e45\u4e86\uff0c\u63621\u7bc7\u8bd5\u8bd5') {
               //detail += `【阅读奖励】看太久了，换1篇试试\n`;
          //  $.log(readres.items.max_notice)}
@@ -624,18 +647,13 @@ function rotary() {
                 body: rotarbody
             }
             $.post(url,async (error, response, data) => {
-                rotaryres = JSON.parse(data)
-                if (rotaryres.status == 1) {
-                    rotarytimes = rotaryres.data.remainTurn
-                    detail += `【转盘抽奖】+${rotaryres.data.score}个青豆 剩余${rotaryres.data.remainTurn}次\n`
-                    if (rotaryres.data.doubleNum != 0) {
-                      await TurnDouble();
-                    }
+                try{
+                      rotaryres = JSON.parse(data)
+                     } catch (e) {
+                   $.logErr(e, resp);
+                   } finally {
+                  resolve()
                 }
-                if (rotaryres.code == 10010) {
-                    rotarynum = ` 转盘${rotaryres.msg}🎉`
-                }
-              resolve();
             })
         }, s);
     })
@@ -690,16 +708,16 @@ function TurnDouble() {
           let time = (new Date()).getTime()
             const url = {
                 url: `${YOUTH_HOST}RotaryTable/toTurnDouble?_=${time}`,headers: JSON.parse(signheaderVal),body: rotarbody}
-            $.post(url, (error, response, data) => {
+            $.post(url, (error, response, data) => { 
+              try{
                 Doubleres = JSON.parse(data)
-                if (Doubleres.status == 1) {
-                    detail += `【转盘双倍】+${Doubleres.data.score1}青豆 剩余${rotaryres.data.doubleNum}次\n`
-                }else{
-                    //detail += `【转盘双倍】失败 ${Doubleres.msg}\n`
-
+                     } catch (e) {
+                   $.logErr(e, resp);
+                   } finally {
+                  resolve()
                 }
+             resolve()
             })
-         resolve()
         },s)
     })
 }
@@ -732,7 +750,7 @@ async function showmsg() {
         }else if (rotaryres.code == 10010 && notifyInterval != 0) {
          rotarynum = ` 转盘${rotaryres.msg}🎉`
          $.msg($.name+"  "+nick+" "+rotarynum,subTitle,detail)//任务全部完成且通知间隔不为0时通知;
-        }
+        } 
      else {
        console.log(`【收益总计】${signinfo.data.user.score}青豆  现金约${cash}元\n`+ detail)
    }
