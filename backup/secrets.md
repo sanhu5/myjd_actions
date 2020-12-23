@@ -20,6 +20,7 @@
 | `DREAM_FACTORY_SHARE_CODES` | 京喜工厂互助码 | 非必须 | 填写规则请看 [jdDreamFactoryShareCodes.js](https://github.com/lxk0301/jd_scripts/blob/master/jdDreamFactoryShareCodes.js) 或见下方`互助码的填写规则` |
 | `JXSTORY_SHARECODES` | 京喜故事互助码 | 非必须 | 填写规则请看 [jdJxStoryShareCodes.js](https://github.com/lxk0301/jd_scripts/blob/master/jdJxStoryShareCodes.js) 或见下方`互助码的填写规则` |
 | `JDZZ_SHARECODES` | 京东赚赚小程序互助码 | 非必须 | 填写规则请看 [jdzz.js](https://github.com/lxk0301/jd_scripts/blob/master/jd_jdzz.js) 或见下方`互助码的填写规则` |
+| `JDJOY_SHARECODES` | 京东疯狂JOY互助码 | 非必须 | 填写规则请看 [jd_crazy_joy.js](https://github.com/lxk0301/jd_scripts/blob/master/jd_crazy_joy.js) 或见下方`互助码的填写规则` |
 
 ##### 其它控制
 
