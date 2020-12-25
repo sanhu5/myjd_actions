@@ -5,8 +5,6 @@ name: 京东注销会员卡
 
 on:
     workflow_dispatch:
-    schedule:
-        - cron: "0 15 * * *"
     watch:
         types: [started]
     repository_dispatch:
