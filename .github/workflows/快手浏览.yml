@@ -7,7 +7,7 @@ name: 快手浏览
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 2,8,16 * * *'
+    - cron: '*/10 18-24 * * *'
   watch:
     types: started
 
