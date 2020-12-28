@@ -28,7 +28,7 @@ jobs:
         run: |
           node ./workflow/baidu_speed.js
         env:
-          YOUTH_HEADER: ${{ secrets.BAIDU_COOKIE }}
+          BAIDU_COOKIE: ${{ secrets.BAIDU_COOKIE }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
