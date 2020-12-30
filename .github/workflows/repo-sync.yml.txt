@@ -1,5 +1,5 @@
 # File: .github/workflows/repo-sync.yml
-name: sync-sazs34-scripts
+name: sync-TaskAction
 on:
   schedule:
     - cron: '5 0,7,15 * * *'
@@ -7,7 +7,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: sync-sazs34-scripts
+    types: sync-TaskAction
 jobs:
   repo-sync:
     env:
@@ -19,11 +19,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync sazs34-scripts
+      - name: sync TaskAction
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/sazs34/MyActions.git"
+          source_repo: "https://github.com/1217079729/TaskAction.git"
           source_branch: "master"
           destination_branch: "main"
           github_token: ${{ secrets.PAT || github.event.client_payload.PAT }}
