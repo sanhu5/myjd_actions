@@ -26,7 +26,7 @@ jobs:
           npm install
       - name: '运行 【聚看点】'
         run: |
-          node ./workflow/Auto_Kuaishou.js
+          node ./workflow/jukan.js
         env:
           JUKAN_COOKIE: ${{ secrets.JUKAN_COOKIE }}
           JUKAN_BODY: ${{ secrets.JUKAN_BODY }}
