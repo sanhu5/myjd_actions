@@ -42,17 +42,15 @@ if ($.isNode()) {
     if (CookieArr[i]) {
       cookieval = CookieArr[i];
       $.index = i + 1;
-    }
       await getsign();
       await coinInfo();
       await firstbox();
-      await TaskCenter();
-  //await get_search();
-  //await getRewards();
-  //await drawPrize();
-  //await get_pkg()
- }
-  })()
+      await TaskCenter()
+      await getRewards();
+     //await drawPrize();
+  }
+ } 
+})()
     .catch((e) => $.logErr(e))
     .finally(() => $.done())
 
@@ -107,15 +105,30 @@ function getRewards() {
       url: `https://haokan.baidu.com/activity/tasks/taskreward?productid=2`,
       headers: {Cookie:cookieval}
       }
-   $.get(rewurl, (error, response, data) => {
+   $.get(rewurl, async(error, response, data) => {
      let get_reward = JSON.parse(data)
      if (get_reward.errno == 0&&get_reward.data.coin!==0){
-         $.desc += '获得收益: +' + get_reward.data.coin
+         $.desc += '获得总收益: +' + get_reward.data.coin
+         await invite()
          }  
-   resolve()
+       resolve()
     })
   })
 }
+
+function invite() {
+  return new Promise((resolve, reject) =>{
+   let rewurl =  {
+      url: `https://haokan.baidu.com/activity/h5/vault?productid=2&inviteCode=WKQLC6&pkg=%5Bpkg%5D `,
+      headers: {Cookie:cookieval}
+      }
+   $.get(rewurl, (error, response, data) => {
+   //  let get_reward = JSON.parse(data)
+      resolve()
+    })
+  })
+}
+
 
 function TaskCenter() {
   return new Promise((resolve, reject) =>{
@@ -126,48 +139,50 @@ function TaskCenter() {
    $.get(rewurl, async(error, resp, data) => {
   try{
      let get_tasks = JSON.parse(data)
-      $.log("获取任务数据"+data)
+      //$.log("获取任务数据"+data)
        tasks = get_tasks.data.comps
       for ( x in tasks){
-         taskid = tasks[x].taskId
+         //taskid = tasks[x].taskId
          id = tasks[x].id
-       if(id ==1069){
-          token = tasks[x].data.btn[0].iosAdUrl.split("?")[1]
-         }
-        if(id ==962){
+        if(id == 962){
          for (jingangs  of  tasks[x].data.jingang_list_ios ){
          if(jingangs.jingangType==2){
           tid = jingangs.jingangTid
           taskName = '【'+jingangs.jingangName+'】'
           RefererUrl = jingangs.jingangUrl
         $.log(taskName+"tid:"+tid)
-   $.log(tasks[x].data.countDown[tid].countDown)
-          downtime = tasks[x].data.countDown[tid].countDown
-         if(downtime == 0){
+        if ($.isNode()){
+           await $.wait(1000)
+           await get_pkg();
+          } 
+else if(tasks[x].data.countDown[tid].countDown ==0){
            await $.wait(1000)
            await get_pkg();
           } else {
-           $.log( "  请等待"+Number(downtime/60).toFixed(2)+"分钟")
-            }
+           $.log( "  请等待"+Number(tasks[x].data.countDown[tid].countDown/60).toFixed(2)+"分钟")
            }
-          }
-        } else if(id ==1076){
-         for ( tasklists  of  tasks[x].data.tasklist){
-          tid = tasklists.id
-          taskName = tasklists.title
-           $.log(taskName+" tid:"+tid)
-           if(tasklists.type == 'openApp'){
-            RefererUrl = tasklists.adLink
-            await get_pkg()
-           }
-          if(tasklists.type == 'watch'){
-            // $.log(tasklists.+'\n')
-             cmd =  tid==346 ? 100:184
-             await get_search()
-          };
           }
          }
-        }
+        } else {
+       let taskArr = tasks[x].data.tasklist
+         for (y in taskArr){
+          tid = taskArr[y].id
+          taskName = "【"+taskArr[y].title+"】"
+           $.log(taskName+" tid:"+tid)
+          if (taskArr[y].taskStatus==1 ){
+            $.log(taskName +" 已完成" )
+            $.desc += taskName +" 已完成"
+           }else if(taskArr[y].type == 'openApp'){
+            RefererUrl = taskArr[y].adLink
+            await get_pkg()
+           } else if(taskArr[y].type == 'watch'){
+            // $.log(tasklists.+'\n')
+             cmd = tid==346 ? 100:184
+             await get_search()
+           };
+          }
+         }
+       }
       } catch(e){
         $.logErr(e, resp);
       } finally {
@@ -215,11 +230,11 @@ function get_pkg() {
       }
    $.get(pkgurl, async(error, resp, data) => {
      let get_pkg = JSON.parse(data)
-        //$.log("数据: "+data+'\n')
+       // $.log("数据: "+data+'\n')
      if (get_pkg.errno == 0&&get_pkg.data.isDone ==0){
        Pkg = get_pkg.data.adInfo[0].material.pkg
        taskid = get_pkg.data.taskPf.taskId;
-      // $.log("\n"+taskid +" "+ Pkg)
+        //$.log("\n"+taskid +" "+ Pkg)
        await activeBox()
        }  
     else if (get_pkg.errno == 0&&get_pkg.data.isDone ==1){
@@ -282,13 +297,13 @@ function activeBox() {
   return new Promise((resolve, reject) =>{
    let actboxurl =  {
       url: `https://haokan.baidu.com/activity/tasks/active?productid=2&id=${tid}`,
-      headers: {Cookie:cookieval,Referer: 'https://eopa.baidu.com/page/pagekey-ASKWNd8W?productid=2&type=1&tid=${tid}'}
+      headers: {Cookie:cookieval,Referer:RefererUrl}
       }
    $.get(actboxurl, async(error, response, data) => {
      //let act_box = JSON.parse(data)
      //$.log('actbox: ' + data)
-     await $.wait(15000);
-     await Tasks();
+       await $.wait(25000);
+       await Tasks();
      resolve()
     })
   })
@@ -303,7 +318,7 @@ function Tasks() {
       }
    $.get(taskurl, async(error, response, data) => {
      let do_task = JSON.parse(data)
-        await $.wait(15000);
+        await $.wait(20000);
          //$.log(data+'\n')
      if (do_task.errno == 0){
          $.desc += taskName + "获得收益"+ do_task.data.coin +"\n"
@@ -356,11 +371,11 @@ function searchBox(id) {
    $.post(searchurl, async(error, resp, data) => {
      let do_search = JSON.parse(data)
           //$.log(data+'\n')
-     if (do_search.errno == 0 && do_search.data[`197`].istip == 1) {
+     if (do_search.errno == 0 && do_search.data['197'].istip == 1) {
         $.log("  获得收益: " +do_search.data[`197`].tips+'\n')
          //$.desc +=  do_search.data[`197`].tips +"\n"
      }  else {
-        //$.log("\n")
+        $.log("\n")
       }
     resolve()
    })
