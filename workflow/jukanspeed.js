@@ -12,9 +12,7 @@ let CookieArr=[],BodyArr=[];
 let cookie = 'JSESSIONID=A0D74C75288111A120F4360643FE8C01; SERVERID=4b3bae870580896bded23ba1131db97c|1609299449|1609299434; CNZZDATA1274871401=1750298542-1609298386-https%253A%252F%252Fwww.xiaodouzhuan.cn%252F%7C1609298386; CNZZDATA1275507390=1298851147-1609296581-%7C1609296581; UM_distinctid=176b1b0ef5434f-0b99d2a18eb1a28-754c1451-5a900-176b1b0ef55a98&JSESSIONID=3EE70F559574FECB1281CAC610B3ADA3; SERVERID=e2e52ee42199401ef190e9b9166db76a|1609299036|1609298449; CNZZDATA1274871401=491391071-1609295452-https%253A%252F%252Fwww.xiaodouzhuan.cn%252F%7C1609295452; CNZZDATA1275507390=1213147556-1609296751-%7C1609296751; UM_distinctid=176b1b233f7611-061850b998fd048-734c1551-3d10d-176b1b233f8560'
 let bodys = 'jsondata=%7B%20%20%22openid%22%20%3A%20%22013f3d82f36341e099326693e2f7735d%22%2C%20%20%22channel%22%20%3A%20%22iOS%22%2C%20%20%22os%22%20%3A%20%22iOS%22%2C%20%20%22appversioncode%22%20%3A%20%22565%22%2C%20%20%22time%22%20%3A%20%221609295968%22%2C%20%20%22psign%22%20%3A%20%2292dea068b6c271161be05ed358b59932%22%2C%20%20%22apptoken%22%20%3A%20%22xzwltoken070704%22%2C%20%20%22appid%22%20%3A%20%22xzwl%22%2C%20%20%22appversion%22%20%3A%20%225.6.5%22%7D&jsondata=%7B%20%20%22openid%22%20%3A%20%22bffa1b15d0934f17a3d951e7fe04b4af%22%2C%20%20%22os%22%20%3A%20%22iOS%22%2C%20%20%22psign%22%20%3A%20%220cf94b87f584dfc81a87fa74dcb3757f%22%2C%20%20%22channel%22%20%3A%20%22IOS-qianzhuan%22%2C%20%20%22appversioncode%22%20%3A%20%226006%22%2C%20%20%22time%22%20%3A%20%221609299037%22%2C%20%20%22apptoken%22%20%3A%20%22xzwltoken070704%22%2C%20%20%22appid%22%20%3A%20%22xzwl%22%2C%20%20%22appversion%22%20%3A%20%2260.0.6%22%7D'
 let UA = 'QianZhuan/60.0.6 (iPhone; iOS 13.7; Scale/3.00)'
- CookieArr.push(cookie.split("&"))
-  BodyArr.push(bodys.split("&"))
-//if ($.isNode()) {
+if ($.isNode()) {
 //  if (process.env.JUKAN_COOKIE && process.env.JUKAN_COOKIE.indexOf('&') > -1) {
 //  JKCookie = process.env.JUKAN_COOKIE.split('&');
 //  }
@@ -31,23 +29,25 @@ let UA = 'QianZhuan/60.0.6 (iPhone; iOS 13.7; Scale/3.00)'
 //  } else {
 //  JKbody = process.env.JUKAN_BODY.split()
 //  }
-//  Object.keys(JKCookie).forEach((item) => {
-//        if (JKCookie[item]) {
-//          CookieArr.push(JKCookie[item])
-//        }
-//    })
-//  Object.keys(JKbody).forEach((item) => {
-//        if (JKbody[item]) {
-//          BodyArr.push(JKbody[item])
-//        }
-//    })
-//} else if (CookieArr.indexOf("&")>-1 &&BodyArr.indexOf("&")>-1){
-// CookieArr.push(cookie.split("&"))
-//  BodyArr.push(bodys.split("&"))
-//} else {
-//   CookieArr.push(cookie)
-//   BodyArr.push(bodys)
-//}
+JKCookie = process.env.JUKAN_COOKIE.split('&');
+ JKbody = process.env.BODY_BODY.split('&');
+  Object.keys(JKCookie).forEach((item) => {
+        if (JKCookie[item]) {
+          CookieArr.push(JKCookie[item])
+        }
+    })
+  Object.keys(JKbody).forEach((item) => {
+        if (JKbody[item]) {
+          BodyArr.push(JKbody[item])
+        }
+    })
+} else if (CookieArr.indexOf("&")>-1 &&BodyArr.indexOf("&")>-1){
+ CookieArr.push(cookie.split("&"))
+  BodyArr.push(bodys.split("&"))
+} else {
+   CookieArr.push(cookie)
+   BodyArr.push(bodys)
+}
 
 if ($.isNode()) {
       console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
