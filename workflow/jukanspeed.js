@@ -29,8 +29,8 @@ if ($.isNode()) {
 //  } else {
 //  JKbody = process.env.JUKAN_BODY.split()
 //  }
-JKCookie = process.env.JUKAN_COOKIE.split('&');
- JKbody = process.env.BODY_BODY.split('&');
+JKCookie = cookie.split('&');
+ JKbody = bodys.split('&');
   Object.keys(JKCookie).forEach((item) => {
         if (JKCookie[item]) {
           CookieArr.push(JKCookie[item])
