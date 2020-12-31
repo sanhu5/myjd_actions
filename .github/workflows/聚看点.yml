@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         if: env.JUKAN_COOKIE && env.JUKAN_BODY
         run: |
-          git clone https://github.com/humanvip/no.1.git ~/no.1
+          git clone https://github.com/humanvip/no.1.git ~/no
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         if: env.JUKAN_COOKIE && env.JUKAN_BODY
@@ -39,13 +39,13 @@ jobs:
       - name: npm install
         if: env.JUKAN_COOKIE && env.JUKAN_BODY
         run: |
-          cd ~/no.1
-          git checkout master
+          cd ~/no
+          git checkout main
           npm install
       - name: '运行 【聚看点】'
         if: env.JUKAN_COOKIE && env.JUKAN_BODY
         run: |
-          cd ~/no.1
+          cd ~/no
           node jukanspeed.js
         env:
           JUKAN_COOKIE: ${{ secrets.JUKAN_COOKIE }}
