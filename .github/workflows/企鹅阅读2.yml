@@ -49,6 +49,7 @@ jobs:
           cd ~/JavaScript/Task
           node qqreads.js
         env:
+          TZ: Asia/shanghai
           QQREAD_BODY: ${{ secrets.QQREAD_BODY }}
           QQREAD_TIMEURL: ${{ secrets.QQREAD_TIMEURL }}
           QQREAD_TIMEHD: ${{ secrets.QQREAD_TIMEHD }}

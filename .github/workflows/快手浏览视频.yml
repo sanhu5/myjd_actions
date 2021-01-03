@@ -28,6 +28,7 @@ jobs:
         run: |
           node ./workflow/Auto_Kuaishou.js
         env:
+          TZ: Asia/shanghai
           KUAISHOUMV: ${{ secrets.KUAISHOUMV }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}

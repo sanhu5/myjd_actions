@@ -28,6 +28,7 @@ jobs:
         run: |
           node ./workflow/youth.js
         env:
+          TZ: Asia/shanghai
           YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
           YOUTH_ARTBODY: ${{ secrets.YOUTH_ARTBODY }}
           YOUTH_REDBODY: ${{ secrets.YOUTH_REDBODY }}

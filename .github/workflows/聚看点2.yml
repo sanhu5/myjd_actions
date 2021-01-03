@@ -48,6 +48,7 @@ jobs:
           cd ~/Scripts/Task
           node jukan.js
         env:
+          TZ: Asia/shanghai
           JUKAN_COOKIE: ${{ secrets.JUKAN_COOKIE }}
           JUKAN_BODY: ${{ secrets.JUKAN_BODY }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
