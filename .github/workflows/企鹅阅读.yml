@@ -18,6 +18,7 @@ jobs:
       QQREAD_TIMEURL: ${{ secrets.QQREAD_TIMEURL }}
       QQREAD_TIMEHD: ${{ secrets.QQREAD_TIMEHD }}
     runs-on: ubuntu-latest
+    TZ: Asia/shanghai
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout
