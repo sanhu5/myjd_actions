@@ -814,7 +814,6 @@ function qqreadbox() {
     };
     $.get(toqqreadboxurl, (error, response, data) => {
       if (logs) $.log(`${O}, 宝箱奖励: ${data}`);
-	    $.log(`${O}, 宝箱奖励: ${data}`);
       let box = JSON.parse(data);
       if (box.code == 0 && box.data.amount) {
         tz += `【宝箱奖励${box.data.count}】:获得${box.data.amount}金币\n`;
@@ -836,7 +835,6 @@ function qqreadbox2() {
     };
     $.get(toqqreadbox2url, (error, response, data) => {
       if (logs) $.log(`${O}, 宝箱奖励翻倍: ${data}`);
-	    $.log(`${O}, 宝箱奖励: ${data}`);
       let box2 = JSON.parse(data);
       if (box2.code == 0 && box2.data.amount) {
         tz += `【宝箱翻倍】:获得${box2.data.amount}金币\n`;
