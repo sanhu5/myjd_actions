@@ -273,7 +273,7 @@ async function all() {
    if ($.isNode()){
   
         //--循环开箱子
-        while (BOX == 1) {
+        while (true) {
                   
                     for (let i = 0; i < Length; i++) {
                       if (COOKIE.qqreadbodyVal) {
@@ -294,8 +294,9 @@ async function all() {
                       if (!cookie_is_live) {
                         continue;
                       }
-                  
-                     if (nowTimes.getHours() === 0 && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 59)) {
+			    
+		if(BOX == 1){
+			 if (nowTimes.getHours() === 0 && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 59)) {
                                         await qqreadtrack();//更新
                                       }
                                       await qqreadtask();//任务列表
@@ -310,9 +311,9 @@ async function all() {
                                         await $.wait(task.data.treasureBox.timeInterval - 600000)
                                         await qqreadbox2();//宝箱翻倍
                                       }
+		}
                   
-                    }
-                    
+         }   
        	      	    console.log(`========================本次任务执行完毕，休息一分钟==============================\n`);
                     await $.wait(60000)
          }
