@@ -53,6 +53,7 @@ jobs:
           QQREAD_BODY: ${{ secrets.QQREAD_BODY }}
           QQREAD_TIMEURL: ${{ secrets.QQREAD_TIMEURL }}
           QQREAD_TIMEHD: ${{ secrets.QQREAD_TIMEHD }}
+          QQREAD_CASH: ${{ secrets.QQREAD_CASH }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           BARK_SOUND: ${{ secrets.BARK_SOUND }}
