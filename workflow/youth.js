@@ -129,6 +129,10 @@ if ($.isNode()) {
     redpArr.push($.getdata('red_zq'));
     readArr.push($.getdata('read_zq'));
     timeArr.push($.getdata('readtime_zq'));
+    cookiesArr.push($.getdata('youthheader_zq2'));
+    redpArr.push($.getdata('red_zq2'));
+    readArr.push($.getdata('read_zq2'));
+    timeArr.push($.getdata('readtime_zq2'));
 }
 
 const firstcheck = $.getdata('signt');
