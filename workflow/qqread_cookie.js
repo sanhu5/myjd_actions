@@ -271,7 +271,7 @@ async function all() {
    if ($.isNode()&&BOX == 1){
   
         //--循环开箱子 4小时30分钟
-        while (readindex<270) {
+        while (readindex>270) {
                   
                     for (let i = 0; i < Length; i++) {
                       if (COOKIE.qqreadbodyVal) {
