@@ -152,40 +152,54 @@ async function all() {
     if (task.data.taskList[3].doneFlag == 0) {
       await qqreadvideo();//视频奖励
     }
-     }
+  }
 
-     if (BOX == 1){
+   if (BOX == 1){
      if ($.isNode()) {
       while (true) {
-          openBox();
-	  console.log(`========================分割线==============================\n`);
+      
+          if (nowTimes.getHours() === 0 && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 59)) {
+                      await qqreadtrack(); //更新
+                  }
+                  await qqreadtask(); //任务列表
+                  if (task.data && task.data.taskList[0].doneFlag == 0) {
+                      await qqreaddayread(); //阅读任务
+                  }
+                  if (task.data && task.data.treasureBox.timeInterval <= 10000) {
+                      await $.wait(task.data.treasureBox.timeInterval)
+                      await qqreadbox(); //宝箱
+                  }
+                  if (task.data && task.data.treasureBox.timeInterval - 600000 <= 10000) {
+                      await $.wait(task.data.treasureBox.timeInterval - 600000)
+                      await qqreadbox2(); //宝箱翻倍
+                  }
+          }
+
+	      console.log(`========================分割线==============================\n`);
           await $.wait(60000)
         }
      }else{ 
-        openBox();
-     }
 
+          if (nowTimes.getHours() === 0 && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 59)) {
+                      await qqreadtrack(); //更新
+                  }
+                  await qqreadtask(); //任务列表
+                  if (task.data && task.data.taskList[0].doneFlag == 0) {
+                      await qqreaddayread(); //阅读任务
+                  }
+                  if (task.data && task.data.treasureBox.timeInterval <= 10000) {
+                      await $.wait(task.data.treasureBox.timeInterval)
+                      await qqreadbox(); //宝箱
+                  }
+                  if (task.data && task.data.treasureBox.timeInterval - 600000 <= 10000) {
+                      await $.wait(task.data.treasureBox.timeInterval - 600000)
+                      await qqreadbox2(); //宝箱翻倍
+                  }
+          }
+
+     }
       await showmsg();//通知
   }
-}
-
-function openBox() {
-        if (nowTimes.getHours() === 0 && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 59)) {
-            await qqreadtrack(); //更新
-        }
-        await qqreadtask(); //任务列表
-        if (task.data && task.data.taskList[0].doneFlag == 0) {
-            await qqreaddayread(); //阅读任务
-        }
-        if (task.data && task.data.treasureBox.timeInterval <= 10000) {
-            await $.wait(task.data.treasureBox.timeInterval)
-            await qqreadbox(); //宝箱
-        }
-        if (task.data && task.data.treasureBox.timeInterval - 600000 <= 10000) {
-            await $.wait(task.data.treasureBox.timeInterval - 600000)
-            await qqreadbox2(); //宝箱翻倍
-        }
-    }
 }
 
 function showmsg() {
