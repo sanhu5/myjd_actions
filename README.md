@@ -9,3 +9,5 @@
 [@bebestmaple](https://github.com/bebestmaple/Tieba_Github-Actions) - 贴吧签到
 
 [@ZhiYi-N](https://github.com/ZhiYi-N/script) - 今日头条极速版
+
+[@pxylen](https://github.com/pxylen/jd_scripts) - 京东系列
