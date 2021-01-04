@@ -60,7 +60,7 @@ http-request https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid? script-
 
 */
 
-const BOX = 2;//设置为0 日常任务，设置为1 单开宝箱，设置为2 完整功能版
+const BOX = 1;//设置为0 日常任务，设置为1 单开宝箱，设置为2 完整功能版
 
 
 
@@ -270,7 +270,7 @@ async function all() {
     $.done();
   }
   
-   if ($.isNode()){
+   if ($.isNode()&&BOX == 1){
   
         //--循环开箱子
         while (true) {
@@ -295,7 +295,6 @@ async function all() {
                         continue;
                       }
 			    
-		if(BOX == 1){
 			 if (nowTimes.getHours() === 0 && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 59)) {
                                         await qqreadtrack();//更新
                                       }
@@ -311,9 +310,8 @@ async function all() {
                                         await $.wait(task.data.treasureBox.timeInterval - 600000)
                                         await qqreadbox2();//宝箱翻倍
                                       }
-		}
-                  
-         }   
+
+             }
        	      	    console.log(`========================本次任务执行完毕，休息一分钟==============================\n`);
                     await $.wait(60000)
          }
