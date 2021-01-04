@@ -153,7 +153,8 @@ async function all() {
      if (BOX == 1){
      if ($.isNode()) {
       while (true) {
-           openBox();
+          openBox();
+	  console.log(`========================分割线==============================\n`);
           await $.wait(60000)
         }
      }else{ 
