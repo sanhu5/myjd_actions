@@ -74,7 +74,7 @@ const COOKIE = $.isNode() ? require("./qqreadCOOKIE") : "";
 const notify = $.isNode() ? require("./sendNotify") : "";
 const notifyttt = 1// 0为关闭外部推送，1为12 23 点外部推送
 const notifyInterval = 2;// 0为关闭通知，1为所有通知，2为12 23 点通知  ， 3为 6 12 18 23 点通知
-const logs = 1;   //0为关闭日志，1为开启
+const logs = 0;   //0为关闭日志，1为开启
 const maxtime = 10//每日上传时长限制，默认20小时
 const wktimess = 1200//周奖励领取标准，默认1200分钟
 let CASH = 0;
@@ -816,6 +816,7 @@ function qqreadbox() {
     };
     $.get(toqqreadboxurl, (error, response, data) => {
       if (logs) $.log(`${O}, 宝箱奖励: ${data}`);
+	    $.log(`${O}, 宝箱奖励: ${data}`);
       let box = JSON.parse(data);
       if (box.code == 0 && box.data.amount) {
         tz += `【宝箱奖励${box.data.count}】:获得${box.data.amount}金币\n`;
@@ -837,6 +838,7 @@ function qqreadbox2() {
     };
     $.get(toqqreadbox2url, (error, response, data) => {
       if (logs) $.log(`${O}, 宝箱奖励翻倍: ${data}`);
+	    $.log(`${O}, 宝箱奖励: ${data}`);
       let box2 = JSON.parse(data);
       if (box2.code == 0 && box2.data.amount) {
         tz += `【宝箱翻倍】:获得${box2.data.amount}金币\n`;
