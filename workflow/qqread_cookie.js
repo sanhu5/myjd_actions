@@ -66,7 +66,6 @@ const jsname = '企鹅读书'
 const $ = Env(jsname)
 let task, tz, kz, config = '';
 let dk,sp,ljyd,ydrw,wktime;
-let readindex;
 
 const COOKIE = $.isNode() ? require("./qqreadCOOKIE") : "";
 const notify = $.isNode() ? require("./sendNotify") : "";
@@ -270,8 +269,8 @@ async function all() {
   
    if ($.isNode()&&BOX == 1){
   
-        //--循环开箱子 4小时30分钟
-        while (readindex>270) {
+        //--循环开箱子
+        while (true) {
                   
                     for (let i = 0; i < Length; i++) {
                       if (COOKIE.qqreadbodyVal) {
@@ -310,7 +309,7 @@ async function all() {
                                       }
 
              }
-                    readindex++;
+           
        	      	    console.log(`========================本次任务执行完毕，休息一分钟==============================\n`);
                     await $.wait(60000)
          }
