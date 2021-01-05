@@ -5,15 +5,14 @@ const jsname = '企鹅读书'
 const $ = Env(jsname)
 const COOKIE = $.isNode() ? require("./qqreadCOOKIE") : "";
 const notify = $.isNode() ? require("./sendNotify") : "";
-const notifyttt = 1// 0为关闭外部推送，1为12 23 点外部推送
-const notifyInterval = 2;// 0为关闭通知，1为所有通知，2为12 23 点通知  ， 3为 6 12 18 23 点通知
+const notifyttt = 0// 0为关闭外部推送，1为12 23 点外部推送
+const notifyInterval = 0;// 0为关闭通知，1为所有通知，2为12 23 点通知  ， 3为 6 12 18 23 点通知
 const logs = 0;   //0为关闭日志，1为开启
 const maxtime = 10//每日上传时长限制，默认20小时
 const wktimess = 1200//周奖励领取标准，默认1200分钟
 
 let task, tz, kz, config = '', CASH = '', COOKIES_SPLIT = '' ;
 let dk,ljyd,sp,ydrw,wktime;
-let taskindex;
 
 let qqreadbodyVal = ``;
 let qqreadtimeurlVal = ``;
@@ -342,14 +341,8 @@ async function all() {
       await showmsg();//通知
 
     }
-
-         taskindex++;
-         if(taskindex>60){
-            console.log(`========================本轮任务执行完毕==============================\n`);
-            break;
-         }
-         console.log(`========================本次任务执行完毕，休息三分钟==============================\n`);
-         await $.wait(180000)
+         console.log(`========================本次任务执行完毕，休息五分钟==============================\n`);
+         await $.wait(300000)
 
   }
 
