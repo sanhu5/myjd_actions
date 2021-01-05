@@ -13,7 +13,6 @@ const wktimess = 1200//周奖励领取标准，默认1200分钟
 
 let task, tz, kz, config = '', CASH = '', COOKIES_SPLIT = '' ;
 let dk,ljyd,sp,ydrw,wktime;
-let taskindex;
 
 let qqreadbodyVal = ``;
 let qqreadtimeurlVal = ``;
@@ -342,14 +341,8 @@ async function all() {
       await showmsg();//通知
 
     }
-
-         taskindex++;
-         if(taskindex>60){
-            console.log(`========================本轮任务执行完毕==============================\n`);
-            break;
-         }
-         console.log(`========================本次任务执行完毕，休息三分钟==============================\n`);
-         await $.wait(180000)
+         console.log(`========================本次任务执行完毕，休息十分钟==============================\n`);
+         await $.wait(600000)
 
   }
 
