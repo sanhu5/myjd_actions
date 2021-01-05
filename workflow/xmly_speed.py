@@ -15,11 +15,11 @@ import re
 
 ###################################################
 # 对应方案2: 下载到本地,需要此处填写
-cookies1 = "1&_device=iPhone&BF8D3615-94F0-4194-8D7F-F9A6E264EA3D&2.0.9; 1&_token=265228348&2D656660340CD1B8D3AE6F27E8967CA006951A642ED0830E2AD4B0FA13A69191676F2BD4F80030M850D9635E9FB8D6_; NSUP=42F340D3%2C41FA8BDC%2C1609244868608; XD=x3WyUkYMqCTF98/HqqchlJMSJPqbPeYi+2E+YtdQwbE2vlAMST9gSkZbBLws29nkbHfRtecSm079Cv3O1cTq/g==; XUM=BF8D3615-94F0-4194-8D7F-F9A6E264EA3D; ainr=0; c-oper=%E6%9C%AA%E7%9F%A5; channel=ios-b1; device_model=iPhone XR; idfa=00000000-0000-0000-0000-000000000000; impl=com.ximalaya.tingLite; ip=10.27.125.241; net-mode=WIFI; res=828%2C1792; _xmLog=h5&7fe62bb6-d03f-48c9-b1b7-74c1e1c68552&2.2.5"
+cookies1 = ""
 
-cookies2 = "1&_device=iPhone&D51C144F-7F7C-4553-A617-DC8018C5573F&1.1.13; 1&_token=274162752&419F7AF0140C557532E1FFBE05B3525AA7D2095B318F1F585E4611DC54480705089F131C125D79M1FC6C03E1F6B543_; NSUP=42F2F4EA%2C41FA8DE7%2C1609291923456; XD=kfkcrYEyqC6Gywe9euMYLXzZjl6Ntms2nG3TrJZMM8slHiU6vzYtAHL2Xjk2S/kLMnquYYsVXgANiFqzs+yIMA==; XUM=D51C144F-7F7C-4553-A617-DC8018C5573F; ainr=0; c-oper=%E6%9C%AA%E7%9F%A5; channel=ios-b1; device_model=iPhone 6s; idfa=D51C144F-7F7C-4553-A617-DC8018C5573F; impl=com.ximalaya.tingLite; ip=192.168.63.98; net-mode=WIFI; res=750%2C1334"
+cookies2 = ""
 
-cookiesList = [cookies1,cookies2]   # 多账号准备
+cookiesList = [cookies1]   # 多账号准备
 
 # 通知服务
 BARK = ''                   # bark服务,自行搜索; secrets可填;形如jfjqxDx3xxxxxxxxSaK的字符串
