@@ -1,3 +1,15 @@
+/*
+聚看点签到任务，不支持Actions跑阅读任务，其他任务可运行
+打开'我的'获取Cookie
+更新时间: 2021-01-03 12:03
+https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action url script-request-body jukan.js
+
+可自动提现，提现需填写微信真实姓名，设置提现金额，默认30，此设置可以boxjs内完成，也可本地配置
+
+hostname = www.xiaodouzhuan.cn
+~~~~~~~~~~~~~~~~
+
+*/
 const $ = new Env('聚看点')
 const drawcash = $.getdata('jukan_cash') || "30" //提现金额
 const wxname = $.getdata('jukan_name') || ""//微信真实名字，可以在双引号内填入
@@ -49,111 +61,112 @@ if (typeof $request !== 'undefined') {
     console.log($.name, '【提示】请把聚看点Cookie填入Github 的 Secrets 中，请以&或者换行隔开')
     return;
   }
-
-     if ($.isNode()){
-
-          while (true) {
-
+  
+      if ($.isNode()){
+  
+            while (true) {
+            
             console.log(`您共提供${BodyArr.length}个聚看点账号Cookie\n————————————————————————————————————\n`)
-            for (let i = 0; i < BodyArr.length; i++) {
-              if (BodyArr[i]) {
-                bodyval = BodyArr[i]
-                ID =  decodeURIComponent(bodyval).match(/"openid" : "(\w+)"/)[1]
-                apptoken = decodeURIComponent(bodyval).match(/"apptoken" : "(\w+)"/)[1]
-                appVersion = decodeURIComponent(bodyval).match(/"appversion" : "(.*)"/)[1]
-                cookieval = `xz_jkd_appkey=${ID}!iOS!${appVersion}`
-                times = Date.parse(new Date())/1000
-                $.index = i + 1;
-             console.log("聚看点账号"+$.index+"任务开始\n")
-                await sign();
-                await getsign();
-                await stimulate();
-                await TimeBox();
-                await userinfo();
-                await LuckDrawLevel();
-             for(boxtype of [1,2]){
-                await $.wait(1000);
-                await BoxProfit(boxtype)
-              }
-               for ( x =18;x<32;++x){
-                await Stimulate(x)
+              for (let i = 0; i < BodyArr.length; i++) {
+                if (BodyArr[i]) {
+                  bodyval = BodyArr[i]
+                  ID =  decodeURIComponent(bodyval).match(/"openid" : "(\w+)"/)[1]
+                  apptoken = decodeURIComponent(bodyval).match(/"apptoken" : "(\w+)"/)[1]
+                  appVersion = decodeURIComponent(bodyval).match(/"appversion" : "(.*)"/)[1]
+                  cookieval = `xz_jkd_appkey=${ID}!iOS!${appVersion}`
+                  times = Date.parse(new Date())/1000
+                  $.index = i + 1;
+               console.log("聚看点账号"+$.index+"任务开始\n")
+                  await sign();
+                  await getsign();
+                  await stimulate();
+                  await TimeBox();
+                  await userinfo();
+                  await LuckDrawLevel();
+               for(boxtype of [1,2]){
+                  await $.wait(1000);
+                  await BoxProfit(boxtype)
+                }   
+                 for ( x =18;x<32;++x){
+                  await Stimulate(x)
+                 }
+              if (cashout==true&&curcash >= drawcash && wxname){
+                    await realname();
+                  //await Withdraw() //实名未通过，强制提现，可取消此注释，不保证成功
                }
-            if (cashout==true&&curcash >= drawcash && wxname){
-                  await realname();
-                //await Withdraw() //实名未通过，强制提现，可取消此注释，不保证成功
-             }
-             if (signtimes&&signtimes<5){
-                await WelfareCash();
-             }
-             if(new Date().getTimezoneOffset() != '-480'){
-              continue
-             } else {
-               await artTotal()
-          }
-             if ((150-artcount) == 0&&(50-videocount) ==0){
-               $.msg($.name+" 昵称:"+userName, $.sub, $.desc+"<今日阅读任务已完成>",{'media-url': calendarpic })
+               if (signtimes&&signtimes<5){
+                  await WelfareCash();
                }
-               $.log("\n"+ $.name+"账号"+$.index+" : "+userName+ "  本次运行任务已结束\n~~~~~~~~~~~~~~~~~~\n")
-
+               if(new Date().getTimezoneOffset() != '-480'){
+                continue
+               } else {
+                 await artTotal() 
+            }  
+               if ((150-artcount) == 0&&(50-videocount) ==0){
+                 $.msg($.name+" 昵称:"+userName, $.sub, $.desc+"<今日阅读任务已完成>",{'media-url': calendarpic })
+                 }
+                 $.log("\n"+ $.name+"账号"+$.index+" : "+userName+ "  本次运行任务已结束\n~~~~~~~~~~~~~~~~~~\n")
+               }
+             } 
+             
                 console.log(`========================本次任务执行完毕，休息五分钟==============================\n`);
                 await $.wait(300000)
-             }
-           }
-          })()
-              .catch((e) => $.logErr(e))
-              .finally(() => $.done())
-
+            
+            }
+            
+       }else{
+       
+       console.log(`您共提供${BodyArr.length}个聚看点账号Cookie\n————————————————————————————————————\n`)
+         for (let i = 0; i < BodyArr.length; i++) {
+           if (BodyArr[i]) {
+             bodyval = BodyArr[i]
+             ID =  decodeURIComponent(bodyval).match(/"openid" : "(\w+)"/)[1]
+             apptoken = decodeURIComponent(bodyval).match(/"apptoken" : "(\w+)"/)[1]
+             appVersion = decodeURIComponent(bodyval).match(/"appversion" : "(.*)"/)[1]
+             cookieval = `xz_jkd_appkey=${ID}!iOS!${appVersion}`
+             times = Date.parse(new Date())/1000
+             $.index = i + 1;
+          console.log("聚看点账号"+$.index+"任务开始\n")
+             await sign();
+             await getsign();
+             await stimulate();
+             await TimeBox();
+             await userinfo();
+             await LuckDrawLevel();
+          for(boxtype of [1,2]){
+             await $.wait(1000);
+             await BoxProfit(boxtype)
+           }   
+            for ( x =18;x<32;++x){
+             await Stimulate(x)
+            }
+         if (cashout==true&&curcash >= drawcash && wxname){
+               await realname();
+             //await Withdraw() //实名未通过，强制提现，可取消此注释，不保证成功
           }
-
-    }else{
-      console.log(`您共提供${BodyArr.length}个聚看点账号Cookie\n————————————————————————————————————\n`)
-      for (let i = 0; i < BodyArr.length; i++) {
-        if (BodyArr[i]) {
-          bodyval = BodyArr[i]
-          ID =  decodeURIComponent(bodyval).match(/"openid" : "(\w+)"/)[1]
-          apptoken = decodeURIComponent(bodyval).match(/"apptoken" : "(\w+)"/)[1]
-          appVersion = decodeURIComponent(bodyval).match(/"appversion" : "(.*)"/)[1]
-          cookieval = `xz_jkd_appkey=${ID}!iOS!${appVersion}`
-          times = Date.parse(new Date())/1000
-          $.index = i + 1;
-       console.log("聚看点账号"+$.index+"任务开始\n")
-          await sign();
-          await getsign();
-          await stimulate();
-          await TimeBox();
-          await userinfo();
-          await LuckDrawLevel();
-       for(boxtype of [1,2]){
-          await $.wait(1000);
-          await BoxProfit(boxtype)
-        }
-         for ( x =18;x<32;++x){
-          await Stimulate(x)
-         }
-      if (cashout==true&&curcash >= drawcash && wxname){
-            await realname();
-          //await Withdraw() //实名未通过，强制提现，可取消此注释，不保证成功
-       }
-       if (signtimes&&signtimes<5){
-          await WelfareCash();
-       }
-       if(new Date().getTimezoneOffset() != '-480'){
-        continue
-       } else {
-         await artTotal()
-    }
-       if ((150-artcount) == 0&&(50-videocount) ==0){
-         $.log($.name+" 昵称:"+userName, $.sub, $.desc+"<今日阅读任务已完成>",{'media-url': calendarpic })
-         }
-         $.log("\n"+ $.name+"账号"+$.index+" : "+userName+ "  本次运行任务已结束\n~~~~~~~~~~~~~~~~~~\n")
-       }
-     }
-    })()
-        .catch((e) => $.logErr(e))
-        .finally(() => $.done())
-
-    }
-
+          if (signtimes&&signtimes<5){
+             await WelfareCash();
+          }
+          if(new Date().getTimezoneOffset() != '-480'){
+           continue
+          } else {
+            await artTotal() 
+       }  
+          if ((150-artcount) == 0&&(50-videocount) ==0){
+            $.msg($.name+" 昵称:"+userName, $.sub, $.desc+"<今日阅读任务已完成>",{'media-url': calendarpic })
+            }
+            $.log("\n"+ $.name+"账号"+$.index+" : "+userName+ "  本次运行任务已结束\n~~~~~~~~~~~~~~~~~~\n")
+          }
+        } 
+        
+        
+      }
+  
+ 
+ 
+})()
+    .catch((e) => $.logErr(e))
+    .finally(() => $.done())
 }
 //签到
 function sign() {
