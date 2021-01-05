@@ -19,6 +19,7 @@ let signtimes = $.getdata('jukan_times')
 let cashout = $.getdata('jukan_out')|| false
 let UA = 'JuKanDian/5.6.5 (iPhone; iOS 14.2; Scale/3.00)'
 let taskresult = "",sumnotify ="";
+let taskindex;
 
 if ($.isNode()) {
   if (process.env.JUKAN_BODY && process.env.JUKAN_BODY.indexOf('&') > -1) {
@@ -108,6 +109,11 @@ if (typeof $request !== 'undefined') {
                  $.log("\n"+ $.name+"账号"+$.index+" : "+userName+ "  本次运行任务已结束\n~~~~~~~~~~~~~~~~~~\n")
                }
              } 
+                      taskindex++;
+                      if(taskindex>42){
+                         console.log(`========================本轮任务执行完毕==============================\n`);
+                         break;
+                      }
              
                 console.log(`========================本次任务执行完毕，休息五分钟==============================\n`);
                 await $.wait(300000)
