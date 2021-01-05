@@ -1,66 +1,5 @@
-/*ziye
-******************************************************************************
-⚠️可N个账号，BOX 设置为0 日常任务，设置为1 单开宝箱，设置为2 完整功能
 
-⚠️云函数固定ck则在 qqreadCOOKIE 文件里面填写ck，多账号换行
-
-qqreadCOOKIE地址 https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreadCOOKIE.js
-github地址     https://github.com/ziye12/JavaScript
-TG频道地址     https://t.me/ziyescript
-TG交流群       https://t.me/joinchat/AAAAAE7XHm-q1-7Np-tF3g
-boxjs链接      https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/ziye.boxjs.json
-另一版         https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js
-
-本人github地址     https://github.com/ziye12/JavaScript
-转载请备注个名字，谢谢
-
-12.28 固定ck版,增加外部通知，默认12点以及23.40通知，解决宝箱翻倍问题，解决手机端运行异常问题
-12.28 解决通知问题，notifyInterval     0为关闭通知，1为所有通知，2为12 23 点通知  ， 3为 6 12 18 23 点通知
-12.28 增加 无通知时打印通知
-12.29 修复手机通知问题，增加外部推送开关
-1.1 修复签到问题
-1.2 增加完整功能 兼容固定ck与boxjs以及变量版
-1.3 增加ck失效提醒，并继续执行其他账号
-1.3 增加一个独立的cookie文件
-1.3 增加cookie获取时间显示
-1.4 单开宝箱不再ck失效提示，增加6点后显示今日收益
-
-⚠️cookie获取方法：
-
-进 https://m.q.qq.com/a/s/d3eacc70120b9a37e46bad408c0c4c2a  点我的   获取cookie
-
-进一本书 看 10秒以下 然后退出，获取阅读时长cookie，看书一定不能超过10秒
-
-可能某些页面会卡住，但是能获取到cookie，再注释cookie重写就行了！
-
-
-
-⚠️宝箱奖励为20分钟一次，自己根据情况设置定时，建议设置11分钟一次
-
-hostname=mqqapi.reader.qq.com
-############## 圈x
-#企鹅读书获取更新body
-https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track url script-request-body https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js
-#企鹅读书获取时长cookie
-https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid? url script-request-header https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js
-
-############## loon
-#企鹅读书获取更新body
-http-request https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js,requires-body=true, tag=企鹅读书获取更新body
-#企鹅读书获取时长cookie
-http-request https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid? script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js, requires-header=true, tag=企鹅读书获取时长cookie
-
-############## surge
-#企鹅读书获取更新body
-企鹅读书获取更新body = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js,
-#企鹅读书获取时长cookie
-企鹅读书获取时长cookie = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid?,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/Task/qqreads.js,
-
-
-
-*/
-
-const BOX = 1;//设置为0 日常任务，设置为1 单开宝箱，设置为2 完整功能版
+const BOX = 2;//设置为0 日常任务，设置为1 单开宝箱，设置为2 完整功能版
 
 const jsname = '企鹅读书'
 const $ = Env(jsname)
@@ -267,52 +206,147 @@ async function all() {
     $.done();
   }
   
-   if ($.isNode()&&BOX == 1){
+   if ($.isNode()){
   
-        //--循环开箱子
         while (true) {
                   
-                    for (let i = 0; i < Length; i++) {
-                      if (COOKIE.qqreadbodyVal) {
-                        qqreadbodyVal = QQ_READ_COOKIES.qqreadbodyVal[i];
-                        qqreadtimeurlVal = QQ_READ_COOKIES.qqreadtimeurlVal[i];
-                        qqreadtimeheaderVal = QQ_READ_COOKIES.qqreadtimeheaderVal[i];
-                      }
-                      if (!COOKIE.qqreadbodyVal) {
-                        qqreadbodyVal = qqreadbdArr[i];
-                        qqreadtimeurlVal = qqreadtimeurlArr[i];
-                        qqreadtimeheaderVal = qqreadtimehdArr[i];
-                  
-                      }
-                      O = (`${jsname + (i + 1)}🔔`);
-                      tz = '';
-                      kz = '';
-                      let cookie_is_live = await qqreadinfo(i + 1);//用户名
-                      if (!cookie_is_live) {
-                        continue;
-                      }
-			    
-			 if (nowTimes.getHours() === 0 && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 59)) {
-                                        await qqreadtrack();//更新
-                                      }
-                                      await qqreadtask();//任务列表
-                                      if (task.data && ljyd.doneFlag == 0) {
-                                        await qqreaddayread();//阅读任务
-                                      }
-                                      if (task.data && task.data.treasureBox.timeInterval <= 10000) {
-                                        await $.wait(task.data.treasureBox.timeInterval)
-                                        await qqreadbox();//宝箱
-                                      }
-                                      if (task.data && task.data.treasureBox.timeInterval - 600000 <= 10000) {
-                                        await $.wait(task.data.treasureBox.timeInterval - 600000)
-                                        await qqreadbox2();//宝箱翻倍
-                                      }
+         for (let i = 0; i < Length; i++) {
+           if (COOKIE.qqreadbodyVal) {
+             qqreadbodyVal = QQ_READ_COOKIES.qqreadbodyVal[i];
+             qqreadtimeurlVal = QQ_READ_COOKIES.qqreadtimeurlVal[i];
+             qqreadtimeheaderVal = QQ_READ_COOKIES.qqreadtimeheaderVal[i];
+           }
+           if (!COOKIE.qqreadbodyVal) {
+             qqreadbodyVal = qqreadbdArr[i];
+             qqreadtimeurlVal = qqreadtimeurlArr[i];
+             qqreadtimeheaderVal = qqreadtimehdArr[i];
 
+           }
+           O = (`${jsname + (i + 1)}🔔`);
+           tz = '';
+           kz = '';
+           let cookie_is_live = await qqreadinfo(i + 1);//用户名
+           if (!cookie_is_live) {
+             continue;
+           }
+           if (BOX == 0) {
+             await qqreadtrack();//更新
+             await qqreadconfig();//时长查询
+             await qqreadwktime();//周时长查询
+             if (config.data && config.data.pageParams.todayReadSeconds / 3600 <= maxtime) {
+               await qqreadtime();// 上传时长
              }
-           
-       	      	    console.log(`========================本次任务执行完毕，休息一分钟==============================\n`);
-                    await $.wait(60000)
+             if (wktime.data && wktime.data.readTime >= wktimess && wktime.data.readTime <= 1250) {
+               await qqreadpick();//领周时长奖励
+             }
+             await qqreadtask();//任务列表
+             if (task.data && ljyd.doneFlag == 0) {
+               await qqreaddayread();//阅读任务
+             }
+             if (ydrw.doneFlag == 0 && config.data && config.data.pageParams.todayReadSeconds / 60 >= 1) {
+               await qqreadssr1();//阅读金币1
+             }
+             if (task.data && dk.doneFlag == 0) {
+               await qqreadsign();//金币签到
+               await qqreadtake();//阅豆签到
+             }
+             await $.wait(4000)
+             if (ydrw.doneFlag == 0 && config.data && config.data.pageParams.todayReadSeconds / 60 >= 30) {
+               await qqreadssr2();//阅读金币2
+               await $.wait(4000);
+               await qqreadssr3();//阅读金币3
+             }
+             if (nowTimes.getHours() >= 23 && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 59)) {
+               if (CASH >= 1 && task.data && task.data.user.amount >= CASH * 10000) {
+                 await qqreadwithdraw();//提现
+               }
+             }
+             if (nowTimes.getHours() >= 6) {
+             await getAmounts();//今日收益累计
+       	  }
+             if (task.data && dk.doneFlag == 0) {
+               await qqreadsign2();
+             }//签到翻倍
+             if (task.data && sp.doneFlag == 0) {
+               await qqreadvideo();//视频奖励
+             }
+
+           }
+
+
+           if (BOX == 1) {
+                if (nowTimes.getHours() === 0 && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 59)) {
+                             await qqreadtrack();//更新
+                           }
+                           await qqreadtask();//任务列表
+                           if (task.data && ljyd.doneFlag == 0) {
+                             await qqreaddayread();//阅读任务
+                           }
+                           if (task.data && task.data.treasureBox.timeInterval <= 10000) {
+                             await $.wait(task.data.treasureBox.timeInterval)
+                             await qqreadbox();//宝箱
+                           }
+                           if (task.data && task.data.treasureBox.timeInterval - 600000 <= 10000) {
+                             await $.wait(task.data.treasureBox.timeInterval - 600000)
+                             await qqreadbox2();//宝箱翻倍
+                           }
+           }
+
+           if (BOX == 2) {
+             await qqreadtrack();//更新
+             await qqreadconfig();//时长查询
+             await qqreadwktime();//周时长查询
+             if (config.data && config.data.pageParams.todayReadSeconds / 3600 <= maxtime) {
+               await qqreadtime();// 上传时长
+             }
+             if (wktime.data && wktime.data.readTime >= wktimess && wktime.data.readTime <= 1250) {
+               await qqreadpick();//领周时长奖励
+             }
+             await qqreadtask();//任务列表
+             if (task.data && ljyd.doneFlag == 0) {
+               await qqreaddayread();//阅读任务
+             }
+             if (ydrw.doneFlag == 0 && config.data && config.data.pageParams.todayReadSeconds / 60 >= 1) {
+               await qqreadssr1();//阅读金币1
+             }
+             if (task.data && dk.doneFlag == 0) {
+               await qqreadsign();//金币签到
+               await qqreadtake();//阅豆签到
+             }
+             if (task.data && task.data.treasureBox.timeInterval <= 10000) {
+               await $.wait(task.data.treasureBox.timeInterval)
+               await qqreadbox();//宝箱
+             }
+             await $.wait(4000)
+             if (task.data && task.data.treasureBox.timeInterval - 600000 <= 10000) {
+               await $.wait(task.data.treasureBox.timeInterval - 600000)
+               await qqreadbox2();//宝箱翻倍
+             }
+             if (ydrw.doneFlag == 0 && config.data && config.data.pageParams.todayReadSeconds / 60 >= 30) {
+               await qqreadssr2();//阅读金币2
+               await $.wait(4000);
+               await qqreadssr3();//阅读金币3
+             }
+             if (nowTimes.getHours() >= 23 && (nowTimes.getMinutes() >= 0 && nowTimes.getMinutes() <= 59)) {
+               if (CASH >= 1 && task.data && task.data.user.amount >= CASH * 10000) {
+                 await qqreadwithdraw();//提现
+               }
+             }
+             if (nowTimes.getHours() >= 6) {
+             await getAmounts();//今日收益累计
+       	  }
+             if (task.data && dk.doneFlag == 0) {
+               await qqreadsign2();
+             }//签到翻倍
+             if (task.data && sp.doneFlag == 0) {
+               await qqreadvideo();//视频奖励
+             }
+
+           }
+
          }
+                    await $.wait(420000)
+       }
   
        }else{
        
