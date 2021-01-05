@@ -110,7 +110,7 @@ if (typeof $request !== 'undefined') {
                }
              } 
                       taskindex++;
-                      if(taskindex>42){
+                      if(taskindex>60){
                          console.log(`========================本轮任务执行完毕==============================\n`);
                          break;
                       }
