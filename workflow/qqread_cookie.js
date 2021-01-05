@@ -212,6 +212,7 @@ async function all() {
         while (true) {
                   
          for (let i = 0; i < Length; i++) {
+         console.log(`========================开始执行任务==============================\n`);
            if (COOKIE.qqreadbodyVal) {
              qqreadbodyVal = QQ_READ_COOKIES.qqreadbodyVal[i];
              qqreadtimeurlVal = QQ_READ_COOKIES.qqreadtimeurlVal[i];
@@ -352,8 +353,8 @@ async function all() {
             break;
          }
          await showmsg();//通知
-         console.log(`========================本次任务执行完毕，休息三分钟==============================\n`);
-         await $.wait(180000)
+//         console.log(`========================本次任务执行完毕，休息三分钟==============================\n`);
+         await $.wait(60000)
        }
   
        }else{
