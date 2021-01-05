@@ -5,6 +5,7 @@ const jsname = '企鹅读书'
 const $ = Env(jsname)
 let task, tz, kz, config = '';
 let dk,sp,ljyd,ydrw,wktime;
+let readindex;
 
 const COOKIE = $.isNode() ? require("./qqreadCOOKIE") : "";
 const notify = $.isNode() ? require("./sendNotify") : "";
@@ -345,7 +346,13 @@ async function all() {
            }
 
          }
-                    await $.wait(420000)
+         readindex++;
+         if(readindex>42){
+            console.log(`========================本轮任务执行完毕==============================\n`);
+            break;
+         }
+         console.log(`========================本次任务执行完毕，休息七分钟==============================\n`);
+         await $.wait(420000)
        }
   
        }else{
