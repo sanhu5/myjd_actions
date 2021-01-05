@@ -25,3 +25,4 @@ jobs:
         env:
           TZ: Asia/shanghai
           XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
