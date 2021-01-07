@@ -2,7 +2,7 @@
 name: sync-TaskAction
 on:
   schedule:
-    - cron: '30 */4 * * *'
+    - cron: '0 5 * * *'
   workflow_dispatch:
   watch:
     types: started
