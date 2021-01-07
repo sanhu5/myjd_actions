@@ -47,3 +47,4 @@ jobs:
           JRTTFARMKEY: ${{ secrets.JRTTFARMKEY }}
           JRTTREADURL: ${{ secrets.JRTTREADURL }}
           JRTTREADKEY: ${{ secrets.JRTTREADKEY }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
