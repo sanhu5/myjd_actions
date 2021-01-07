@@ -6,7 +6,7 @@ name: 今日头条极速版
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0,20,40 * * * *'
+    - cron: '30,50 * * * *'
   watch:
     types: started
   repository_dispatch:
@@ -35,7 +35,7 @@ jobs:
           cd ~/script
           git checkout master
           npm install
-      - name: '运行 【今日头条极速版】'
+      - name: '运行 【今日头条极速版2】'
         run: |
           cd ~/script
           node jrtt.js
