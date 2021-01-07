@@ -240,10 +240,6 @@ if (!hotsoonsignheaderArr[0]) {
  //==============自定义循环==========================
 
 
-    }
-
-
-
 })()
     .catch((e) => $.logErr(e))
     .finally(() => $.done())
