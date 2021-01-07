@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 企鹅阅读开箱子
+name: 今日头条极速版
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/1217079729/TaskAction.git ~/TaskAction
+          git clone https://github.com/ZhiYi-N/script.git ~/TaskAction
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -35,10 +35,15 @@ jobs:
           cd ~/TaskAction
           git checkout master
           npm install
-      - name: '运行 【企鹅阅读开箱子】'
+      - name: '运行 【今日头条极速版】'
         run: |
           cd ~/TaskAction/workflow
-          node qqread_box.js
+          node jrtt.js
         env:
           TZ: Asia/shanghai
-          QQREAD_CASH: ${{ secrets.QQREAD_CASH }}
+          JRTTSIGNURL: ${{ secrets.JRTTSIGNURL }}
+          JRTTSIGNKEY: ${{ secrets.JRTTSIGNKEY }}
+          JRTTFARMURL: ${{ secrets.JRTTFARMURL }}
+          JRTTFARMKEY: ${{ secrets.JRTTFARMKEY }}
+          JRTTREADURL: ${{ secrets.JRTTREADURL }}
+          JRTTREADKEY: ${{ secrets.JRTTREADKEY }}
