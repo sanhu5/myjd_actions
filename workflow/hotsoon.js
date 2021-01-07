@@ -200,10 +200,10 @@ if (!hotsoonsignheaderArr[0]) {
                      //await userinfo()
                  await sign_in()
                  await treasure_task()
-//                 await control()
-//                 await profit()
-//                 await watch_video()
-//                 await showmsg()
+                 await control()
+                 await profit()
+                 await watch_video()
+                 await showmsg()
              }
          }
 
