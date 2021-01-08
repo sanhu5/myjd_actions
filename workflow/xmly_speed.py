@@ -16,14 +16,13 @@ import re
 ###################################################
 # 对应方案2: 下载到本地,需要此处填写
 cookies1 = ""
-
 cookies2 = ""
 
-cookiesList = [cookies1]   # 多账号准备
+cookiesList = [cookies1, ]   # 多账号准备
 
 # 通知服务
 BARK = ''                   # bark服务,自行搜索; secrets可填;形如jfjqxDx3xxxxxxxxSaK的字符串
-PUSH_KEY = ''                  # Server酱的PUSH_KEY; secrets可填
+SCKEY = ''                  # Server酱的SCKEY; secrets可填
 TG_BOT_TOKEN = ''           # telegram bot token 自行申请
 TG_USER_ID = ''             # telegram 用户ID
 
@@ -44,8 +43,8 @@ if "XMLY_SPEED_COOKIE" in os.environ:
     if "BARK" in os.environ and os.environ["BARK"]:
         BARK = os.environ["BARK"]
         print("BARK 推送打开")
-    if "PUSH_KEY" in os.environ and os.environ["PUSH_KEY"]:
-        BARK = os.environ["PUSH_KEY"]
+    if "SCKEY" in os.environ and os.environ["SCKEY"]:
+        BARK = os.environ["SCKEY"]
         print("serverJ 推送打开")
     if "TG_BOT_TOKEN" in os.environ and os.environ["TG_BOT_TOKEN"] and "TG_USER_ID" in os.environ and os.environ["TG_USER_ID"]:
         TG_BOT_TOKEN = os.environ["TG_BOT_TOKEN"]
@@ -55,11 +54,11 @@ if "XMLY_SPEED_COOKIE" in os.environ:
 
 ###################################################
 # 可选项
-# 自定义设备命名,非必须 ;devices=["iPhone XR","iPhone 6s"];与cookiesList对应
+# 自定义设备命名,非必须 ;devices=["iPhone7P","huawei"];与cookiesList对应
 devices = ["iPhone XR","iPhone 6s"]
 notify_time = 19                            # 通知时间,24小时制,默认19
 XMLY_ACCUMULATE_TIME = 1                    # 希望刷时长的,此处置1,默认打开;关闭置0
-UserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 iting/1.0.12 kdtunion_iting/1.0 iting(main)/1.0.12/ios_1"
+UserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 13_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 iting/1.0.12 kdtunion_iting/1.0 iting(main)/1.0.12/ios_1"
 # 非iOS设备的需要的自行修改,自己抓包 与cookie形式类似
 
 
@@ -988,22 +987,22 @@ def get_uid(cookies):
 
 def serverJ(title, content):
     print("\n")
-    PUSH_KEY = PUSH_KEY
-    if "PUSH_KEY" in os.environ:
+    sckey = SCKEY
+    if "SCKEY" in os.environ:
         """
-        判断是否运行自GitHub action,"PUSH_KEY" 该参数与 repo里的Secrets的名称保持一致
+        判断是否运行自GitHub action,"SCKEY" 该参数与 repo里的Secrets的名称保持一致
         """
-        PUSH_KEY = os.environ["PUSH_KEY"]
+        sckey = os.environ["SCKEY"]
 
-    if not PUSH_KEY:
-        print("server酱服务的PUSH_KEY未设置!!\n取消推送")
+    if not sckey:
+        print("server酱服务的SCKEY未设置!!\n取消推送")
         return
     print("serverJ服务启动")
     data = {
         "text": title,
         "desp": content.replace("\n", "\n\n")+"\n\n [打赏作者](https://github.com/Zero-S1/xmly_speed/blob/master/thanks.md)"
     }
-    response = requests.post(f"https://sc.ftqq.com/{PUSH_KEY}.send", data=data)
+    response = requests.post(f"https://sc.ftqq.com/{sckey}.send", data=data)
     print(response.text)
 
 
