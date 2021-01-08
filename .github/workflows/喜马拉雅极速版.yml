@@ -1,0 +1,28 @@
+name: 喜马拉雅极速版
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  watch:
+    types: [started]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+         
+      - name: 'Install requirements'
+        run: pip install -r ./workflow/requirements.txt 
+        
+      - name: 'run 喜马拉雅极速版' 
+        run: python3 ./workflow/xmly_speed.py 
+        env:
+          TZ: Asia/shanghai
+          XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
