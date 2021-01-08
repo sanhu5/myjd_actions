@@ -1053,7 +1053,7 @@ def run():
         bubble(cookies)  # 收金币气泡
         # continue
         continuousDays = checkin(cookies, _datatime)  # 自动签到
-        # lottery_info(cookies)  # 大转盘4次
+        lottery_info(cookies)  # 大转盘4次
         answer(cookies)      # 答题赚金币
         cardReportTime(cookies, mins, date_stamp, _datatime)  # 卡牌
         getOmnipotentCard(cookies, mins, date_stamp, _datatime)  # 领取万能卡
