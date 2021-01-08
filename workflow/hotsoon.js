@@ -200,14 +200,14 @@ if (!hotsoonsignheaderArr[0]) {
                      //await userinfo()
                  await sign_in()
                  await treasure_task()
-                 await control()
-                 await profit()
-                 await watch_video()
-                 await showmsg()
+               //  await control()
+               //  await profit()
+               //  await watch_video()
+              //   await showmsg()
              }
          }
 
-         console.log(`========================本次任务执行完毕，休息五分钟==============================\n`);
+         //console.log(`========================本次任务执行完毕，休息五分钟==============================\n`);
          await $.wait(300000)
 
      }
