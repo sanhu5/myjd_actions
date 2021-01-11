@@ -29,11 +29,12 @@ jobs:
           node ./workflow/jrtt.js
         env:
           TZ: Asia/shanghai
-          YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
-          YOUTH_ARTBODY: ${{ secrets.YOUTH_ARTBODY }}
-          YOUTH_REDBODY: ${{ secrets.YOUTH_REDBODY }}
-          YOUTH_TIME: ${{ secrets.YOUTH_TIME }}
-          YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
+          JRTTSIGNURL: ${{ secrets.JRTTSIGNURL }}
+          JRTTSIGNKEY: ${{ secrets.JRTTSIGNKEY }}
+          JRTTFARMURL: ${{ secrets.JRTTFARMURL }}
+          JRTTFARMKEY: ${{ secrets.JRTTFARMKEY }}
+          JRTTREADURL: ${{ secrets.JRTTREADURL }}
+          JRTTREADKEY: ${{ secrets.JRTTREADKEY }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
 
       - name: '运行 【火山小视频】'
