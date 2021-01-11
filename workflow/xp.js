@@ -102,11 +102,11 @@ if (!videoheaderArr[0]) {
     $.msg($.name, '【提示】请先获取笑谱一cookie')
     return;
   }
-
- //==============自定义循环==========================
-   if ($.isNode()) {
-     while(true){
-
+  
+  //==============自定义循环==========================
+    if ($.isNode()) {
+      while(true){
+  
     console.log(`------------- 共${videoheaderArr.length}个账号----------------\n`)
    for (let i = 0; i < videoheaderArr.length; i++) {
      if (videoheaderArr[i]) {
@@ -121,33 +121,33 @@ if (!videoheaderArr[0]) {
        await showmsg()
    }
   }
-
-       console.log(`========================本次任务执行完毕，休息2分钟==============================\n`);
-       await $.wait(120000)
-
-     }
-   }else{
-
-   console.log(`------------- 共${videoheaderArr.length}个账号----------------\n`)
-  for (let i = 0; i < videoheaderArr.length; i++) {
-    if (videoheaderArr[i]) {
-      message = ''
-      signheader = videoheaderArr[i];
-      videobody = videobodyArr[i];
-      $.index = i + 1;
-      console.log(`\n开始【笑谱${$.index}】`)
-      //await invite()
-      //await profit()
-      await watch_video()
-      await showmsg()
-  }
- }
-
+  
+        console.log(`========================本次任务执行完毕，休息2分钟==============================\n`);
+        await $.wait(120000)
+  
+      }
+    }else{
+  
+    console.log(`------------- 共${videoheaderArr.length}个账号----------------\n`)
+   for (let i = 0; i < videoheaderArr.length; i++) {
+     if (videoheaderArr[i]) {
+       message = ''
+       signheader = videoheaderArr[i];
+       videobody = videobodyArr[i];
+       $.index = i + 1;
+       console.log(`\n开始【笑谱${$.index}】`)
+       //await invite()
+       //await profit()
+       await watch_video()
+       await showmsg()
    }
-  //==============自定义循环==========================
+  }
+  
+    }
+   //==============自定义循环==========================
 
 
-
+ 
 })()
     .catch((e) => $.logErr(e))
     .finally(() => $.done())
@@ -174,14 +174,14 @@ return new Promise((resolve, reject) => {
     body: videobody
 }
    $.post(watch_videourl,(error, response, data) =>{
+     const result = JSON.parse(data)
        if(logs) $.log(data)
-//     const result = JSON.parse(data)
-//          message += '📣看视频\n'
-//      if(result.resultCode == 1) {
-//          message += '获得'+result.data.goldCoinNumber+'\n'
-//      }else{
-//          message +='⚠️异常'+result.errorDesc+'\n'
-//           }
+          message += '📣看视频\n'
+      if(result.resultCode == 1) {
+          message += '获得'+result.data.goldCoinNumber+'\n'
+      }else{
+          message +='⚠️异常'+result.errorDesc+'\n'
+           }
           resolve()
     })
    })
@@ -194,14 +194,14 @@ return new Promise((resolve, reject) => {
     headers: JSON.parse(videoheader)
 }
    $.post(profiturl,(error, response, data) =>{
+     const result = JSON.parse(data)
       if(logs) $.log(data)
-//     const result = JSON.parse(data)
-//      message += '📣账户余额\n'
-//      if(result.resultCode == 1) {
-//           message += "余额:"+result.data.coinSum+'\n'
-//       }else{
-//         message += '⚠️异常\n'
-//       }
+      message += '📣账户余额\n'
+      if(result.resultCode == 1) {
+           message += "余额:"+result.data.coinSum+'\n'
+       }else{
+         message += '⚠️异常\n'
+       }
           resolve()
     })
    })
