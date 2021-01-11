@@ -32,7 +32,7 @@ hotsoonread = type=http-request,pattern=https://(\w+-\w+||\w+).snssdk.com/luckyc
 
 const jsname='火山视频极速版'
 const $ = Env(jsname)
-const notify = $.isNode() ?require('./sendNotify') : '';
+//const notify = $.isNode() ?require('./sendNotify') : '';
 $.idx = ($.idx = ($.getval("hotsooncount") || "1") - 1) > 0 ? `${$.idx + 1}` : ""; // 账号扩展字符
 const hotsoonsignheaderArr = [],hotsoonsignkeyArr=[]
 const hotsoonadheaderArr = [],hotsoonadkeyArr=[]
