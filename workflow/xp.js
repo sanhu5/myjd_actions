@@ -96,17 +96,16 @@ if (!videoheaderArr[0]) {
     return;
   }
   
+  //==============自定义循环==========================
+    if ($.isNode()) {
+      while(true){
   
- //==============自定义循环==========================
-  if ($.isNode()) {
-    while(true){
-
-
+  
    console.log(`------------- 共${videoheaderArr.length}个账号----------------\n`)
   for (let i = 0; i < videoheaderArr.length; i++) {
     if (videoheaderArr[i]) {
       message = ''
-      signheader = videoheaderArr[i];
+      videoheader = videoheaderArr[i];
       videobody = videobodyArr[i];
       $.index = i + 1;
       console.log(`\n开始【笑谱${$.index}】`)
@@ -116,32 +115,31 @@ if (!videoheaderArr[0]) {
       await showmsg()
   }
  }
-
-      console.log(`========================本次任务执行完毕，休息1分钟==============================\n`);
-      await $.wait(60000)
-
+  
+        console.log(`========================本次任务执行完毕，休息1分钟==============================\n`);
+        await $.wait(60000)
+  
+      }
+    }else{
+  
+  
+   console.log(`------------- 共${videoheaderArr.length}个账号----------------\n`)
+  for (let i = 0; i < videoheaderArr.length; i++) {
+    if (videoheaderArr[i]) {
+      message = ''
+      videoheader = videoheaderArr[i];
+      videobody = videobodyArr[i];
+      $.index = i + 1;
+      console.log(`\n开始【笑谱${$.index}】`)
+      //await invite()
+      //await profit()
+      await watch_video()
+      await showmsg()
+  }
+ }
+  
     }
-  }else{
-
-
-   console.log(`------------- 共${videoheaderArr.length}个账号----------------\n`)
-  for (let i = 0; i < videoheaderArr.length; i++) {
-    if (videoheaderArr[i]) {
-      message = ''
-      signheader = videoheaderArr[i];
-      videobody = videobodyArr[i];
-      $.index = i + 1;
-      console.log(`\n开始【笑谱${$.index}】`)
-      //await invite()
-      //await profit()
-      await watch_video()
-      await showmsg()
-  }
- }
-
-  }
- //==============自定义循环==========================
-
+   //==============自定义循环==========================
 
 })()
     .catch((e) => $.logErr(e))
@@ -180,7 +178,7 @@ return new Promise((resolve, reject) => {
           resolve()
     })
    })
-  } 
+  }
 //profit
 function profit() {
 return new Promise((resolve, reject) => {
@@ -200,7 +198,7 @@ return new Promise((resolve, reject) => {
           resolve()
     })
    })
-  } 
+  }
 async function showmsg(){
 if(tz==1){
     if ($.isNode()){
