@@ -58,10 +58,10 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
 
-      - name: '运行 【京东年货】'
-        run: |
-          cd ~/jd_scripts
-          node jd_nh.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+#       - name: '运行 【京东年货】'
+#         run: |
+#           cd ~/jd_scripts
+#           node jd_nh.js
+#         env:
+#           JD_COOKIE: ${{ secrets.JD_COOKIE }}
+#           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
