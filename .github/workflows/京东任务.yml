@@ -48,6 +48,7 @@ jobs:
           node jd_unsubscribe.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
 
       - name: '运行 【京东直播】'
         run: |
@@ -55,10 +56,12 @@ jobs:
           node jd_live.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
       - name: '运行 【京东年货】'
         run: |
           cd ~/jd_scripts
           node jd_nh.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
