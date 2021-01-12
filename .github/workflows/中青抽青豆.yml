@@ -13,7 +13,6 @@ on:
     types: zq
 jobs:
   build:
-    env:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
