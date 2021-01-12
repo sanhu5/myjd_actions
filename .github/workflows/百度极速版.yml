@@ -35,12 +35,12 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       - name: npm install
         run: |
-          cd ~/TaskAction/workflow
+          cd ~/TaskAction
           git checkout master
           npm install
       - name: '运行 【百度极速版】'
         run: |
-          cd ~/Scripts/Task
+          cd ~/Scripts/TaskAction
           node baidu_speed.js
         env:
           TZ: Asia/shanghai
