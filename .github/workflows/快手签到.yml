@@ -6,7 +6,7 @@ name: 快手签到
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 18 * * *'
+    - cron: '5 16 * * *'
   watch:
     types: started
   repository_dispatch:
