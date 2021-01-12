@@ -1,4 +1,4 @@
-﻿# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: 百度极速版
@@ -40,7 +40,7 @@ jobs:
           npm install
       - name: '运行 【百度极速版】'
         run: |
-          cd ~/Scripts/TaskAction
+          cd ~/TaskAction/workflow
           node baidu_speed.js
         env:
           TZ: Asia/shanghai
