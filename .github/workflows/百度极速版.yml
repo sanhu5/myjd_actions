@@ -40,7 +40,7 @@ jobs:
           npm install
       - name: '运行 【百度极速版】'
         run: |
-          cd ~/Scripts/TaskAction
+          cd ~/TaskAction/workflow
           node baidu_speed.js
         env:
           TZ: Asia/shanghai
