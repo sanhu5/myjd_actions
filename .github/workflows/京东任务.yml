@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 京东直播
+name: 京东任务
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: 京东直播
+    types: jd
 jobs:
   build:
     env:
@@ -41,12 +41,21 @@ jobs:
           cd ~/jd_scripts
           git checkout master
           npm install
+          
       - name: '运行 【京东直播】'
         if: env.JD_COOKIE
         run: |
           cd ~/jd_scripts
           node jd_live.js
         env:
-          TZ: Asia/shanghai
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          
+      - name: '运行 【京东年货】'
+        if: env.JD_COOKIE
+        run: |
+          cd ~/jd_scripts
+          node jd_nh.js
+        env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
