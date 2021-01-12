@@ -38,19 +38,50 @@ if ($.isNode()) {
     console.log($.name, '【提示】请把百度Cookie填入Github 的 Secrets 中，请以&或者换行隔开')
     return;
   }
-  console.log(`您共提供${CookieArr.length}个百度账号Cookie`)
-  for (let i = 0; i < CookieArr.length; i++) {
-    if (CookieArr[i]) {
-      cookieval = CookieArr[i];
-      $.index = i + 1;
-      await getsign();
-      await coinInfo();
-      await firstbox();
-      await TaskCenter()
-      await getRewards();
-     //await drawPrize();
+
+  //==============自定义循环==========================
+  if ($.isNode()) {
+      while (true) {
+
+
+          console.log(`您共提供${CookieArr.length}个百度账号Cookie`)
+          for (let i = 0; i < CookieArr.length; i++) {
+              if (CookieArr[i]) {
+                  cookieval = CookieArr[i];
+                  $.index = i + 1;
+                  await getsign();
+                  await coinInfo();
+                  await firstbox();
+                  await TaskCenter()
+                  await getRewards();
+                  //await drawPrize();
+              }
+          }
+
+          console.log(`========================本次任务执行完毕，休息20分钟==============================\n`);
+          await $.wait(1200000)
+
+      }
+  } else {
+
+      console.log(`您共提供${CookieArr.length}个百度账号Cookie`)
+      for (let i = 0; i < CookieArr.length; i++) {
+          if (CookieArr[i]) {
+              cookieval = CookieArr[i];
+              $.index = i + 1;
+              await getsign();
+              await coinInfo();
+              await firstbox();
+              await TaskCenter()
+              await getRewards();
+              //await drawPrize();
+          }
+      }
+
+
   }
- } 
+  //==============自定义循环==========================
+
 })()
     .catch((e) => $.logErr(e))
     .finally(() => $.done())
