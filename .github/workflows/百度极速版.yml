@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     env:
-      JD_COOKIE: ${{ secrets.BAIDU_COOKIE }}
+      BAIDU_COOKIE: ${{ secrets.BAIDU_COOKIE }}
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:

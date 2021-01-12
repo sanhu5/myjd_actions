@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     env:
-      JD_COOKIE: ${{ secrets.YOUTH_HEADER }}
+      YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
