@@ -6,11 +6,11 @@ name: 百度极速版
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '0 */6 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: start
+    types: baidu_speed
 jobs:
   build:
     env:
@@ -21,14 +21,12 @@ jobs:
       - name: Checkout
         if: env. BAIDU_COOKIE
         run: |
-          git clone https://github.com/Sunert/Scripts.git ~/Scripts
+          git clone https://github.com/1217079729/TaskAction.git ~/TaskAction
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
-        if: env.BAIDU_COOKIE
         with:
           node-version: ${{ matrix.node-version }}
       - name: Cache node_modules
-        if: env.BAIDU_COOKIE
         uses: actions/cache@v2 # 使用 GitHub 官方的缓存 Action。
         env:
           cache-name: cache-node-modules
@@ -36,13 +34,11 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       - name: npm install
-        if: env.BAIDU_COOKIE
         run: |
-          cd ~/Scripts
+          cd ~/TaskAction/workflow
           git checkout master
           npm install
       - name: '运行 【百度极速版】'
-        if: env.BAIDU_COOKIE
         run: |
           cd ~/Scripts/Task
           node baidu_speed.js
