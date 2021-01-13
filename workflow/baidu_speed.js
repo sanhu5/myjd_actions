@@ -336,6 +336,7 @@ function searchBox(id) {
       body: `data={"origin_nid":"${id}","taskid":"${tid}"}`
       }
    $.post(searchurl, async(error, resp, data) => {
+     try{
      let do_search = JSON.parse(data)
           //$.log(data+'\n')
      if (do_search.errno == 0 && do_search.data['197'].istip == 1) {
@@ -344,6 +345,7 @@ function searchBox(id) {
      }  else {
         $.log("\n")
       }
+     }catch(e){}
     resolve()
    })
   })
