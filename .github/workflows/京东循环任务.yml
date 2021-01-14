@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         if: env.JD_COOKIE
         run: |
-          git clone https://github.com/lxk0301/jd_scripts.git ~/jd_scripts
+          git clone https://github.com/pxylen/Task.git ~/jd_scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         if: env.JD_COOKIE
@@ -39,7 +39,7 @@ jobs:
         if: env.JD_COOKIE
         run: |
           cd ~/jd_scripts
-          git checkout master
+          git checkout jd_code
           npm install
 
       - name: '运行 【种豆得豆】'
