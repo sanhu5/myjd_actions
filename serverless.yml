@@ -11,7 +11,7 @@ inputs:
   src: ./
   handler: index.main_handler #入口
   runtime: Nodejs12.16 # 运行环境 默认 Nodejs10.15
-  region: ap-hongkong # 函数所在区域
+  region: ap-shanghai # 函数所在区域
   description: This is a function in ${app} application.
   memorySize: 128 # 内存大小，单位MB
   timeout: 900 # 超时时间，单位秒
