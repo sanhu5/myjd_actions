@@ -2,7 +2,7 @@
 name: sync-TaskAction
 on:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 */6 * * *'
   workflow_dispatch:
   watch:
     types: started
@@ -28,3 +28,14 @@ jobs:
           source_branch: "master"
           destination_branch: "master"
           github_token: ${{ secrets.PAT || github.event.client_payload.PAT }}
+          
+
+      - name: sync jdCode
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/1217079729/TaskAction.git"
+          source_branch: "jd_code"
+          destination_branch: "jd_code"
+          github_token: ${{ secrets.PAT || github.event.client_payload.PAT }}
+    
