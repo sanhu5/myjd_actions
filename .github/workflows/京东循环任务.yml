@@ -148,10 +148,3 @@ jobs:
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
 
 
-      - name: '运行 【京东家庭号】'
-        run: |
-          cd ~/TaskAction
-          node jd_family.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
