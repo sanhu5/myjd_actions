@@ -39,7 +39,6 @@ if ($.isNode()) {
     return;
   }
 
-  
           console.log(`您共提供${CookieArr.length}个百度账号Cookie`)
           for (let i = 0; i < CookieArr.length; i++) {
               if (CookieArr[i]) {
@@ -53,7 +52,6 @@ if ($.isNode()) {
                   //await drawPrize();
               }
           }
-
 
 })()
     .catch((e) => $.logErr(e))
