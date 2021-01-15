@@ -6,11 +6,11 @@ name: 京东循环任务
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 */2 * * *'
+    - cron: '0 */2 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: jd_task
+    types: jd_job
 jobs:
   build:
     env:
@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         if: env.JD_COOKIE
         run: |
-          git clone https://github.com/pxylen/Task.git ~/jd_scripts
+          git clone https://github.com/1217079729/TaskAction.git ~/TaskAction
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         if: env.JD_COOKIE
@@ -38,30 +38,119 @@ jobs:
       - name: npm install
         if: env.JD_COOKIE
         run: |
-          cd ~/jd_scripts
+          cd ~/TaskAction
           git checkout jd_code
           npm install
 
-      - name: '运行 【种豆得豆】'
+      - name: '运行 【东东农场】'
         run: |
-          cd ~/jd_scripts
-          node jd_plantBean.js
+          cd ~/TaskAction
+          node jd_fruit.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
 
-      - name: '运行 【京东超市】'
+      - name: '运行 【东东萌宠】'
         run: |
-          cd ~/jd_scripts
+          cd ~/TaskAction
+          node jd_pet.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+      - name: '运行 【口袋书店】'
+        run: |
+          cd ~/TaskAction
+          node jd_bookshop.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+      - name: '运行 【京喜农场】'
+        run: |
+          cd ~/TaskAction
+          node jd_jxnc.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+      - name: '运行 【宠汪汪积分兑换奖品】'
+        run: |
+          cd ~/TaskAction
+          node jd_joy_reward.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+      - name: '运行 【宠汪汪偷好友积分与狗】'
+        run: |
+          cd ~/TaskAction
+          node jd_joy_steal.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+      - name: '运行 【点点券】'
+        run: |
+          cd ~/TaskAction
+          node jd_necklace.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+      - name: '运行 【京东直播18豆】'
+        run: |
+          cd ~/TaskAction
+          node jd_live.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+      - name: '运行 【取关京东店铺商品】'
+        run: |
+          cd ~/TaskAction
+          node jd_unsubscribe.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+      - name: '运行 【京东天天加速】'
+        run: |
+          cd ~/TaskAction
+          node jd_speed.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+      - name: '运行 【天天提鹅】'
+        run: |
+          cd ~/TaskAction
+          node jd_daily_egg.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+      - name: '运行 【东东超市】'
+        run: |
+          cd ~/TaskAction
           node jd_superMarket.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
 
-      - name: '运行 【东东水果】'
+      - name: '运行 【京东家庭号】'
         run: |
-          cd ~/jd_scripts
-          node jd_fruit.js
+          cd ~/TaskAction
+          node jd_family.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+
+
+      - name: '运行 【京东家庭号】'
+        run: |
+          cd ~/TaskAction
+          node jd_family.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
