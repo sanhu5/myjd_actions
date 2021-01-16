@@ -39,7 +39,7 @@ jobs:
         if: env.JD_COOKIE
         run: |
           cd ~/TaskAction
-          git checkout jd_code
+          git checkout main
           npm install
 
       - name: '运行 【宝洁美发屋】'
