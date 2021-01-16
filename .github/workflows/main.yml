@@ -1,0 +1,36 @@
+name: 测试
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '14 */1 * * *'
+  watch:
+    types: started
+  repository_dispatch:
+    types: jd_superMarket
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: npm install
+        run: |
+          npm install
+      - name: '运行 【测试】'
+        run: |
+          node onlyOneExecute.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE || github.event.client_payload.JD_COOKIE }}
+          JD_DEBUG: ${{ secrets.JD_DEBUG || github.event.client_payload.JD_DEBUG }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT || github.event.client_payload.JD_USER_AGENT }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN || github.event.client_payload.TG_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID || github.event.client_payload.TG_USER_ID }}
+          SUPERMARKET_UPGRADE: ${{ secrets.SUPERMARKET_UPGRADE || github.event.client_payload.SUPERMARKET_UPGRADE }}
+          jdSuperMarketLottery: ${{ secrets.SUPERMARKET_LOTTERY || github.event.client_payload.SUPERMARKET_LOTTERY }}
+          SYNCURL: https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_cash.js
