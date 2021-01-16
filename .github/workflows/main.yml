@@ -33,4 +33,4 @@ jobs:
           TG_USER_ID: ${{ secrets.TG_USER_ID || github.event.client_payload.TG_USER_ID }}
           SUPERMARKET_UPGRADE: ${{ secrets.SUPERMARKET_UPGRADE || github.event.client_payload.SUPERMARKET_UPGRADE }}
           jdSuperMarketLottery: ${{ secrets.SUPERMARKET_LOTTERY || github.event.client_payload.SUPERMARKET_LOTTERY }}
-          SYNCURL: https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_cash.js
+          SYNCURL: https://github.com/LXK9301/jd_scripts/blob/master/jd_cash.js
