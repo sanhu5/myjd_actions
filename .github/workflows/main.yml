@@ -1,36 +1,58 @@
-name: 测试
-
+name: cash
+ 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '14 */1 * * *'
+    - cron: '0 1,4,10 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: jd_superMarket
-
+    types: jd_cash
 jobs:
   build:
+ 
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 12.x
+      - name: Checkout
+        run: |
+          git clone -b master https://github.com/LXK9301/jd_scripts.git ~/jd_scripts
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2 # 使用 GitHub 官方的缓存 Action。
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       - name: npm install
         run: |
+          cd ~/jd_scripts
           npm install
-      - name: '运行 【测试】'
+      - name: '运行 【cash】'
         run: |
-          node onlyOneExecute.js
+          cd ~/jd_scripts
+          node jd_cash.js
         env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE || github.event.client_payload.JD_COOKIE }}
-          JD_DEBUG: ${{ secrets.JD_DEBUG || github.event.client_payload.JD_DEBUG }}
-          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT || github.event.client_payload.JD_USER_AGENT }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN || github.event.client_payload.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID || github.event.client_payload.TG_USER_ID }}
-          SUPERMARKET_UPGRADE: ${{ secrets.SUPERMARKET_UPGRADE || github.event.client_payload.SUPERMARKET_UPGRADE }}
-          jdSuperMarketLottery: ${{ secrets.SUPERMARKET_LOTTERY || github.event.client_payload.SUPERMARKET_LOTTERY }}
-          SYNCURL: https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_cash.js
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_DEBUG: ${{ secrets.JD_DEBUG }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+          FRUITSHARECODES: ${{ secrets.FRUITSHARECODES }}
+          FRUIT_BEAN_CARD: ${{ secrets.FRUIT_BEAN_CARD }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          JXNC_NOTIFY_LEVEL: ${{ secrets.JXNC_NOTIFY_LEVEL }}
+          BARK_SOUND: ${{ secrets.BARK_SOUND }}
+          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
+          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
+          IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY }}
+          QQ_SKEY: ${{ secrets.QQ_SKEY }}
+          QQ_MODE: ${{ secrets.QQ_MODE }}
+          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
+          PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER }}
+     
