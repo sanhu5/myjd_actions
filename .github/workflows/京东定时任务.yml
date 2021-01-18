@@ -6,7 +6,7 @@ name: 京东定时任务
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 16 * * *'
+    - cron: '0 */12 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -200,6 +200,14 @@ jobs:
         run: |
           cd ~/TaskAction
           node jx_sign.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+          
+      - name: '运行 【京东炸年兽】'
+        run: |
+          cd ~/TaskAction/jd_scripts
+          node jd_nian.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
