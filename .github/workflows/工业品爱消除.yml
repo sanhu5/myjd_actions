@@ -39,12 +39,12 @@ jobs:
         if: env.JD_COOKIE
         run: |
           cd ~/TaskAction
-          git checkout master
+          git checkout jd_code
           npm install
 
       - name: '运行 【工业品爱消除】'
         run: |
-          cd ~/TaskAction/jd_scripts
+          cd ~/TaskAction
           node jd_gyec.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
