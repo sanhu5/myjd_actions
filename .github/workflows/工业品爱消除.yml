@@ -41,6 +41,15 @@ jobs:
           cd ~/TaskAction
           git checkout jd_code
           npm install
+          
+
+      - name: '运行 【京东炸年兽领爆竹🧨】'
+        run: |
+          cd ~/TaskAction
+          node jd_nianCollect.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
 
       - name: '运行 【工业品爱消除】'
         run: |
@@ -50,10 +59,3 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
 
-      - name: '运行 【京东炸年兽领爆竹🧨】'
-        run: |
-          cd ~/TaskAction
-          node jd_nianCollect.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
