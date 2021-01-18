@@ -44,7 +44,7 @@ jobs:
 
       - name: '运行 【工业品爱消除】'
         run: |
-          cd ~/TaskAction/jd_scripts/jd_scripts
+          cd ~/TaskAction/jd_scripts
           node jd_gyec.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
