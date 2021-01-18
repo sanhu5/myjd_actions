@@ -1,6 +1,5 @@
-/.idea/codeStyles/Project.xml
-/.idea/encodings.xml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/vcs.xml
-/.idea/workspace.xml
+/node_modules/
+/.idea
+/.history
+/box.dat
+/CookieSet.json
