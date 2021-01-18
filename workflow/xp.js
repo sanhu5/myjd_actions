@@ -169,10 +169,12 @@ if (!videoheaderArr[0]) {
       //await withdraw()
       //await watch_livevideo()
       await showmsg()
+      
+      await $.wait(10000)
   }
  }
-      console.log(`========================本次任务执行完毕，休息2分钟==============================\n`);
-      await $.wait(120000)
+      console.log(`========================本次任务执行完毕，休息一会儿==============================\n`);
+      await $.wait(90000)
 
     }
   }else{
