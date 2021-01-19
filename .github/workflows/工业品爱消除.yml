@@ -49,7 +49,6 @@ jobs:
           node jd_nianCollect.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
 
       - name: '运行 【工业品爱消除】'
         run: |
@@ -57,5 +56,4 @@ jobs:
           node jd_gyec.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
 
