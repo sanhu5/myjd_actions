@@ -26,6 +26,7 @@ jobs:
         env:
           TZ: Asia/shanghai
           XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE }}
+          XMLY_ACCUMULATE_TIME: ${{ secrets.XMLY_ACCUMULATE_TIME }} #非私密信息，去掉
           SCKEY: ${{ secrets.SCKEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
