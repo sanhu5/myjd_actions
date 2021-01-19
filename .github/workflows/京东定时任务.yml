@@ -49,6 +49,7 @@ jobs:
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
+          SCKEY: ${{ secrets.SCKEY }}
 
       - name: '运行 【京小超兑换奖品】'
         run: |
