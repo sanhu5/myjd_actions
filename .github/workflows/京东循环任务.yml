@@ -133,3 +133,17 @@ jobs:
           node jd_family.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+      - name: '运行 【京东炸年兽】'
+        run: |
+          cd ~/TaskAction
+          node jd_nian.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+      - name: '运行 【东东爱消除】'
+        run: |
+          cd ~/TaskAction
+          node jd_xxl.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
