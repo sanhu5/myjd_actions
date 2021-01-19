@@ -6,7 +6,7 @@ name: 步步宝
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 */2 * * *'
   watch:
     types: started
   repository_dispatch:
