@@ -177,4 +177,10 @@ jobs:
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
 
+      - name: '运行 【京东神仙书院】'
+        run: |
+          cd ~/TaskAction
+          node jd_immortal.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
 
