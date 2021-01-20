@@ -57,6 +57,7 @@ $.msg($.name,"開始🎉🎉🎉")
 
       await userInfo()
       await signIn()
+      await zaoWanDkInfo()
       await sleepStatus()
       await checkWaterNum()
       await clickTaskStatus()
@@ -64,6 +65,7 @@ $.msg($.name,"開始🎉🎉🎉")
       await helpStatus()
       await getNewsId()
       await getQuestionId()
+      await guaList()
       await checkHomeJin()
       await showmsg()
 
@@ -153,6 +155,168 @@ $.log('\n🔔開始領取每日觀看獎勵\n')
     })
    })
   }
+
+function zaoWanDkInfo() {
+return new Promise((resolve, reject) => {
+  let timestamp=new Date().getTime();
+  let zaowandkinfo ={
+    url: `https://bububao.duoshoutuan.com/mini/dk_info`,
+    headers: JSON.parse(CookieVal),
+}
+   $.post(zaowandkinfo,async(error, response, data) =>{
+     const zwdkinfo = JSON.parse(data)
+      if(zwdkinfo.code == 1 && zwdkinfo.is_daka == 0) {
+      nowTime = zwdkinfo.now_time
+      title1 = zwdkinfo.title1
+      title2 = zwdkinfo.title2
+          await zaoWanDk()
+           }
+          resolve()
+    })
+   })
+  }
+
+
+
+function zaoWanDk() {
+return new Promise((resolve, reject) => {
+  let timestamp=new Date().getTime();
+  let zaowandk ={
+    url: `https://bububao.duoshoutuan.com/user/chuansj`,
+    headers: JSON.parse(CookieVal),
+    body: `mini_pos=3&c_type=1&`,
+}
+   $.post(zaowandk,async(error, response, data) =>{
+     const zwdk = JSON.parse(data)
+      if(zwdk.code == 1) {
+      zwdkStr = zwdk.nonce_str
+          await $.wait(30000)
+          await dkClick()
+           }
+          resolve()
+    })
+   })
+  }
+
+function dkClick() {
+return new Promise((resolve, reject) => {
+  let timestamp=new Date().getTime();
+  let dkclick ={
+    url: `https://bububao.duoshoutuan.com/mini/dk_click`,
+    headers: JSON.parse(CookieVal),
+    body: `now_time=${nowTime}&`,
+}
+   $.post(dkclick,async(error, response, data) =>{
+     const clickdk = JSON.parse(data)
+      if(clickdk.code == 1) {
+          $.log('\n🎉'+clickdk.msg+'+ '+clickdk.jinbi+'💰\n')
+          $.msg(`🎉${title1}\n${title2}💰`,'','')
+           }else{
+          $.log('\n⚠️'+clickdk.msg)
+           }
+          resolve()
+    })
+   })
+  }
+
+
+function guaList() {
+return new Promise((resolve, reject) => {
+  let timestamp=new Date().getTime();
+  let gualist ={
+    url: `https://bububao.duoshoutuan.com/gua/gualist?`,
+    headers: JSON.parse(CookieVal),
+}
+   $.post(gualist,async(error, response, data) =>{
+$.log('\n🔔開始查詢刮刮卡ID\n')
+     const guaid = JSON.parse(data)
+$.log('\n🔔查詢刮刮卡ID成功,5s後開始刮卡\n')
+      if(guaid.ka > 0){
+      for (guaId of guaid.list)
+      if(guaId.is_ad == 0)
+      guaID = guaId.id
+          await $.wait(5000)
+          await guaDet()
+         }else{
+$.log('\n⚠️刮刮卡已用完,請明天再刮吧！\n')
+        }
+
+          resolve()
+    })
+   })
+  }
+
+function guaDet() {
+return new Promise((resolve, reject) => {
+  let timestamp=new Date().getTime();
+  let guadet ={
+    url: `https://bububao.duoshoutuan.com/gua/guadet?`,
+    headers: JSON.parse(CookieVal),
+    body: `gid=${guaID}&`
+}
+   $.post(guadet,async(error, response, data) =>{
+$.log('\n🔔開始查詢刮卡簽名\n')
+     const guasign= JSON.parse(data)
+      if(response.statusCode == 200) {
+$.log('\n🔔查詢刮卡簽名成功\n')
+      SIGN = guasign.sign
+      GLID = guasign.glid
+$.log('\nsign: '+SIGN+'\n')
+$.log('\nglid: '+GLID+'\n')
+          await guaPost()
+         }
+          resolve()
+    })
+   })
+  }
+
+function guaPost() {
+return new Promise((resolve, reject) => {
+  let timestamp=new Date().getTime();
+  let guapost ={
+    url: `https://bububao.duoshoutuan.com/gua/guapost?`,
+    headers: JSON.parse(CookieVal),
+    body: `sign=${SIGN}&gid=${guaID}&glid=${GLID}&`
+}
+   $.post(guapost,async(error, response, data) =>{
+$.log('\n🔔開始刮卡\n')
+     const guaka= JSON.parse(data)
+      if(typeof guaka.jf === 'number') {
+      guaStr = guaka.nonce_str
+          $.log('\n🎉刮卡成功\n恭喜您刮出'+guaka.tp+'張相同圖案\n金幣+ '+guaka.jf+'\n等待45s後開始翻倍刮卡獎勵')
+          await $.wait(45000)
+          await guaDouble()
+         }
+          resolve()
+    })
+   })
+  }
+
+
+function guaDouble() {
+return new Promise((resolve, reject) => {
+  let timestamp=new Date().getTime();
+  let guadouble ={
+    url: `https://bububao.duoshoutuan.com/you/callback`,
+    headers: JSON.parse(CookieVal),
+    body: `nonce_str=${guaStr}&tid=6&pos=1&`,
+}
+   $.post(guadouble,async(error, response, data) =>{
+     const guaka2 = JSON.parse(data)
+$.log('\n🔔開始領取刮卡翻倍獎勵\n')
+      if(guaka2.code == 1) {
+          $.log('\n🎉刮卡翻倍成功,等待2s後查詢下一張刮刮卡ID\n')
+          await $.wait(2000)
+          await guaList()
+           }else{
+          $.log('\n⚠️刮卡翻倍失敗:'+guaka2.msg+'\n')
+           }
+          resolve()
+    })
+   })
+  }
+
+
 
 function checkWaterNum() {
 return new Promise((resolve, reject) => {
@@ -258,21 +422,21 @@ $.log('\n🔔開始查詢睡覺狀態\n')
       sleepStr = slpstatus.nonce_str
       sleepId = slpstatus.taskid
      }else{
-$.msg('🔔大白天的就不要睡覺啦！')
+$.log('🔔大白天的就不要睡覺啦！')
       }
       if(slpstatus.is_sleep == 0 && slpstatus.is_lq == 0 && now.getHours() >= 20) {
-$.msg('🔔都幾點了，還不睡？5s後開始睡覺！')
+$.log('🔔都幾點了，還不睡？5s後開始睡覺！')
           await $.wait(5000)
           await sleepStart()
          }else if((slpstatus.is_sleep == 1 || slpstatus.is_sleep == 0)&& slpstatus.is_lq == 1 && now.getHours() >= 8 && now.getHours() <= 12){
-$.msg('🔔都幾點了，還不起？5s後準備起床！')
+$.log('🔔都幾點了，還不起？5s後準備起床！')
           await $.wait(5000)
           await sleepEnd()
          }else if(slpstatus.is_sleep == 1 && slpstatus.is_lq == 1 && now.getHours() >= 22){
-          $.msg('⚠️睡覺的時候不要玩手機！！！')
+          $.log('⚠️睡覺的時候不要玩手機！！！')
          }else if(slpstatus.is_sleep == 0 &&
 now.getHours() >= 18){
-          $.msg('😘這麼早就準備睡覺了嗎？是身體不舒服嗎？要保重身體呀！')
+          $.log('😘這麼早就準備睡覺了嗎？是身體不舒服嗎？要保重身體呀！')
          }}
           resolve()
     })
@@ -294,7 +458,7 @@ $.log('\n🔔開始睡覺\n')
       if(startsleep.code == 1) {
           $.log('\n🎉睡覺成功！早睡早起身體好！\n')
            }else{
-          $.log('\n⚠️睡覺失敗:'+startsleep.msg+'\n')
+          $.log('\n⚠️睡覺失敗敗:'+startsleep.msg+'\n')
            }
           resolve()
     })
