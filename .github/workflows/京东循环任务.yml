@@ -127,12 +127,13 @@ jobs:
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
 
-      - name: '运行 【京东家庭号】'
-        run: |
-          cd ~/TaskAction
-          node jd_family.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+      # 根据上游得知该脚本有黑号风险
+      #      - name: '运行 【京东家庭号】'
+      #        run: |
+      #          cd ~/TaskAction
+      #          node jd_family.js
+      #        env:
+      #          JD_COOKIE: ${{ secrets.JD_COOKIE }}
 
       - name: '运行 【京东炸年兽】'
         run: |
