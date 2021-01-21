@@ -226,3 +226,19 @@ jobs:
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
 
+      - name: '运行 【京东炸年兽AR🧨】'
+        run: |
+          cd ~/TaskAction
+          node jd_nian_ar.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+      
+      - name: '运行 【京东炸年兽小程序🧨】'
+        run: |
+          cd ~/TaskAction
+          node jd_nian_wechat.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+
+
