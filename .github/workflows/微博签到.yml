@@ -44,3 +44,4 @@ jobs:
           WB_TOKEN: ${{ secrets.WB_TOKEN }}
           WB_PAY: ${{ secrets.WB_PAY }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
