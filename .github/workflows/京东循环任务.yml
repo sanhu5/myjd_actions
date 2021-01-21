@@ -166,15 +166,6 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
-
-      - name: '运行 【东东爱消除】'
-        run: |
-          cd ~/TaskAction
-          node jd_xxl.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-
           
       - name: '运行 【集鞭炮赢京豆🧨】'
         run: |
