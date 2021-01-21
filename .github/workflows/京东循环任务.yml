@@ -148,3 +148,10 @@ jobs:
           node jd_xxl.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          
+      - name: '运行 【集鞭炮赢京豆🧨】'
+        run: |
+          cd ~/TaskAction
+          node jd_firecrackers.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
