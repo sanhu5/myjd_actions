@@ -184,3 +184,10 @@ jobs:
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
 
+      - name: '运行 【京东炸年兽签到任务🧨】'
+        run: |
+          cd ~/TaskAction
+          node jd_nian_sign.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
