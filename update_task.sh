@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 ## Author: https://github.com/EvineDeng
-## Modified： 2021-01-21
-## Version： v1.0.0
+## Modified： 2021-01-22
+## Version： v1.0.1
 
 ## 路径与清单
 WorkDir=$(cd $(dirname $0); pwd)
-JsList=$(cd $WorkDir; ls *.js | grep -E "j[drx]_")
+JsList=$(cd $WorkDir; ls *.js | grep -Ei "j[drx]_")
 JsList="$JsList backUp/xmSports.js"
 FileLoon=$WorkDir/Loon/lxk0301_LoonTask.conf
 FileQx=$WorkDir/QuantumultX/lxk0301_gallery.json
@@ -37,11 +37,11 @@ do
     grep -E "https://raw\.githubusercontent\.com.+tag.+enabled" $file | perl -pe 's|(.+\w)|\1",|' | perl -pe 's|^|    \"|' >> $FileQx
     grep -E "type.+cronexp.+script-path.+https://raw\.githubusercontent\.com" $file >> $FileSurge
   fi
-  grep -E "http-(request|response).+script-path.+https://raw\.githubusercontent\.com.+tag" $file | perl -pe "s|(.+tag=)(.+)|\n# \2\n\1\2|">> $FileLoon
+  grep -E "http-(request|response).+script-path.+https://raw\.githubusercontent\.com.+tag" $file | perl -pe "s|(.+tag=)(.+)|\n# \2\n\1\2|" >> $FileLoon
   grep -E "script-(request|response)-.+https://raw\.githubusercontent\.com" $file | perl -pe "s|(.+)|\n# $TaskName\n\1|" >> $FileQxRe
   grep -E "type=http-(request|response).+pattern.+script-path.+https://raw\.githubusercontent\.com" $file >> $FileSurge
 done
 echo -e "  ]\n}" >> $FileQx
 echo -e $CommentsSurgeTail >> $FileSurge
-perl -0777 -i -pe "s|,(\n  \])|\1|" $FileQx
+perl -0777 -i -pe "s|,(\s{1,2}  \])|\1|" $FileQx
 perl -0777 -i -pe "s|# .+\n{2}(# .+)|\1|g" $FileLoon
