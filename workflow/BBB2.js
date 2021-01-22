@@ -1005,7 +1005,7 @@ return new Promise((resolve, reject) => {
    $.post(getnewsid,async(error, response, data) =>{
      const newsid = JSON.parse(data)
      if(newsid.code == 1){
-       if(newsid.is_first == 1 && newsid.is_max == 0){
+       if(newsid.is_max == 0){
           $.log('\n🔔開始查詢新聞ID\n')
           newsStr = newsid.nonce_str
           $.log('\n🎉新聞ID查詢成功,15s後領取閱讀獎勵\n')
@@ -1306,10 +1306,11 @@ return new Promise((resolve, reject) => {
      if(response.statusCode == 200 && cash.code != -1){
 if(cash.jinbi >= 500000){
      tip = 50
+      await withDraw()
      }else if(cash.day_jinbi > 5000){
      tip = 0.3
-     }
       await withDraw()
+     }
            }
           resolve()
     })
