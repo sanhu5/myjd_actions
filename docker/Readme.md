@@ -6,13 +6,13 @@
 
 
 + 2021-01-03更新 增加 CUSTOM_SHELL_FILE 参数配置执行自定义shell脚本
-+ 例1:配置远程shell脚本, 我自己写了一个shell脚本https://raw.githubusercontent.com/iouAkira/someDockerfile/master/jd_scripts/shell_script_mod.sh 内容很简单下载惊喜农场并添加定时任务
-+ CUSTOM_SHELL_FILE=https://raw.githubusercontent.com/iouAkira/someDockerfile/master/jd_scripts/shell_script_mod.sh
++ 例1:配置远程shell脚本, 我自己写了一个shell脚本https://raw.GITHUBAusercontent.com/iouAkira/someDockerfile/master/jd_scripts/shell_script_mod.sh 内容很简单下载惊喜农场并添加定时任务
++ CUSTOM_SHELL_FILE=https://raw.GITHUBAusercontent.com/iouAkira/someDockerfile/master/jd_scripts/shell_script_mod.sh
 +
 + 例2:配置docker挂载本地自定义shell脚本,/scripts/docker/shell_script_mod.sh 为你在docker-compose.yml里面挂载到容器里面绝对路径
 + CUSTOM_SHELL_FILE=/scripts/docker/shell_script_mod.sh
 +
-+ tip：如果使用远程自定义，请保证网络畅通或者选择合适的国内仓库，例如有部分人的容器里面就下载不到github的raw文件，那就可以把自己的自定义shell写在gitee上，或者换本地挂载
++ tip：如果使用远程自定义，请保证网络畅通或者选择合适的国内仓库，例如有部分人的容器里面就下载不到GITHUBA的raw文件，那就可以把自己的自定义shell写在gitee上，或者换本地挂载
 +      如果是 docker 挂载本地，请保重文件挂载进去了，并且配置的是绝对路径。
 +      自定义 shell 脚本里面如果要加 crontab 任务请使用 echo 追加到 /scripts/docker/merged_list_file.sh 里面否者不生效
 + 注⚠️ 建议无shell能力的不要轻易使用，当然你可以找别人写好适配了这个docker镜像的脚本直接远程配置
@@ -28,7 +28,7 @@ _____
 
 - `docker-compose` 安装（群晖nas docker自带安装了docker-compose）
 ```
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://GITHUBA.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 `Ubuntu`用户快速安装`docker-compose`
@@ -44,7 +44,7 @@ pip install docker-compose
 国内一键安装 `sudo curl -sSL https://get.daocloud.io/docker | sh`
 国外一键安装 `sudo curl -sSL get.docker.com | sh`
 
-### 如果需要使用 docker 多个账户独立并发执行定时任务，[参考这里](https://github.com/iouAkira/scripts/blob/patch-1/docker/docker%E5%A4%9A%E8%B4%A6%E6%88%B7%E4%BD%BF%E7%94%A8%E7%8B%AC%E7%AB%8B%E5%AE%B9%E5%99%A8%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md#%E4%BD%BF%E7%94%A8%E6%AD%A4%E6%96%B9%E5%BC%8F%E8%AF%B7%E5%85%88%E7%90%86%E8%A7%A3%E5%AD%A6%E4%BC%9A%E4%BD%BF%E7%94%A8docker%E5%8A%9E%E6%B3%95%E4%B8%80%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)  
+### 如果需要使用 docker 多个账户独立并发执行定时任务，[参考这里](https://GITHUBA.com/iouAkira/scripts/blob/patch-1/docker/docker%E5%A4%9A%E8%B4%A6%E6%88%B7%E4%BD%BF%E7%94%A8%E7%8B%AC%E7%AB%8B%E5%AE%B9%E5%99%A8%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md#%E4%BD%BF%E7%94%A8%E6%AD%A4%E6%96%B9%E5%BC%8F%E8%AF%B7%E5%85%88%E7%90%86%E8%A7%A3%E5%AD%A6%E4%BC%9A%E4%BD%BF%E7%94%A8docker%E5%8A%9E%E6%B3%95%E4%B8%80%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)
 
 > 注⚠️：前提先理解学会使用这下面的教程
 ### 创建一个目录`jd_scripts`用于存放备份配置等数据，迁移重装的时候只需要备份整个jd_scripts目录即可
@@ -66,7 +66,7 @@ jd_scripts
 - - [使用群晖默认配置用这个](./example/jd_scripts.syno.json)
 - - [使用群晖自定义任务追加到默认任务之后用这个](./example/jd_scripts.custom-append.syno.json)
 - - [使用群晖自定义任务覆盖默认任务用这个](./example/jd_scripts.custom-overwrite.syno.json)
-- `jd_scripts/docker-compose.yml`里面的环境变量(`environment:`)配置[参考这里](https://github.com/LXK9301/jd_scripts/blob/master/githubAction.md#%E4%B8%8B%E6%96%B9%E6%8F%90%E4%BE%9B%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84-secrets%E5%85%A8%E9%9B%86%E5%90%88)
+- `jd_scripts/docker-compose.yml`里面的环境变量(`environment:`)配置[参考这里](https://GITHUBA.com/LXK9301/jd_scripts/blob/master/GITHUBAAction.md#%E4%B8%8B%E6%96%B9%E6%8F%90%E4%BE%9B%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84-secrets%E5%85%A8%E9%9B%86%E5%90%88)
 
 
 - `jd_scripts/my_crontab_list.sh` 参考内容如下,自己根据需要调整增加删除，不熟悉用户推荐使用默认配置：
@@ -90,7 +90,7 @@ jd_scripts
 55 23 * * * node /scripts/jd_unsubscribe.js >> /scripts/logs/jd_unsubscribe.log 2>&1
 ```
 > 定时任务命之后，也就是 `>>` 符号之前加上 `|ts` 可在日志每一行前面显示时间，如下图:
-> ![image](https://user-images.githubusercontent.com/6993269/99031839-09e04b00-25b3-11eb-8e47-0b6515a282bb.png)
+> ![image](https://user-images.GITHUBAusercontent.com/6993269/99031839-09e04b00-25b3-11eb-8e47-0b6515a282bb.png)
 - 目录文件配置好之后在 `jd_scripts`目录执行。  
  `docker-compose up -d` 启动（修改docker-compose.yml后需要使用此命令使更改生效）；  
  `docker-compose logs` 打印日志；  
@@ -102,9 +102,9 @@ jd_scripts
 - 如果是群晖用户，在docker注册表搜jd_scripts，双击下载映像。
 不需要docker-compose.yml，只需建个logs/目录，调整`jd_scripts.syno.json`里面对应的配置值，然后导入json配置新建容器。
 若要自定义my_crontab_list.sh，再建个my_crontab_list.sh文件，配置参考`jd_scripts.my_crontab_list.syno.json`。
-![image](https://user-images.githubusercontent.com/6993269/99024743-32ac1480-25a2-11eb-8c0f-3cb3be90d54c.png)
+![image](https://user-images.GITHUBAusercontent.com/6993269/99024743-32ac1480-25a2-11eb-8c0f-3cb3be90d54c.png)
 
-![image](https://user-images.githubusercontent.com/6993269/99024803-4ce5f280-25a2-11eb-9693-60e8910c182c.png)
+![image](https://user-images.GITHUBAusercontent.com/6993269/99024803-4ce5f280-25a2-11eb-9693-60e8910c182c.png)
 
-![image](https://user-images.githubusercontent.com/6993269/99024832-6424e000-25a2-11eb-8e31-287771f42ad2.png)
+![image](https://user-images.GITHUBAusercontent.com/6993269/99024832-6424e000-25a2-11eb-8e31-287771f42ad2.png)
 

@@ -1,7 +1,7 @@
 /*
 LXK9301修改自用，单独开宝箱
 ******************************************************************************
-本人github地址     https://github.com/ziye12/JavaScript
+本人GITHUBA地址     https://GITHUBA.com/ziye12/JavaScript
 转载请备注个名字，谢谢
 
 1.5 调整宝箱策略，20分钟运行一次就行
