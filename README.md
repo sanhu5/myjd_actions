@@ -8,7 +8,7 @@
 
 [@bebestmaple](https://github.com/bebestmaple/Tieba_Github-Actions) - 贴吧签到
 
-[@ZhiYi-N](https://github.com/ZhiYi-N/script) - 今日头条极速版
+[@ZhiYi-N](https://github.com/ZhiYi-N/Private-Script) - 今日头条极速版
 
 [@lxk0301](https://github.com/LXK9301/jd_scripts/tree/master) - 京东系列
 
