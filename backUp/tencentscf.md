@@ -2,7 +2,7 @@
 # 云函数快速部署京东脚本
 >
 > - 本地安装依赖使用serverless部署，[点这里](tencentscf.md#1-安装-nodejs-环境)
-> - GITHUBA Action 部署[点这里](tencentscf.md#GITHUBA-action-部署)
+> - GIT_HUB Action 部署[点这里](tencentscf.md#GIT_HUB-action-部署)
 
 ## 1. 安装 Node.js 环境
 
@@ -42,7 +42,7 @@ let CookieJDs = [
 ]
 ```
 
-> 注：获取京东 cookie 教程参考 [浏览器获取京东cookie教程](https://GITHUBA.com/LXK9301/jd_scripts/blob/master/backUp/GetJdCookie.md) , [插件获取京东cookie教程](https://GITHUBA.com/LXK9301/jd_scripts/blob/master/backUp/GetJdCookie2.md)
+> 注：获取京东 cookie 教程参考 [浏览器获取京东cookie教程](https://GIT_HUB.com/LXK9301/jd_scripts/blob/master/backUp/GetJdCookie.md) , [插件获取京东cookie教程](https://GIT_HUB.com/LXK9301/jd_scripts/blob/master/backUp/GetJdCookie2.md)
 
 
 ## 4. 部署到云函数
@@ -93,12 +93,12 @@ triggers:
 
 在左侧栏的日志查询中，可以查看到触发的日志，包括是否打卡成功等。
 
-![测试函数](https://user-images.GITHUBAusercontent.com/6993269/99628053-5a9eea80-2a70-11eb-906f-f1d5ea2bfa3a.png)
+![测试函数](https://user-images.GIT_HUBusercontent.com/6993269/99628053-5a9eea80-2a70-11eb-906f-f1d5ea2bfa3a.png)
 
 > 如果需要配置永久秘钥，则可以在[访问秘钥页面](https://console.cloud.tencent.com/cam/capi)获取账号的 TENCENT_SECRET_ID，TENCENT_SECRET_KEY，并配置在代码根目录 .env 文件中。
 
 
-# GITHUBA Action 部署
+# GIT_HUB Action 部署
 ## 1. 开通服务
 
 依次登录 [SCF 云函数控制台](https://console.cloud.tencent.com/scf) 和 [SLS 控制台](https://console.cloud.tencent.com/sls) 开通相关服务，确保账户下已开通服务并创建相应[服务角色](https://console.cloud.tencent.com/cam/role) **SCF_QcsRole、SLS_QcsRole**
@@ -108,21 +108,21 @@ triggers:
 ## 2. 在这里新建一个访问密钥[新建密钥](https://console.cloud.tencent.com/cam/capi)
 > 将SecretId和SecretKey分别配置在仓库的secrets变量里面， TENCENT_SECRET_ID对应你的SecretId的值，TENCENT_SECRET_KEY对应你的SecretKey的值
 
-## 3. 配置自己需要secrets变量[参考这里](GITHUBAAction.md#下方提供使用到的-secrets全集合)
+## 3. 配置自己需要secrets变量[参考这里](GIT_HUBAction.md#下方提供使用到的-secrets全集合)
 ### __重要的说三遍__   
 ### 如果涉及一个变量配置多个值，如多个cookie，多个取消订阅关键字，去掉里面的 *__[空格]()__* 和 __*[换行]()*__ 使用 `&` 连接   
 ### 如果涉及一个变量配置多个值，如多个cookie，多个取消订阅关键字，去掉里面的 *__[空格]()__* 和 __*[换行]()*__ 使用 `&` 连接   
 ### 如果涉及一个变量配置多个值，如多个cookie，多个取消订阅关键字，去掉里面的 *__[空格]()__* 和 __*[换行]()*__ 使用 `&` 连接   
 > 排查问题第一步先看自己[腾讯云函数](https://console.cloud.tencent.com/scf/list-detail?rid=5&ns=default&id=scf-jdscript)那边的环境变量跟自己在仓库配置的 `secrets` 是否一致
-![image](https://user-images.GITHUBAusercontent.com/6993269/99937191-06617680-2da0-11eb-99ea-033f2c655683.png)
+![image](https://user-images.GIT_HUBusercontent.com/6993269/99937191-06617680-2da0-11eb-99ea-033f2c655683.png)
 
 
 ## 4.执行action workflow进行部署，workflow未报错即部署成功
-![image](https://user-images.GITHUBAusercontent.com/6993269/99513289-6a152980-29c5-11eb-9266-3f56ba13d3b2.png)
+![image](https://user-images.GIT_HUBusercontent.com/6993269/99513289-6a152980-29c5-11eb-9266-3f56ba13d3b2.png)
 ## 5. 查看和测试
 登录后，在 [腾讯云函数地址](https://console.cloud.tencent.com/scf/index) 点击管理控制台，查看最新部署的函数。
 
 在左侧栏的日志查询中，可以查看到触发的日志，包括是否打卡成功等。
 
-![测试函数](https://user-images.GITHUBAusercontent.com/6993269/99628053-5a9eea80-2a70-11eb-906f-f1d5ea2bfa3a.png)
-## 6. 设置触发器[看这里](iCloud.md#5设置触发器) 或者看这里的[注释说明](https://GITHUBA.com/iouAkira/jd_scripts/blob/patch-1/index.js#L4)
+![测试函数](https://user-images.GIT_HUBusercontent.com/6993269/99628053-5a9eea80-2a70-11eb-906f-f1d5ea2bfa3a.png)
+## 6. 设置触发器[看这里](iCloud.md#5设置触发器) 或者看这里的[注释说明](https://GIT_HUB.com/iouAkira/jd_scripts/blob/patch-1/index.js#L4)

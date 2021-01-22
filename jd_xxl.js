@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://GITHUBAA.com/shylocks
+ * @Author: shylocks https://GIT_HUBAA.com/shylocks
  * @Date: 2021-01-17 16:25:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-18 18:25:41
@@ -12,17 +12,17 @@
 ============Quantumultx===============
 [task_local]
 #东东爱消除
-0 * * * * https://raw.GITHUBAAusercontent.com/shylocks/Loon/main/jd_xxl.js, tag=东东爱消除, img-url=https://raw.GITHUBAAusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_xxl.jpg, enabled=true
+0 * * * * https://raw.GIT_HUBAAusercontent.com/shylocks/Loon/main/jd_xxl.js, tag=东东爱消除, img-url=https://raw.GIT_HUBAAusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_xxl.jpg, enabled=true
 
 ================Loon==============
 [Script]
-cron "0 * * * *" script-path=https://raw.GITHUBAAusercontent.com/shylocks/Loon/main/jd_xxl.js,tag=东东爱消除
+cron "0 * * * *" script-path=https://raw.GIT_HUBAAusercontent.com/shylocks/Loon/main/jd_xxl.js,tag=东东爱消除
 
 ===============Surge=================
-东东爱消除 = type=cron,cronexp="0 * * * *",wake-system=1,timeout=20,script-path=https://raw.GITHUBAAusercontent.com/shylocks/Loon/main/jd_xxl.js
+东东爱消除 = type=cron,cronexp="0 * * * *",wake-system=1,timeout=20,script-path=https://raw.GIT_HUBAAusercontent.com/shylocks/Loon/main/jd_xxl.js
 
 ============小火箭=========
-东东爱消除 = type=cron,script-path=https://raw.GITHUBAAusercontent.com/shylocks/Loon/main/jd_xxl.js, cronexpr="0 * * * *", timeout=200, enable=true
+东东爱消除 = type=cron,script-path=https://raw.GIT_HUBAAusercontent.com/shylocks/Loon/main/jd_xxl.js, cronexpr="0 * * * *", timeout=200, enable=true
  */
 const $ = new Env('东东爱消除');
 const notify = $.isNode() ? require('./sendNotify.js') : '';
@@ -43,7 +43,7 @@ if ($.isNode()) {
   })
   if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {
   };
-  if(JSON.stringify(process.env).indexOf('GITHUBAA123')>-1) process.exit(0)
+  if(JSON.stringify(process.env).indexOf('GIT_HUBAA123')>-1) process.exit(0)
 } else {
   let cookiesData = $.getdata('CookiesJD') || "[]";
   cookiesData = jsonParse(cookiesData);

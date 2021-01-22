@@ -18,10 +18,10 @@ if (process.env.JD_COOKIE) {
     CookieJDs = [process.env.JD_COOKIE];
   }
 }
-//if (JSON.stringify(process.env).indexOf('GITHUBA')>-1) {
-//  console.log(`请勿使用GITHUBA action运行此脚本,无论你是从你自己的私库还是其他哪里拉取的源代码，都会导致我被封号\n`);
+//if (JSON.stringify(process.env).indexOf('GIT_HUB')>-1) {
+//  console.log(`请勿使用GIT_HUB action运行此脚本,无论你是从你自己的私库还是其他哪里拉取的源代码，都会导致我被封号\n`);
 //  !(async () => {
-//    await require('./sendNotify').sendNotify('提醒', `请勿使用GITHUBA action、滥用GITHUBA资源会封我仓库以及账号`)
+//    await require('./sendNotify').sendNotify('提醒', `请勿使用GIT_HUB action、滥用GIT_HUB资源会封我仓库以及账号`)
 //    await process.exit(0);
 //  })()
 //}

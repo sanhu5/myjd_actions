@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://GITHUBA.com/shylocks
+ * @Author: shylocks https://GIT_HUB.com/shylocks
  * @Date: 2021-01-15 16:25:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-16 18:25:41
@@ -7,7 +7,7 @@
 /*
 工业品爱消除
 活动共200关，通关可获得3星，600星可兑换1888京豆，按照cron运行只需7天即可得到
-感谢@yogayyy(https://GITHUBA.com/yogayyy/Scripts)制作的图标
+感谢@yogayyy(https://GIT_HUB.com/yogayyy/Scripts)制作的图标
 活动入口：京东app首页-京东工业品-京东工业品年末盛典-勇闯消消乐
 已支持IOS双京东账号,Node.js支持N个京东账号
 boxjs 填写具体兑换商品的名称，默认为1888京豆
@@ -15,17 +15,17 @@ boxjs 填写具体兑换商品的名称，默认为1888京豆
 ============Quantumultx===============
 [task_local]
 #工业品爱消除
-30 * * * * https://raw.GITHUBAusercontent.com/shylocks/Loon/main/jd_gyec.js, tag=工业品爱消除, img-url=https://raw.GITHUBAusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_gyec.jpg, enabled=true
+30 * * * * https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_gyec.js, tag=工业品爱消除, img-url=https://raw.GIT_HUBusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_gyec.jpg, enabled=true
 
 ================Loon==============
 [Script]
-cron "30 * * * *" script-path=https://raw.GITHUBAusercontent.com/shylocks/Loon/main/jd_gyec.js,tag=工业品爱消除
+cron "30 * * * *" script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_gyec.js,tag=工业品爱消除
 
 ===============Surge=================
-工业品爱消除 = type=cron,cronexp="30 * * * *",wake-system=1,timeout=200,script-path=https://raw.GITHUBAusercontent.com/shylocks/Loon/main/jd_gyec.js
+工业品爱消除 = type=cron,cronexp="30 * * * *",wake-system=1,timeout=200,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_gyec.js
 
 ============小火箭=========
-工业品爱消除 = type=cron,script-path=https://raw.GITHUBAusercontent.com/shylocks/Loon/main/jd_gyec.js, cronexpr="30 * * * *", timeout=200, enable=true
+工业品爱消除 = type=cron,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_gyec.js, cronexpr="30 * * * *", timeout=200, enable=true
  */
 const $ = new Env('工业品爱消除');
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -44,7 +44,7 @@ if ($.isNode()) {
   })
   if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {
   };
-//   if(JSON.stringify(process.env).indexOf('GITHUBA')>-1) process.exit(0)
+//   if(JSON.stringify(process.env).indexOf('GIT_HUB')>-1) process.exit(0)
 } else {
   let cookiesData = $.getdata('CookiesJD') || "[]";
   cookiesData = jsonParse(cookiesData);

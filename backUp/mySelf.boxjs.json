@@ -2,8 +2,8 @@
   "id": "LXK9301.app.sub2",
   "name": "自用",
   "author": "@LXK9301",
-  "icon": "https://avatars0.GITHUBAusercontent.com/u/21308593?s=52&v=4",
-  "repo": "https://GITHUBA.com/LXK9301/jd_scripts/",
+  "icon": "https://avatars0.GIT_HUBusercontent.com/u/21308593?s=52&v=4",
+  "repo": "https://GIT_HUB.com/LXK9301/jd_scripts/",
   "apps": [
     {
       "id": "QQ_READ",
@@ -15,10 +15,10 @@
       ],
       "settings": [],
       "author": "@ziye12",
-      "repo": "https://GITHUBA.com/ziye12/JavaScript ",
+      "repo": "https://GIT_HUB.com/ziye12/JavaScript ",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/Orz-3/mini/master/jd.png",
-        "https://raw.GITHUBAusercontent.com/Orz-3/task/master/jd.png"
+        "https://raw.GIT_HUBusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.GIT_HUBusercontent.com/Orz-3/task/master/jd.png"
       ]
     }
   ]

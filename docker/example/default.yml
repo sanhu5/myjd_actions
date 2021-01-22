@@ -15,8 +15,8 @@ jd_scripts:
   # 因为更换仓库地址可能git pull的dns解析不到，可以在配置追加hosts
   extra_hosts:
     - "gitee.com:180.97.125.228"
-    - "GITHUBA.com:13.229.188.59"
-    - "raw.GITHUBAusercontent.com:151.101.228.133"
+    - "GIT_HUB.com:13.229.188.59"
+    - "raw.GIT_HUBusercontent.com:151.101.228.133"
   environment:
     #脚本更新仓库地址，配置了会切换到对应的地址
     - REPO_URL=https://gitee.com/lxk0301/jd_scripts.git

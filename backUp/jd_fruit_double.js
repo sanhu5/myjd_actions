@@ -1,16 +1,16 @@
 /*
-jd免费水果 搬的https://GITHUBA.com/liuxiaoyucc/jd-helper/blob/a6f275d9785748014fc6cca821e58427162e9336/fruit/fruit.js
+jd免费水果 搬的https://GIT_HUB.com/liuxiaoyucc/jd-helper/blob/a6f275d9785748014fc6cca821e58427162e9336/fruit/fruit.js
 更新时间:2020-08-25
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 // quantumultx
 [task_local]
 #jd免费水果
-5 6-18/6 * * * https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_fruit.js, tag=东东农场, img-url=https://raw.GITHUBAusercontent.com/znz1992/Gallery/master/jdsg.png, enabled=true
+5 6-18/6 * * * https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_fruit.js, tag=东东农场, img-url=https://raw.GIT_HUBusercontent.com/znz1992/Gallery/master/jdsg.png, enabled=true
 // Loon
 [Script]
-cron "5 6-18/6 * * *" script-path=https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_fruit.js,tag=东东农场
+cron "5 6-18/6 * * *" script-path=https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_fruit.js,tag=东东农场
 // Surge
-// 宠汪汪偷好友积分与狗粮 = type=cron,cronexp="5 6-18/6 * * *",wake-system=1,timeout=3600,script-path=https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_joy_steal.js
+// 宠汪汪偷好友积分与狗粮 = type=cron,cronexp="5 6-18/6 * * *",wake-system=1,timeout=3600,script-path=https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_joy_steal.js
 互助码shareCode请先手动运行脚本查看打印可看到
 一天只能帮助4个人。多出的助力码无效
 注：如果使用Node.js, 需自行安装'crypto-js,got,http-server,tough-cookie'模块. 例: npm install crypto-js http-server tough-cookie got --save

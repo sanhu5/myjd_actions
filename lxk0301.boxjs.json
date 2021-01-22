@@ -2,8 +2,8 @@
   "id": "LXK9301.app.sub",
   "name": "LXK9301脚本订阅",
   "author": "@LXK9301",
-  "icon": "https://avatars0.GITHUBAusercontent.com/u/21308593?s=52&v=4",
-  "repo": "https://GITHUBA.com/LXK9301/jd_scripts/",
+  "icon": "https://avatars0.GIT_HUBusercontent.com/u/21308593?s=52&v=4",
+  "repo": "https://GIT_HUB.com/LXK9301/jd_scripts/",
   "apps": [
     {
       "id": "JD_Cookies",
@@ -11,7 +11,7 @@
       "keys": ["CookiesJD"],
       "descs_html": [
         "请勿随意在输入框修改内容，建议通过脚本去获取cookie，若要修改，请按照JSON 格式修改。",
-        "脚本地址【<a href=\"https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/JD_extra_cookie.js\">京东多 CK获取</a>】,并按照此脚本注释进行配置",
+        "脚本地址【<a href=\"https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/JD_extra_cookie.js\">京东多 CK获取</a>】,并按照此脚本注释进行配置",
         "使用方式【<a href=\"https://home.m.jd.com/myJd/newhome.action\">个人中心</a>】获取对应的数据Code",
         "注：如与NobyDa的京东cookie重复，建议在此处删除重复的cookie"
       ],
@@ -27,12 +27,12 @@
         }
       ],
       "icons": [
-        "https://raw.GITHUBAusercontent.com/Orz-3/mini/master/jd.png",
-        "https://raw.GITHUBAusercontent.com/Orz-3/task/master/jd.png"
+        "https://raw.GIT_HUBusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.GIT_HUBusercontent.com/Orz-3/task/master/jd.png"
       ],
       "author": "@dompling",
-      "repo": "https://GITHUBA.com/dompling/Script",
-      "script": "https://raw.GITHUBAusercontent.com/dompling/Script/master/jd/JD_extra.js"
+      "repo": "https://GIT_HUB.com/dompling/Script",
+      "script": "https://raw.GIT_HUBusercontent.com/dompling/Script/master/jd/JD_extra.js"
     },
     {
       "id": "JD_UA",
@@ -54,10 +54,10 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/Orz-3/mini/master/jd.png",
-        "https://raw.GITHUBAusercontent.com/Orz-3/task/master/jd.png"
+        "https://raw.GIT_HUBusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.GIT_HUBusercontent.com/Orz-3/task/master/jd.png"
       ]
     },
     {
@@ -76,7 +76,7 @@
         "jd2_fruit4"
       ],
       "descs_html": [
-        "<h4 align=\"center\">获取Cookie请查看NobyDa京东签到脚本说明<a href=\"https://raw.GITHUBAusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js\">脚本注释</a></h4>"
+        "<h4 align=\"center\">获取Cookie请查看NobyDa京东签到脚本说明<a href=\"https://raw.GIT_HUBusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js\">脚本注释</a></h4>"
       ],
       "settings": [
         {
@@ -165,11 +165,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_fruit.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_fruit.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdnc_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdnc.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdnc_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdnc.png"
       ]
     },
     {
@@ -283,11 +283,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_pet.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_pet.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdmc_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdmc.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdmc_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdmc.png"
       ]
     },
     {
@@ -369,11 +369,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_plantBean.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_plantBean.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdzd_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdzd.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdzd_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdzd.png"
       ]
     },
     {
@@ -436,11 +436,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_joy.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_joy.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdcww_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdcww.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdcww_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdcww.png"
       ]
     },
     {
@@ -482,11 +482,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_joy_reward.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_joy_reward.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdcww_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdcww.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdcww_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdcww.png"
       ]
     },
     {
@@ -568,11 +568,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_joy_run.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_joy_run.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdcww_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdcww.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdcww_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdcww.png"
       ]
     },
     {
@@ -596,11 +596,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_moneyTree.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_moneyTree.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdyqs_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdyqs.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdyqs_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdyqs.png"
       ]
     },
     {
@@ -617,11 +617,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_speed.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_speed.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdjs_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jdjs.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdjs_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdjs.png"
       ]
     },
     {
@@ -669,11 +669,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_unsubscribe.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_unsubscribe.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/Orz-3/mini/master/jd.png",
-        "https://raw.GITHUBAusercontent.com/Orz-3/task/master/jd.png"
+        "https://raw.GIT_HUBusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.GIT_HUBusercontent.com/Orz-3/task/master/jd.png"
       ]
     },
     {
@@ -707,11 +707,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_unbind.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_unbind.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jd_unbind_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jd_unbind.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jd_unbind_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jd_unbind.png"
       ]
     },
     {
@@ -742,16 +742,16 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
       "scripts":[
         {
           "name" : "东东超市",
-          "script" : "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_superMarket.js"
+          "script" : "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_superMarket.js"
         }
       ],
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jxc_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jxc.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jxc_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jxc.png"
       ]
     },
     {
@@ -778,16 +778,16 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
       "scripts": [
         {
           "name" : "东东超市兑换奖品",
-          "script" : "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_blueCoin.js"
+          "script" : "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_blueCoin.js"
         }
       ],
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jxc_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jxc.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jxc_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jxc.png"
       ]
     },
     {
@@ -795,21 +795,21 @@
       "name": "Webhook",
       "keys": [
         "ACTIONS_TRIGGER_TOKEN",
-        "GITHUBAUser",
+        "GIT_HUBUser",
         "repo",
         "TRIGGER_KEYWORDS"
       ],
       "settings": [
         {
           "id": "ACTIONS_TRIGGER_TOKEN",
-          "name": "GITHUBA token",
+          "name": "GIT_HUB token",
           "val": "",
           "type": "text",
           "desc": "申请教程:https://www.jianshu.com/p/bb82b3ad1d11 记得勾选repo权限就行"
         },
         {
-          "id": "GITHUBAUser",
-          "name": "GITHUBA 用户名",
+          "id": "GIT_HUBUser",
+          "name": "GIT_HUB 用户名",
           "val": "",
           "type": "text",
           "desc": "例如：LXK9301"
@@ -826,15 +826,15 @@
           "name": "触发关键词",
           "val": "",
           "type": "text",
-          "desc": ".GITHUBA/workflows/路径里面yml文件repository_dispatch项目的types值，例如jd_fruit.yml里面的值为fruit,多个使用英文逗号','隔开"
+          "desc": ".GIT_HUB/workflows/路径里面yml文件repository_dispatch项目的types值，例如jd_fruit.yml里面的值为fruit,多个使用英文逗号','隔开"
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/backUp/webhook.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/backUp/webhook.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/webhooks_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/webhooks.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/webhooks_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/webhooks.png"
       ]
     },
     {
@@ -869,11 +869,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/backUp/xmSports.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/backUp/xmSports.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/xmyd_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/xmyd.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/xmyd_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/xmyd.png"
       ]
     },
     {
@@ -892,11 +892,11 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_jdfactory.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_jdfactory.js",
       "icons": [
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jd_factory_mini.png",
-        "https://raw.GITHUBAusercontent.com/58xinian/icon/master/jd_factory.png"
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jd_factory_mini.png",
+        "https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jd_factory.png"
       ]
     },
     {
@@ -919,8 +919,8 @@
         }
       ],
       "author": "@LXK9301",
-      "repo": "https://GITHUBA.com/LXK9301/jd_scripts",
-      "script": "https://raw.GITHUBAusercontent.com/LXK9301/jd_scripts/master/jd_immortal.js",
+      "repo": "https://GIT_HUB.com/LXK9301/jd_scripts",
+      "script": "https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/jd_immortal.js",
       "icons": [
         "https://m.360buyimg.com/babel/jfs/t1/165970/14/3741/2184/600585feE6fb250f8/77db4ca560e006be.png",
         "https://m.360buyimg.com/babel/jfs/t1/165970/14/3741/2184/600585feE6fb250f8/77db4ca560e006be.png"
