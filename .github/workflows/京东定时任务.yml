@@ -207,6 +207,21 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
+      - name: '运行 【盲盒抽京豆】'
+        run: |
+          cd ~/TaskAction
+          node jd_mh.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+
+      - name: '运行 【京东秒秒币】'
+        run: |
+          cd ~/TaskAction
+          node jd_ms.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
       - name: '运行 【京东神仙书院】'
         run: |
