@@ -42,12 +42,16 @@ let ReadArr = [], YouthBody = "",readscore = 0;
 
   while(true){
     for (let i = 0; i < ReadArr.length; i++) {
+
+    try {
       if (ReadArr[i]) {
         articlebody = ReadArr[i];
         $.index = i + 1;
         console.log(`-------------------------\n\n开始中青看点第${$.index}次阅读`)
       }
         await AutoRead();
+     }catch(e){ }
+
    }
      console.log(`-------------------------\n\n中青看点共完成${$.index}次阅读，共计获得${readscore}个青豆，阅读请求全部结束`)
   }
