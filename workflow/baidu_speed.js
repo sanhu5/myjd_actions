@@ -44,11 +44,13 @@ if ($.isNode()) {
               if (CookieArr[i]) {
                   cookieval = CookieArr[i];
                   $.index = i + 1;
-                  await getsign();
-                  await coinInfo();
-                  await firstbox();
-                  await TaskCenter()
-                  await getRewards();
+
+                 try { await getsign();}catch(e){ }
+                 try { await coinInfo();}catch(e){ }
+                 try { await firstbox();}catch(e){ }
+                 try { await TaskCenter();}catch(e){ }
+                 try { await getRewards();}catch(e){ }
+
                   //await drawPrize();
               }
           }
