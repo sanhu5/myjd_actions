@@ -15,3 +15,5 @@
 [@shylocks](https://github.com/shylocks/loon) - 京东系列2
 
 [@adwktt](https://github.com/adwktt/adwktt) - 步步宝、一刻
+
+[@CenBoMin](https://github.com/CenBoMin/GithubSync) - 葱花视频
