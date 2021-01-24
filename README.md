@@ -16,4 +16,4 @@
 
 [@adwktt](https://github.com/adwktt/adwktt) - 步步宝、一刻
 
-[@CenBoMin](https://github.com/CenBoMin/GithubSync) - 葱花视
+[@CenBoMin](https://github.com/CenBoMin/GithubSync) - 葱花视频
