@@ -25,8 +25,10 @@ jobs:
         run: python3 ./workflow/xmly_speed.py
         env:
           TZ: Asia/shanghai
-          XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE }}
-          SCKEY: ${{ secrets.SCKEY }}
-          BARK: ${{ secrets.BARK }}     # bark服务
-          TG_BOT_TOKEN: ${{secrets.TG_BOT_TOKEN}} # tg通知token
-          TG_USER_ID:  ${{secrets.TG_USER_ID}}    # tg通知id
+          XMLY_SPEED_COOKIE: ${{ github.event.client_payload.XMLY_SPEED_COOKIE || secrets.XMLY_SPEED_COOKIE }}
+          XMLY_ACCUMULATE_TIME: ${{ github.event.client_payload.XMLY_ACCUMULATE_TIME || secrets.XMLY_ACCUMULATE_TIME }}
+          XMLY_ACCUMULATE_INDEX: ${{ github.event.client_payload.XMLY_ACCUMULATE_INDEX || secrets.XMLY_ACCUMULATE_INDEX }}
+          XMLY_ACCUMULATE_HOURS: ${{ github.event.client_payload.XMLY_ACCUMULATE_HOURS || secrets.XMLY_ACCUMULATE_HOURS }}
+          XMLY_ANDROID_AGENT: ${{ github.event.client_payload.XMLY_ANDROID_AGENT || secrets.XMLY_ANDROID_AGENT }}
+          BARK_PUSH: ${{ github.event.client_payload.BARK_PUSH || secrets.BARK_PUSH }}
+          SYNCURL: https://github.com/Zero-S1/xmly_speed/raw/master/xmly_speed.py
