@@ -57,7 +57,7 @@ jobs:
           node jd_pet.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+#          BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
 
       - name: '运行 【口袋书店】'
