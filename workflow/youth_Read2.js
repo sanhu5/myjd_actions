@@ -71,7 +71,8 @@ function AutoRead() {
             body: articlebody
         };
         $.post(url, async(error, response, data) => {
-           let readres = JSON.parse(data);
+         try {
+            let readres = JSON.parse(data);
              //console.log(data)
            if (readres.error_code == '0' && typeof readres.items.read_score === 'number') {
               console.log(`\n本次阅读获得${readres.items.read_score}个青豆，请等待30s后执行下一次阅读\n`);
@@ -85,10 +86,10 @@ function AutoRead() {
             else if (readres.success == false){
               console.log(`第${$.index}次阅读请求有误，请删除此请求`)
             }
-            else if (readres.items.max_notice == '\u770b\u592a\u4e45\u4e86\uff0c\u63621\u7bc7\u8bd5\u8bd5') {     
+            else if (readres.items.max_notice == '\u770b\u592a\u4e45\u4e86\uff0c\u63621\u7bc7\u8bd5\u8bd5') {
               console.log(readres.items.max_notice)
             }
-          resolve()
+         }catch(e){ }finally{resolve()}
         })
     })
 }
