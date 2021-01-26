@@ -50,13 +50,13 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
 #          BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
-      - name: '运行 【领京豆额外奖励】'
+      - name: '运行 【京东种豆得豆】'
         run: |
           cd ~/TaskAction
-          node jd_bean_home.js
+          node jd_plantBean.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+#          BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
       - name: '运行 【东东萌宠】'
         run: |
