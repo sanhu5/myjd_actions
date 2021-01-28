@@ -12,7 +12,7 @@
 
 [@lxk0301](https://gitee.com/lxk0301/jd_scripts/tree/master/) - 京东系列
 
-[@shylocks](https://github.com/shylocks/loon) - 京东系列2
+[@shylocks](https://bitbucket.org/jd-study/shylocks/src) - 京东系列2
 
 [@adwktt](https://github.com/adwktt/adwktt) - 步步宝、一刻
 
