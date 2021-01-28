@@ -82,13 +82,6 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
-      - name: '运行 【京东神仙书院答题】'
-        run: |
-          cd ~/TaskAction
-          node jd_immortal_answer.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
       - name: '运行 【京东手机年终奖】'
         run: |
