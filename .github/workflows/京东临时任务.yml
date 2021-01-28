@@ -42,127 +42,69 @@ jobs:
           git checkout jd_code
           npm install
 
-      - name: '运行 【东东农场】'
+      - name: '运行 【京东炸年兽】'
         run: |
           cd ~/TaskAction
-          node jd_fruit.js
+          node jd_nian.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
-#          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
-      - name: '运行 【京东种豆得豆】'
+          
+      - name: '运行 【集鞭炮赢京豆🧨】'
         run: |
           cd ~/TaskAction
-          node jd_plantBean.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-#          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-
-      - name: '运行 【东东萌宠】'
-        run: |
-          cd ~/TaskAction
-          node jd_pet.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-#          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-
-
-      - name: '运行 【口袋书店】'
-        run: |
-          cd ~/TaskAction
-          node jd_bookshop.js
+          node jd_firecrackers.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
 
-      - name: '运行 【京喜农场】'
+      - name: '运行 【京东炸年兽签到任务🧨】'
         run: |
           cd ~/TaskAction
-          node jd_jxnc.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          JXNCTOKENS: ${{ secrets.JXNCTOKENS }}
-#          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-
-
-      - name: '运行 【宠汪汪积分兑换奖品】'
-        run: |
-          cd ~/TaskAction
-          node jd_joy_reward.js
+          node jd_nian_sign.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
 
-      - name: '运行 【宠汪汪偷好友积分与狗】'
+      - name: '运行 【京东炸年兽AR🧨】'
         run: |
           cd ~/TaskAction
-          node jd_joy_steal.js
+          node jd_nian_ar.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+      - name: '运行 【京东炸年兽小程序🧨】'
+        run: |
+          cd ~/TaskAction
+          node jd_nian_wechat.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+      - name: '运行 【京东神仙书院】'
+        run: |
+          cd ~/TaskAction
+          node jd_immortal.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
-      - name: '运行 【点点券】'
+      - name: '运行 【京东手机年终奖】'
         run: |
           cd ~/TaskAction
-          node jd_necklace.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-
-
-      - name: '运行 【京东直播18豆】'
-        run: |
-          cd ~/TaskAction
-          node jd_live.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-
-
-      - name: '运行 【取关京东店铺商品】'
-        run: |
-          cd ~/TaskAction
-          node jd_unsubscribe.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-
-
-      - name: '运行 【京东天天加速】'
-        run: |
-          cd ~/TaskAction
-          node jd_speed.js
+          node jd_festival.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
 
-      - name: '运行 【天天提鹅】'
+      - name: '运行 【京东年货节】'
         run: |
           cd ~/TaskAction
-          node jd_daily_egg.js
+          node jd_nh.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
-
-
-      - name: '运行 【东东超市】'
-        run: |
-          cd ~/TaskAction
-          node jd_superMarket.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-
-
-      # 根据上游得知该脚本有黑号风险
-      #      - name: '运行 【京东家庭号】'
-      #        run: |
-      #          cd ~/TaskAction
-      #          node jd_family.js
-      #        env:
-      #          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-
 
