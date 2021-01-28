@@ -37,3 +37,12 @@ jobs:
           source_branch: "jd_code"	
           destination_branch: "jd_code"	
           github_token: ${{ secrets.PAT || github.event.client_payload.PAT }}
+
+      - name: sync jdCode2
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/1217079729/TaskAction.git"
+          source_branch: "jd_code2"
+          destination_branch: "jd_code2"
+          github_token: ${{ secrets.PAT || github.event.client_payload.PAT }}
