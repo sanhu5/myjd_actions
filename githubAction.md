@@ -4,7 +4,7 @@
 
 |    Name     | 归属 | 属性 | 说明                                                         |
 | :---------: | :--: | ---- | ------------------------------------------------------------ |
-| `JD_COOKIE` | 京东 | 必须 | 京东cookie,多个账号的cookie使用`&`隔开或者换行。具体获取参考[浏览器获取京东cookie教程](https://github.com/LXK9301/jd_scripts/blob/master/backUp/GetJdCookie.md) 或者 [插件获取京东cookie教程](https://github.com/LXK9301/jd_scripts/blob/master/backUp/GetJdCookie2.md) |
+| `JD_COOKIE` | 京东 | 必须 | 京东cookie,多个账号的cookie使用`&`隔开或者换行。具体获取参考[浏览器获取京东cookie教程](https://GIT_HUB.com/LXK9301/jd_scripts/blob/master/backUp/GetJdCookie.md) 或者 [插件获取京东cookie教程](https://GIT_HUB.com/LXK9301/jd_scripts/blob/master/backUp/GetJdCookie2.md) |
 
 ##### 京东隐私安全 环境变量
 
@@ -25,7 +25,7 @@
 |  `DD_BOT_TOKEN`   |                           钉钉推送                           | 非必须 | 钉钉推送(`DD_BOT_TOKEN`和`DD_BOT_SECRET`两者必需)[官方文档](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) ,只需`https://oapi.dingtalk.com/robot/send?access_token=XXX` 等于`=`符号后面的XXX即可 |
 |  `DD_BOT_SECRET`  |                           钉钉推送                           | 非必须 | (`DD_BOT_TOKEN`和`DD_BOT_SECRET`两者必需) ,密钥，机器人安全设置页面，加签一栏下面显示的SEC开头的`SECXXXXXXXXXX`等字符 , 注:钉钉机器人安全设置只需勾选`加签`即可，其他选项不要勾选,再不懂看 [这个图](icon/DD_bot.png) |
 |    `QYWX_KEY`     |                         企业微信推送                         | 非必须 | 密钥，企业微信推送 webhook 后面的 key [详见官方说明文档](https://work.weixin.qq.com/api/doc/90000/90136/91770) |
-|  `IGOT_PUSH_KEY`  |                           iGot推送                           | 非必须 | iGot聚合推送，支持多方式推送，确保消息可达。 [参考文档](https://wahao.github.io/Bark-MP-helper ) |
+|  `IGOT_PUSH_KEY`  |                           iGot推送                           | 非必须 | iGot聚合推送，支持多方式推送，确保消息可达。 [参考文档](https://wahao.GIT_HUB.io/Bark-MP-helper ) |
 |     `QQ_SKEY`     |                     酷推(Cool Push)推送                      | 非必须 | 推送所需的Skey,登录后获取Skey [参考文档](https://cp.xuthus.cc/) |
 |     `QQ_MODE`     |                     酷推(Cool Push)推送                      | 非必须 | 推送方式(send或group或者wx，默认send) [参考文档](https://cp.xuthus.cc/) |
 | `PUSH_PLUS_TOKEN` |                         pushplus推送                         | 非必须 | 微信扫码登录后一对一推送或一对多推送下面的token(您的Token) [官方网站](http://pushplus.hxtrip.com/) |
@@ -37,17 +37,17 @@
 
 |            Name             |        归属        |  属性  | 需要助力次数/提供助力次数 | 说明                                                         |
 | :-------------------------: | :----------------: | :----: | :-----------------------: | ------------------------------------------------------------ |
-|      `FRUITSHARECODES`      |   东东农场互助码   | 非必须 |            5/4            | 填写规则请看[jdFruitShareCodes.js](https://github.com/LXK9301/jd_scripts/blob/master/jdFruitShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
-|       `PETSHARECODES`       |   东东萌宠互助码   | 非必须 |            5/5            | 填写规则请看[jdPetShareCodes.js](https://github.com/LXK9301/jd_scripts/blob/master/jdPetShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
-|   `PLANT_BEAN_SHARECODES`   |   种豆得豆互助码   | 非必须 |            9/3            | 填写规则请看[jdPlantBeanShareCodes.js](https://github.com/LXK9301/jd_scripts/blob/master/jdPlantBeanShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
-|  `SUPERMARKET_SHARECODES`   | 东东超市商圈互助码 | 非必须 |             /             | 填写规则请看[jdSuperMarketShareCodes.js](https://github.com/LXK9301/jd_scripts/blob/master/jdSuperMarketShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
-|   `DDFACTORY_SHARECODES`    |   东东工厂互助码   | 非必须 |            5/3            | 填写规则请看[jdFactoryShareCodes.js](https://github.com/LXK9301/jd_scripts/blob/master/jdFactoryShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
-| `DREAM_FACTORY_SHARE_CODES` |   京喜工厂互助码   | 非必须 |         不固定/3          | 填写规则请看[jdDreamFactoryShareCodes.js](https://github.com/LXK9301/jd_scripts/blob/master/jdDreamFactoryShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
+|      `FRUITSHARECODES`      |   东东农场互助码   | 非必须 |            5/4            | 填写规则请看[jdFruitShareCodes.js](https://GIT_HUB.com/LXK9301/jd_scripts/blob/master/jdFruitShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
+|       `PETSHARECODES`       |   东东萌宠互助码   | 非必须 |            5/5            | 填写规则请看[jdPetShareCodes.js](https://GIT_HUB.com/LXK9301/jd_scripts/blob/master/jdPetShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
+|   `PLANT_BEAN_SHARECODES`   |   种豆得豆互助码   | 非必须 |            9/3            | 填写规则请看[jdPlantBeanShareCodes.js](https://GIT_HUB.com/LXK9301/jd_scripts/blob/master/jdPlantBeanShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
+|  `SUPERMARKET_SHARECODES`   | 东东超市商圈互助码 | 非必须 |             /             | 填写规则请看[jdSuperMarketShareCodes.js](https://GIT_HUB.com/LXK9301/jd_scripts/blob/master/jdSuperMarketShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
+|   `DDFACTORY_SHARECODES`    |   东东工厂互助码   | 非必须 |            5/3            | 填写规则请看[jdFactoryShareCodes.js](https://GIT_HUB.com/LXK9301/jd_scripts/blob/master/jdFactoryShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
+| `DREAM_FACTORY_SHARE_CODES` |   京喜工厂互助码   | 非必须 |         不固定/3          | 填写规则请看[jdDreamFactoryShareCodes.js](https://GIT_HUB.com/LXK9301/jd_scripts/blob/master/jdDreamFactoryShareCodes.js)或见下方[互助码的填写规则](#互助码的填写规则) |
 |      `JDZZ_SHARECODES`      |   京东赚赚互助码   | 非必须 |            5/2            | 填写规则和上面类似，或见下方[互助码的填写规则](#互助码的填写规则) |
 |     `JDJOY_SHARECODES`      |  疯狂的JOY互助码   | 非必须 |            6/             | 填写规则和上面类似，或见下方[互助码的填写规则](#互助码的填写规则) |
 |    `BOOKSHOP_SHARECODES`    |   京东书店互助码   | 非必须 |            10/            | 填写规则和上面类似，或见下方[互助码的填写规则](#互助码的填写规则) |
 |    `JD_CASH_SHARECODES`     |  签到领现金互助码  | 非必须 |            10/            | 填写规则和上面类似，或见下方[互助码的填写规则](#互助码的填写规则) |
-|      `JXNC_SHARECODES`      |   京喜农场互助码   | 非必须 |             /             | 注意：京喜农场 种植种子发生变化的时候，互助码也会变！！<br>每个账号 shareCode 是一个 json，json 需要用单引号包裹且是一行字符串，<br>否则设置环境变量时会出错，示例：'{"smp":"22bdadsfaadsfadse8a","active":"jdnc_1_btorange210113_2","joinnum":"1"}'，多账单间使用`&`或换行分开。详细说明参见[#Pr202](https://github.com/LXK9301/jd_scripts/pull/202) |
+|      `JXNC_SHARECODES`      |   京喜农场互助码   | 非必须 |             /             | 注意：京喜农场 种植种子发生变化的时候，互助码也会变！！<br>每个账号 shareCode 是一个 json，json 需要用单引号包裹且是一行字符串，<br>否则设置环境变量时会出错，示例：'{"smp":"22bdadsfaadsfadse8a","active":"jdnc_1_btorange210113_2","joinnum":"1"}'，多账单间使用`&`或换行分开。详细说明参见[#Pr202](https://GIT_HUB.com/LXK9301/jd_scripts/pull/202) |
 |    `JDSGMH_SHARECODES`      |  闪购盲盒互助码  | 非必须 |            10/            | 填写规则和上面类似，或见下方[互助码的填写规则](#互助码的填写规则) |
 |     `JDNIAN_SHARECODES`     |    炸年兽互助码    | 非必须 |            10/            | 填写规则和上面类似，或见下方[互助码的填写规则](#互助码的填写规则) |
 |     `JDSXSY_SHARECODES`     |    京东神仙书院<br>互助码    | 非必须 |            20/5            | 填写规则和上面类似，或见下方[互助码的填写规则](#互助码的填写规则) |
@@ -57,7 +57,7 @@
 
 |             Name             |             归属             |  属性  | 说明                                                         |
 | :--------------------------: | :--------------------------: | :----: | ------------------------------------------------------------ |
-|        `JD_BEAN_STOP`        |             京东             | 非必须 | `jd_bean_sign.js`自定义延迟签到,单位毫秒.默认分批并发无延迟，<br>延迟作用于每个签到接口，如填入延迟则切换顺序签到(耗时较长)，<br>如需填写建议输入数字`1`，详见[此处说明](https://github.com/NobyDa/Script/blob/master/JD-DailyBonus/JD_DailyBonus.js#L93) |
+|        `JD_BEAN_STOP`        |             京东             | 非必须 | `jd_bean_sign.js`自定义延迟签到,单位毫秒.默认分批并发无延迟，<br>延迟作用于每个签到接口，如填入延迟则切换顺序签到(耗时较长)，<br>如需填写建议输入数字`1`，详见[此处说明](https://GIT_HUB.com/NobyDa/Script/blob/master/JD-DailyBonus/JD_DailyBonus.js#L93) |
 |  `JD_BEAN_SIGN_STOP_NOTIFY`  |             京东             | 非必须 | `jd_bean_sign.js`脚本运行后不推送签到结果通知，默认推送，填`true`表示不发送通知 |
 | `JD_BEAN_SIGN_NOTIFY_SIMPLE` |             京东             | 非必须 | `jd_bean_sign.js`脚本运行后推送签到结果简洁版通知，<br>默认推送全部签到结果，填`true`表示推送简洁通知，[效果图](./icon/bean_sign_simple.jpg) |
 |     `PET_NOTIFY_CONTROL`     |     东东萌宠<br>推送开关     | 非必须 | 控制京东萌宠是否静默运行,<br>`false`为否(发送推送通知消息),`true`为是(即：不发送推送通知消息) |

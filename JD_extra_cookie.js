@@ -1,9 +1,9 @@
 /*
-感谢github@dompling的PR
+感谢GIT_HUB@dompling的PR
 
 Author: 2Ya
 
-Github: https://github.com/dompling
+GIT_HUB: https://GIT_HUB.com/dompling
 
 ===================
 特别说明：

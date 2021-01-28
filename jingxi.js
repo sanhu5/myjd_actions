@@ -4,7 +4,7 @@
 本脚本使用京东公共Cooike，支持双账号，获取方法请查看NobyDa大佬脚本说明
 
 [task_local]
-0 9 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js
+0 9 * * * https://raw.GIT_HUBusercontent.com/Sunert/Scripts/master/Task/jingxi.js
 
 ~~~~~~~~~~~~~~~~
 [MITM]
