@@ -10,7 +10,7 @@
 
 [@ZhiYi-N](https://github.com/ZhiYi-N/Private-Script) - 今日头条极速版
 
-[@lxk0301](https://github.com/LXK9301/jd_scripts/tree/master) - 京东系列
+[@lxk0301](https://gitee.com/lxk0301/jd_scripts/tree/master/) - 京东系列
 
 [@shylocks](https://github.com/shylocks/loon) - 京东系列2
 
