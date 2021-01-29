@@ -6,7 +6,7 @@ name: 京东定时任务
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: '0 */8 * * *'
   watch:
     types: started
   repository_dispatch:
