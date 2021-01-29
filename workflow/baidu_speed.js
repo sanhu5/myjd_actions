@@ -39,21 +39,22 @@ if ($.isNode()) {
     return;
   }
 
-          console.log(`您共提供${CookieArr.length}个百度账号Cookie`)
-          for (let i = 0; i < CookieArr.length; i++) {
-              if (CookieArr[i]) {
-                  cookieval = CookieArr[i];
-                  $.index = i + 1;
 
-                 try { await getsign();}catch(e){ }
-                 try { await coinInfo();}catch(e){ }
-                 try { await firstbox();}catch(e){ }
-                 try { await TaskCenter();}catch(e){ }
-                 try { await getRewards();}catch(e){ }
 
-                  //await drawPrize();
-              }
-          }
+
+  console.log(`您共提供${CookieArr.length}个百度账号Cookie`)
+  for (let i = 0; i < CookieArr.length; i++) {
+    if (CookieArr[i]) {
+      cookieval = CookieArr[i];
+      $.index = i + 1;
+      try { await getsign();}catch(e){ }
+      try { await coinInfo();}catch(e){ }
+      try { await firstbox();}catch(e){ }
+      try { await TaskCenter();}catch(e){ }
+      try { await getRewards();}catch(e){ }
+     //await drawPrize();
+  }
+ }
 
 })()
     .catch((e) => $.logErr(e))
@@ -336,7 +337,6 @@ function searchBox(id) {
       body: `data={"origin_nid":"${id}","taskid":"${tid}"}`
       }
    $.post(searchurl, async(error, resp, data) => {
-     try{
      let do_search = JSON.parse(data)
           //$.log(data+'\n')
      if (do_search.errno == 0 && do_search.data['197'].istip == 1) {
@@ -345,7 +345,6 @@ function searchBox(id) {
      }  else {
         $.log("\n")
       }
-     }catch(e){}
     resolve()
    })
   })
