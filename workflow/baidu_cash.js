@@ -587,7 +587,7 @@ function doubleBox() {
 
 function showmsg() {
 
-    // $.msg($.name,$.sub,$.desc)
+     $.msg($.name,$.sub,$.desc)
 
 }
 
