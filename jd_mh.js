@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://GIT_HUB.com/shylocks
+ * @Author: shylocks https://github.com/shylocks
  * @Date: 2021-01-11 16:25:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-11 18:25:41
@@ -14,7 +14,7 @@
 ============Quantumultx===============
 [task_local]
 #盲盒抽京豆
-1 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_mh.js, tag=盲盒抽京豆, img-url=https://raw.GIT_HUBusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_mh.jpg, enabled=true
+1 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_mh.js, tag=盲盒抽京豆, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_mh.jpg, enabled=true
 
 ================Loon==============
 [Script]

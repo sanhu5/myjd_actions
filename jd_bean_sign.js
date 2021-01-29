@@ -1,13 +1,13 @@
 /*
- * @Author: LXK9301 https://GIT_HUB.com/LXK9301
+ * @Author: LXK9301 https://github.com/LXK9301
  */
 /*
 京豆签到,自用,可N个京东账号
 活动入口：各处的签到汇总
 Node.JS专用
-IOS软件用户请使用 https://raw.GIT_HUBusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+IOS软件用户请使用 https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 更新时间：2021-1-19
-Modified From GIT_HUB https://GIT_HUB.com/ruicky/jd_sign_bot
+Modified From github https://github.com/ruicky/jd_sign_bot
  */
 const $ = new Env('京豆签到');
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -112,13 +112,13 @@ async function downFile () {
   // if (process.env.CDN_JD_DAILYBONUS) {
   //   url = 'https://cdn.jsdelivr.net/gh/NobyDa/Script@master/JD-DailyBonus/JD_DailyBonus.js';
   // } else if (process.env.JD_COOKIE) {
-  //   url = 'https://raw.GIT_HUBusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js';
+  //   url = 'https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js';
   // } else {
   //   url = 'https://cdn.jsdelivr.net/gh/NobyDa/Script@master/JD-DailyBonus/JD_DailyBonus.js';
   // }
   await downloadUrl();
   if ($.body) {
-    url = 'https://raw.GIT_HUBusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js';
+    url = 'https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js';
   } else {
     url = 'https://cdn.jsdelivr.net/gh/NobyDa/Script@master/JD-DailyBonus/JD_DailyBonus.js';
   }
@@ -211,7 +211,7 @@ function TotalBean() {
     })
   })
 }
-function downloadUrl(url = 'https://raw.GIT_HUBusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js') {
+function downloadUrl(url = 'https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js') {
   return new Promise(resolve => {
     const options = { url };
     if (process.env.TG_PROXY_HOST && process.env.TG_PROXY_PORT) {

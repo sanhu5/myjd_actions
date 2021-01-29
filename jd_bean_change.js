@@ -1,5 +1,5 @@
 /*
- * @Author: LXK9301 https://GIT_HUB.com/LXK9301
+ * @Author: LXK9301 https://github.com/LXK9301
  * @Date: 2020-11-01 16:25:41
  * @Last Modified by:   LXK9301
  * @Last Modified time: 2020-12-22 10:25:41
@@ -13,7 +13,7 @@
 ============QuantumultX==============
 [task_local]
 #京豆变动通知
-2 9 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bean_change.js, tag=京豆变动通知, img-url=https://raw.GIT_HUBusercontent.com/Orz-3/task/master/jd.png, enabled=true
+2 9 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bean_change.js, tag=京豆变动通知, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
 ================Loon===============
 [Script]
 cron "2 9 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bean_change.js, tag=京豆变动通知

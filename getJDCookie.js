@@ -1,10 +1,10 @@
 /**
  * 扫码获取京东cookie，此方式得到的cookie有效期为90天(实际待测试)
- * @Author: LXK9301 https://GIT_HUB.com/LXK9301
+ * @Author: LXK9301 https://github.com/LXK9301
  * @Date: 2021-01-13 12:12:40
  * @Last Modified by: LXK9301
  * @Last Modified time: 2021-01-13 12:22:54
- * Modify from FanchangWang https://GIT_HUB.com/FanchangWang
+ * Modify from FanchangWang https://github.com/FanchangWang
  */
 const $ = new Env('扫码获取京东cookie');
 const qrcode = require('qrcode-terminal');

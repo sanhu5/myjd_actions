@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://GIT_HUB.com/shylocks
+ * @Author: shylocks https://github.com/shylocks
  * @Date: 2021-01-13 22:01:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-13 22:11:41
@@ -14,7 +14,7 @@
 ============Quantumultx===============
 [task_local]
 #京东秒秒币
-10 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_ms.js, tag=京东秒秒币, img-url=https://raw.GIT_HUBusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_ms.jpg, enabled=true
+10 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_ms.js, tag=京东秒秒币, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_ms.jpg, enabled=true
 
 ================Loon==============
 [Script]

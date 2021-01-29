@@ -1,7 +1,7 @@
 /*
- * @Author: LXK9301 https://GIT_HUB.com/LXK9301
+ * @Author: LXK9301 https://github.com/LXK9301
  * @Date: 2020-11-27 09:19:21
- * @Last Modified by: shylocks https://GIT_HUB.com/shylocks
+ * @Last Modified by: shylocks https://github.com/shylocks
  * @Last Modified time: 2020-12-7 17:39:02
  */
 /*
@@ -9,13 +9,13 @@
 一周签到下来可获得30京豆，一天任意时刻运行一次即可
 
 更新地址：https://gitee.com/lxk0301/jd_scripts/raw/master/jd_ds.js
-参考GIT_HUB@jidesheng6修改而来
+参考github@jidesheng6修改而来
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #京东代属
-10 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_ds.js, tag=京东代属, img-url=https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jd_ds.png, enabled=true
+10 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_ds.js, tag=京东代属, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_ds.png, enabled=true
 
 ================Loon==============
 [Script]
@@ -91,8 +91,8 @@ function showMsg() {
     // $.msg($.name, '', `【京东账号${$.index}】${$.nickName}\n${message}`);
     let nowTime = new Date().getTime() + new Date().getTimezoneOffset()*60*1000 + 8*60*60*1000;
     if (nowTime > new Date('2020/12/31 23:59:59+08:00').getTime()) {
-      $.msg($.name, '活动已结束', `咱江湖再见\nhttps://GIT_HUB.com/LXK9301/jd_scripts`, {"open-url": "https://GIT_HUB.com/LXK9301/jd_scripts"});
-      if ($.isNode()) await notify.sendNotify($.name + '活动已结束', `咱江湖再见\n https://GIT_HUB.com/LXK9301/jd_scripts`)
+      $.msg($.name, '活动已结束', `咱江湖再见\nhttps://github.com/LXK9301/jd_scripts`, {"open-url": "https://github.com/LXK9301/jd_scripts"});
+      if ($.isNode()) await notify.sendNotify($.name + '活动已结束', `咱江湖再见\n https://github.com/LXK9301/jd_scripts`)
     } else {
       $.msg($.name, '', `京东账号${$.index} ${$.nickName}\n${message}`);
     }

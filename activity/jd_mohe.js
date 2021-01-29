@@ -40,7 +40,7 @@ let shareId = '';
     await taskList();
     await getAward();//抽奖
     if ($.time('yyyy-MM-dd') === '2020-08-19') {
-      $.msg($.name, '活动已结束', `请禁用或删除脚本\n如果帮助到您可以点下🌟STAR鼓励我一下,谢谢\n咱江湖再见\nhttps://GIT_HUB.com/LXK9301/jd_scripts\n`, {"open-url": "https://GIT_HUB.com/LXK9301/jd_scripts"});
+      $.msg($.name, '活动已结束', `请禁用或删除脚本\n如果帮助到您可以点下🌟STAR鼓励我一下,谢谢\n咱江湖再见\nhttps://github.com/LXK9301/jd_scripts\n`, {"open-url": "https://github.com/LXK9301/jd_scripts"});
     } else {
       $.msg($.name, '', `【京东账号一】${UserName}\n任务已做完.\n 抽奖详情查看 https://blindbox.jd.com\n`, {"open-url": "https://blindbox.jd.com"});
     }

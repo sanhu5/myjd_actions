@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://GIT_HUB.com/shylocks
+ * @Author: shylocks https://github.com/shylocks
  * @Date: 2021-01-20 13:27:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-20 21:27:41
@@ -13,7 +13,7 @@
 ============Quantumultx===============
 [task_local]
 #集鞭炮赢京豆
-10 8,21 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_firecrackers.js, tag=集鞭炮赢京豆, img-url=https://raw.GIT_HUBusercontent.com/Orz-3/task/master/jd.png, enabled=true
+10 8,21 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_firecrackers.js, tag=集鞭炮赢京豆, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
 
 ================Loon==============
 [Script]
