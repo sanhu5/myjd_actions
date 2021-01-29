@@ -4,7 +4,7 @@
 
 自用
 author：yangtingxiao
-github： https://github.com/yangtingxiao
+GIT_HUB： https://GIT_HUB.com/yangtingxiao
  */
 const $ = new Env('京东排行榜');
 main();
@@ -20,7 +20,7 @@ async function main() {
     eval($.body);
   }
 }
-function updateShareCodes(url = 'https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js') {
+function updateShareCodes(url = 'https://raw.GIT_HUBusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js') {
   return new Promise(resolve => {
     $.get({url}, async (err, resp, data) => {
       try {

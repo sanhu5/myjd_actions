@@ -1,5 +1,5 @@
 /*
- * @Author: LXK9301 https://github.com/LXK9301
+ * @Author: LXK9301 https://GIT_HUB.com/LXK9301
  * @Date: 2020-11-10 14:10:27 
  * @Last Modified by: LXK9301
  * @Last Modified time: 2020-11-20 14:11:01
@@ -13,7 +13,7 @@ TODO
 ============Quantumultx===============
 [task_local]
 #天天提鹅
-10 * * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_daily_egg.js, tag=天天提鹅, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdte.png, enabled=true
+10 * * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_daily_egg.js, tag=天天提鹅, img-url=https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdte.png, enabled=true
 
 ================Loon==============
 [Script]

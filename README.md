@@ -21,7 +21,7 @@
 
 #### 说明
 
-1. 其中 [jd_bean_sign.js](https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bean_sign.js) 可N个京东账号，Node.js专用，核心脚本是JD_DailyBonus.js， IOS软件用户请使用NobyDa的 [JD_DailyBonus.js](https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js)
+1. 其中 [jd_bean_sign.js](https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bean_sign.js) 可N个京东账号，Node.js专用，核心脚本是JD_DailyBonus.js， IOS软件用户请使用NobyDa的 [JD_DailyBonus.js](https://raw.GIT_HUBusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js)
 
 2. 以字母排序。
 
@@ -95,9 +95,9 @@
 
 #### 搬运脚本
 
-1.  【 [@yangtingxiao](https://github.com/yangtingxiao) 】 京东抽奖机([jd_lotteryMachine.js](https://gitee.com/lxk0301/jd_scripts/raw/master/jd_lotteryMachine.js))
+1.  【 [@yangtingxiao](https://GIT_HUB.com/yangtingxiao) 】 京东抽奖机([jd_lotteryMachine.js](https://gitee.com/lxk0301/jd_scripts/raw/master/jd_lotteryMachine.js))
 
-2.  【 [@yangtingxiao](https://github.com/yangtingxiao) 】 京东排行榜([jd_rankingList.js](https://gitee.com/lxk0301/jd_scripts/raw/master/jd_rankingList.js))
+2.  【 [@yangtingxiao](https://GIT_HUB.com/yangtingxiao) 】 京东排行榜([jd_rankingList.js](https://gitee.com/lxk0301/jd_scripts/raw/master/jd_rankingList.js))
 
 **脚本兼容: [QuantumultX](https://apps.apple.com/us/app/quantumult-x/id1443988620), [Surge](https://apps.apple.com/us/app/surge-4/id1442620678), [Loon](https://apps.apple.com/us/app/loon/id1373567447), 小火箭, JSBox, Node.js**
 
@@ -105,7 +105,7 @@
 
 - [获取各类活动互助码脚本 jd_get_share_code.js](https://gitee.com/lxk0301/jd_scripts/raw/master/jd_get_share_code.js)
 
-- [邀请码使用规范](githubAction.md#互助码类环境变量)(仅限云端)
+- [邀请码使用规范](GIT_HUBAction.md#互助码类环境变量)(仅限云端)
 
 ## 食用方法
 
@@ -113,7 +113,7 @@
 
 - [部署方法](./docker)
 
-- [环境变量集合](./githubAction.md)
+- [环境变量集合](./GIT_HUBAction.md)
  
 - 获取京东cookie教程可参考：
   
@@ -149,14 +149,14 @@
 
 ## 特别感谢(排名不分先后)：
 
-* [@NobyDa](https://github.com/NobyDa)
+* [@NobyDa](https://GIT_HUB.com/NobyDa)
 
-* [@chavyleung](https://github.com/chavyleung)
+* [@chavyleung](https://GIT_HUB.com/chavyleung)
 
-* [@liuxiaoyucc](https://github.com/liuxiaoyucc)
+* [@liuxiaoyucc](https://GIT_HUB.com/liuxiaoyucc)
 
-* [@Zero-S1](https://github.com/Zero-S1)
+* [@Zero-S1](https://GIT_HUB.com/Zero-S1)
 
-* [@uniqueque](https://github.com/uniqueque)
+* [@uniqueque](https://GIT_HUB.com/uniqueque)
 
-* [@nzw9314](https://github.com/nzw9314)
+* [@nzw9314](https://GIT_HUB.com/nzw9314)

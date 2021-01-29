@@ -6,12 +6,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
+    if: GIT_HUB.event.repository.owner.id == GIT_HUB.event.sender.id
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: ${{ github.repository }}
+          repository: ${{ GIT_HUB.repository }}
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1

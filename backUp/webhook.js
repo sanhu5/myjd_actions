@@ -1,5 +1,5 @@
 /*
- * @Author: LXK9301 https://github.com/LXK9301
+ * @Author: LXK9301 https://GIT_HUB.com/LXK9301
  * @Date: 2020-10-24 18:53:29 
  * @Last Modified by: LXK9301
  * @Last Modified time: 2020-11-05 18:54:13
@@ -7,13 +7,13 @@
 
 const $ = new Env('Webhook触发Action');
 let ACTIONS_TRIGGER_TOKEN = '';//Personal access tokens，申请教程:https://www.jianshu.com/p/bb82b3ad1d11 记得勾选repo权限就行
-let TRIGGER_KEYWORDS = '';//.github/workflows/路径里面yml文件里面repository_dispatch项目的types值，例如jd_fruit.yml里面的值为fruit
-let githubUser = '';//github用户名，例:LXK9301
-let repo = '';//需要触发的 Github Action 所在的仓库名称 例:scripts
+let TRIGGER_KEYWORDS = '';//.GIT_HUB/workflows/路径里面yml文件里面repository_dispatch项目的types值，例如jd_fruit.yml里面的值为fruit
+let GIT_HUBUser = '';//GIT_HUB用户名，例:LXK9301
+let repo = '';//需要触发的 GIT_HUB Action 所在的仓库名称 例:scripts
 
 !(async () => {
   ACTIONS_TRIGGER_TOKEN = $.getdata('ACTIONS_TRIGGER_TOKEN') ? $.getdata('ACTIONS_TRIGGER_TOKEN') : ACTIONS_TRIGGER_TOKEN;
-  githubUser = $.getdata('githubUser') ? $.getdata('githubUser') : githubUser;
+  GIT_HUBUser = $.getdata('GIT_HUBUser') ? $.getdata('GIT_HUBUser') : GIT_HUBUser;
   repo = $.getdata('repo') ? $.getdata('repo') : repo;
   TRIGGER_KEYWORDS = $.getdata('TRIGGER_KEYWORDS') ? $.getdata('TRIGGER_KEYWORDS') : TRIGGER_KEYWORDS;
   TRIGGER_KEYWORDS = TRIGGER_KEYWORDS.split(',');
@@ -23,18 +23,18 @@ let repo = '';//需要触发的 Github Action 所在的仓库名称 例:scripts
       return
     }
     if (!ACTIONS_TRIGGER_TOKEN) {
-      $.msg($.name, `失败`, `github token未提供`)
+      $.msg($.name, `失败`, `GIT_HUB token未提供`)
       return
     }
-    if (!githubUser) {
-      $.msg($.name, `失败`, `github 用户名未提供`)
+    if (!GIT_HUBUser) {
+      $.msg($.name, `失败`, `GIT_HUB 用户名未提供`)
       return
     }
     if (!repo) {
-      $.msg($.name, `失败`, `需触发的github仓库名未提供`)
+      $.msg($.name, `失败`, `需触发的GIT_HUB仓库名未提供`)
       return
     }
-    if (ACTIONS_TRIGGER_TOKEN && githubUser && repo && item) {
+    if (ACTIONS_TRIGGER_TOKEN && GIT_HUBUser && repo && item) {
       await hook(item);
     }
   }
@@ -48,10 +48,10 @@ let repo = '';//需要触发的 Github Action 所在的仓库名称 例:scripts
 
 function hook(key) {
   const options = {
-    'url': `https://api.github.com/repos/${githubUser}/${repo}/dispatches`,
+    'url': `https://api.GIT_HUB.com/repos/${GIT_HUBUser}/${repo}/dispatches`,
     'body': `${JSON.stringify({"event_type": key})}`,
     'headers': {
-      'Accept': 'application/vnd.github.everest-preview+json',
+      'Accept': 'application/vnd.GIT_HUB.everest-preview+json',
       'Authorization': `token ${ACTIONS_TRIGGER_TOKEN}`
     }
   }
@@ -60,15 +60,15 @@ function hook(key) {
       try {
         if (err) {
           if (data && data.match('404')) {
-            $.msg($.name, ``, `触发[${key}]失败,请仔细检查提供的参数`, {"open-url": `https://github.com/${githubUser}/${repo}`})
+            $.msg($.name, ``, `触发[${key}]失败,请仔细检查提供的参数`, {"open-url": `https://GIT_HUB.com/${GIT_HUBUser}/${repo}`})
           } else if (data && data.match('401')) {
-            $.msg($.name, ``, `触发[${key}]失败,github token权限不足`, {"open-url": `https://github.com/settings/tokens`})
+            $.msg($.name, ``, `触发[${key}]失败,GIT_HUB token权限不足`, {"open-url": `https://GIT_HUB.com/settings/tokens`})
           } else {
             console.log(`${JSON.stringify(err)}`)
           }
           console.log(`${$.name} API请求失败，请检查网路重试`)
         } else {
-          $.msg($.name, ``, `触发[${key}]成功`, {"open-url": `https://github.com/${githubUser}/${repo}/actions`})
+          $.msg($.name, ``, `触发[${key}]成功`, {"open-url": `https://GIT_HUB.com/${GIT_HUBUser}/${repo}/actions`})
         }
       } catch (e) {
         $.logErr(e, resp);

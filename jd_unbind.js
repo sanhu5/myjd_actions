@@ -6,7 +6,7 @@
 ==========Quantumult X==========
 [task_local]
 #注销京东会员卡
-55 23 * * 6 https://gitee.com/lxk0301/jd_scripts/raw/master/jd_unbind.js, tag=注销京东会员卡, img-url= https://raw.githubusercontent.com/58xinian/icon/master/jd_unbind.png, enabled=true
+55 23 * * 6 https://gitee.com/lxk0301/jd_scripts/raw/master/jd_unbind.js, tag=注销京东会员卡, img-url= https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jd_unbind.png, enabled=true
 =======Loon========
 [Script]
 cron "55 23 * * 6" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_unbind.js,tag=注销京东会员卡

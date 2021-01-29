@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: shylocks https://GIT_HUB.com/shylocks
  * @Date: 2021-01-11 16:25:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-11 18:25:41
@@ -15,7 +15,7 @@
 ============Quantumultx===============
 [task_local]
 #小鸽有礼
-5 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xg.js, tag=小鸽有礼, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_xg.jpg, enabled=true
+5 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xg.js, tag=小鸽有礼, img-url=https://raw.GIT_HUBusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_xg.jpg, enabled=true
 
 ================Loon==============
 [Script]

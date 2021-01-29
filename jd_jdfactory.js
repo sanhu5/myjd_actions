@@ -1,5 +1,5 @@
 /*
- * @Author: LXK9301 https://github.com/LXK9301
+ * @Author: LXK9301 https://GIT_HUB.com/LXK9301
  * @Date: 2020-12-06 18:19:21
  * @Last Modified by: LXK9301
  * @Last Modified time: 2020-12-26 22:58:02
@@ -17,7 +17,7 @@
 ============Quantumultx===============
 [task_local]
 #东东工厂
-10 * * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_jdfactory.js, tag=东东工厂, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_factory.png, enabled=true
+10 * * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_jdfactory.js, tag=东东工厂, img-url=https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jd_factory.png, enabled=true
 
 ================Loon==============
 [Script]

@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: shylocks https://GIT_HUB.com/shylocks
  * @Date: 2021-01-27 16:25:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-27 21:25:41
@@ -14,7 +14,7 @@
 ============Quantumultx===============
 [task_local]
 #京东超级盒子
-20 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_super_box.js, tag=京东超级盒子, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
+20 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_super_box.js, tag=京东超级盒子, img-url=https://raw.GIT_HUBusercontent.com/Orz-3/task/master/jd.png, enabled=true
 
 ================Loon==============
 [Script]

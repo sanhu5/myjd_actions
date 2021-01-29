@@ -1,5 +1,5 @@
 /*
- * @Author: LXK9301 https://github.com/LXK9301
+ * @Author: LXK9301 https://GIT_HUB.com/LXK9301
  * @Date: 2020-07-16 18:54:16
  * @Last Modified by: LXK9301
  * @Last Modified time: 2021-1-21 21:22:37
@@ -15,7 +15,7 @@ IOS用户支持京东双账号,NodeJs用户支持N个京东账号
 ==========Quantumult X==========
 [task_local]
 #宠汪汪偷好友积分与狗粮
-0 0-10/2 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_steal.js, tag=宠汪汪偷好友积分与狗粮, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
+0 0-10/2 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_steal.js, tag=宠汪汪偷好友积分与狗粮, img-url=https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
 
 =======Loon========
 [Script]

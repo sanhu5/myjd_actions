@@ -7,13 +7,13 @@
 /*
 活动入口：京东APP首页-领京豆-摇京豆
 更新时间:2020-10-12
-Modified from https://github.com/Zero-S1/JD_tools/blob/master/JD_vvipclub.py
+Modified from https://GIT_HUB.com/Zero-S1/JD_tools/blob/master/JD_vvipclub.py
 已支持IOS双京东账号,Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ============QuantumultX==============
 [task_local]
 #摇京豆
-5 0 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_club_lottery.js, tag=摇京豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdyjd.png, enabled=true
+5 0 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_club_lottery.js, tag=摇京豆, img-url=https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdyjd.png, enabled=true
 =================Loon===============
 [Script]
 cron "5 0 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_club_lottery.js,tag=摇京豆

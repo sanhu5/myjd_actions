@@ -1,5 +1,5 @@
 /*
- * @Author: LXK9301 https://github.com/LXK9301
+ * @Author: LXK9301 https://GIT_HUB.com/LXK9301
  * @Date: 2020-11-10 14:07:07 
  * @Last Modified by: LXK9301
  * @Last Modified time: 2020-11-23 12:27:16
@@ -16,7 +16,7 @@
 ===============Quantumultx===============
 [task_local]
 #京东金融养猪猪
-12 * * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_pigPet.js, tag=京东金融养猪猪, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdyz.png, enabled=true
+12 * * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_pigPet.js, tag=京东金融养猪猪, img-url=https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdyz.png, enabled=true
 
 ================Loon==============
 [Script]

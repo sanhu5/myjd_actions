@@ -8,7 +8,7 @@
 ============Quantumultx===============
 [task_local]
 #京东炸年兽🧨
-50 * * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nianCollect.js, tag=京东收🧨, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/lxk0301/jd_nianCollect.png, enabled=true
+50 * * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nianCollect.js, tag=京东收🧨, img-url=https://raw.GIT_HUBusercontent.com/yogayyy/Scripts/main/Icon/lxk0301/jd_nianCollect.png, enabled=true
 
 ================Loon==============
 [Script]

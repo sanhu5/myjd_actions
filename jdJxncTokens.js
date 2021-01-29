@@ -9,7 +9,7 @@ let JxncTokens = [
   '',//账号一的京喜农场token
   '',//账号二的京喜农场token
 ]
-// 判断github action里面是否有京喜农场 token 
+// 判断GIT_HUB action里面是否有京喜农场 token
 if (process.env.JXNCTOKENS) {
   if (process.env.JXNCTOKENS.indexOf('&') > -1) {
     console.log(`您的京喜农场 token 选择的是用&隔开\n`)

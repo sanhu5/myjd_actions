@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-## Author: https://github.com/EvineDeng
+## Author: https://GIT_HUB.com/EvineDeng
 ## Modified： 2021-01-24
 ## Version： v1.0.0
 
