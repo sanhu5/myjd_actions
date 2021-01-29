@@ -1,5 +1,5 @@
 /*
- * @Author: LXK9301 https://github.com/LXK9301
+ * @Author: LXK9301 https://GIT_HUB.com/LXK9301
  * @Date: 2020-11-27 09:19:21
  * @Last Modified by: LXK9301
  * @Last Modified time: 2021-1-1 16:58:02
@@ -8,13 +8,13 @@
 赚京豆脚本，一周签到下来可获得30京豆，一天任意时刻运行一次即可
 活动入口：赚京豆(微信小程序)-赚京豆-签到领京豆
 更新地址：https://gitee.com/lxk0301/jd_scripts/raw/master/jd_syj.js
-参考github@jidesheng6修改而来
+参考GIT_HUB@jidesheng6修改而来
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #赚京豆
-10 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_syj.js, tag=赚京豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_syj.png, enabled=true
+10 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_syj.js, tag=赚京豆, img-url=https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jd_syj.png, enabled=true
 
 ================Loon==============
 [Script]
