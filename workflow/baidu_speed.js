@@ -157,11 +157,12 @@ function TaskCenter() {
           taskName = '【'+jingangs.jingangName+'】'
           RefererUrl = jingangs.jingangUrl
         $.log(taskName+"tid:"+tid)
-        if ($.isNode()){
-           await $.wait(1000)
-           await get_pkg();
-          }
-else if(tasks[x].data.countDown[tid].countDown ==0){
+//        if ($.isNode()){
+//           await $.wait(1000)
+//           await get_pkg();
+//          }
+//       else
+if(tasks[x].data.countDown[tid].countDown ==0){
            await $.wait(1000)
            await get_pkg();
           } else {
