@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 笑谱循环任务
+name: 笑谱直播
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '10 1 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: crazyJoy挂机
+    types: job
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,7 +35,7 @@ jobs:
           cd ~/TaskAction
           git checkout master
           npm install
-      - name: '运行 【笑谱循环任务】'
+      - name: '运行 【笑谱直播】'
         run: |
           cd ~/TaskAction/workflow
-          node xp.js
+          node iboxpayZB.js
