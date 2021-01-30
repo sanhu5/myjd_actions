@@ -192,7 +192,7 @@ function TaskCenter() {
 //           await get_pkg();
 //          }
 //       else
-if(tasks[x].data.countDown[tid].countDown ==0){
+       if(tasks[x].data.countDown[tid].countDown ==0){
            await $.wait(1000)
            await get_pkg();
           } else {
