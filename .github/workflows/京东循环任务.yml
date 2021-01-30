@@ -165,6 +165,14 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
 
+      - name: '运行 【东东818】'
+        run: |
+          cd ~/TaskAction
+          node jd_818.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+
       # 根据上游得知该脚本有黑号风险
       #      - name: '运行 【京东家庭号】'
       #        run: |
