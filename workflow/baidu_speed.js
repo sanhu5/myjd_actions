@@ -39,7 +39,32 @@ if ($.isNode()) {
     return;
   }
 
+ //==============自定义循环==========================
+  if ($.isNode()) {
+    while(true){
 
+  console.log(`您共提供${CookieArr.length}个百度账号Cookie`)
+  for (let i = 0; i < CookieArr.length; i++) {
+    if (CookieArr[i]) {
+      cookieval = CookieArr[i];
+      $.index = i + 1;
+      try { await getsign();}catch(e){ }
+      try { await coinInfo();}catch(e){ }
+      try { await firstbox();}catch(e){ }
+      try { await TaskCenter();}catch(e){ }
+      try { await getRewards();}catch(e){ }
+     //await drawPrize();
+  }
+ }
+
+
+     }
+
+      console.log(`========================本次任务执行完毕，休息5分钟==============================\n`);
+      await $.wait(300000)
+
+    }
+  }else{
 
 
   console.log(`您共提供${CookieArr.length}个百度账号Cookie`)
@@ -55,6 +80,12 @@ if ($.isNode()) {
      //await drawPrize();
   }
  }
+
+
+  }
+ //==============自定义循环==========================
+
+
 
 })()
     .catch((e) => $.logErr(e))
