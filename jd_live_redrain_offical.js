@@ -1,23 +1,23 @@
 /*
 官方号直播红包雨
 活动时间：2021年1月20日-2021年2月5日每天0,9,11,13,15,17,19,20,21,23点可领
-更新地址：https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js
+更新地址：https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #官方号直播红包雨
-0 0,9,11,13,15,17,19,20,21,22,23 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js, tag=官方号直播红包雨, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_live_redrain_offical.jpg, enabled=true
+0 0,9,11,13,15,17,19,20,21,22,23 * * * https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js, tag=官方号直播红包雨, img-url=https://raw.GIT_HUBusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_live_redrain_offical.jpg, enabled=true
 
 ================Loon==============
 [Script]
-cron "0 0,9,11,13,15,17,19,20,21,22,23 * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js, tag=官方号直播红包雨
+cron "0 0,9,11,13,15,17,19,20,21,22,23 * * *" script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js, tag=官方号直播红包雨
 
 ===============Surge=================
-官方号直播红包雨 = type=cron,cronexp="0 0,9,11,13,15,17,19,20,21,22,23 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js
+官方号直播红包雨 = type=cron,cronexp="0 0,9,11,13,15,17,19,20,21,22,23 * * *",wake-system=1,timeout=200,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js
 
 ============小火箭=========
-官方号直播红包雨 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js, cronexpr="0 0,9,11,13,15,17,19,20,21,22,23 * * *", timeout=200, enable=true
+官方号直播红包雨 = type=cron,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_live_redrain_offical.js, cronexpr="0 0,9,11,13,15,17,19,20,21,22,23 * * *", timeout=200, enable=true
  */
 const $ = new Env('官方号直播红包雨');
 

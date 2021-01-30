@@ -1,4 +1,4 @@
-repo=https://raw.githubusercontent.com/shylocks/Loon/main
+repo=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main
 
 # Loon
 loon=./loon/shylocks_LoonTask.conf
@@ -26,7 +26,7 @@ qx=./quantumultx/shylocks_gallery.json
 rm $qx
 echo "{" >>$qx
 echo '  "name": "shylocks task gallery",' >>$qx
-echo '  "description": "https://github.com/shylocks/Loon",' >>$qx
+echo '  "description": "https://GIT_HUB.com/shylocks/Loon",' >>$qx
 echo '  "task": [' >>$qx
 
 for file in $(ls | grep jd_ $1); do

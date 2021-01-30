@@ -1,23 +1,23 @@
 /*
 半点红包雨
 活动时间：2021年1月20日-2021年2月5日每天12~23每个半点
-更新地址：https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js
+更新地址：https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #半点红包雨
-30,31 12-23/1 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js, tag=半点红包雨, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_live_redrain_half.jpg, enabled=true
+30,31 12-23/1 * * * https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js, tag=半点红包雨, img-url=https://raw.GIT_HUBusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_live_redrain_half.jpg, enabled=true
 
 ================Loon==============
 [Script]
-cron "30,31 12-23/1 * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js, tag=半点红包雨
+cron "30,31 12-23/1 * * *" script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js, tag=半点红包雨
 
 ===============Surge=================
-半点红包雨 = type=cron,cronexp="30,31 12-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js
+半点红包雨 = type=cron,cronexp="30,31 12-23/1 * * *",wake-system=1,timeout=200,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js
 
 ============小火箭=========
-半点红包雨 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js, cronexpr="30,31 12-23/1 * * *", timeout=200, enable=true
+半点红包雨 = type=cron,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_live_redrain_half.js, cronexpr="30,31 12-23/1 * * *", timeout=200, enable=true
  */
 const $ = new Env('半点红包雨');
 

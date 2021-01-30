@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: shylocks https://GIT_HUB.com/shylocks
  * @Date: 2021-01-20 13:27:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-20 21:27:41
@@ -12,17 +12,17 @@
 ============Quantumultx===============
 [task_local]
 #超级直播间任务赢京豆
-40 21 25 1 * https://raw.githubusercontent.com/shylocks/Loon/main/jd_super.js, tag=超级直播间任务赢京豆, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
+40 21 25 1 * https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_super.js, tag=超级直播间任务赢京豆, img-url=https://raw.GIT_HUBusercontent.com/Orz-3/task/master/jd.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "40 21 * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_super.js,tag=超级直播间任务赢京豆
+cron "40 21 * * *" script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_super.js,tag=超级直播间任务赢京豆
 
 ===============Surge=================
-超级直播间任务赢京豆 = type=cron,cronexp="40 21 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_super.js
+超级直播间任务赢京豆 = type=cron,cronexp="40 21 * * *",wake-system=1,timeout=3600,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_super.js
 
 ============小火箭=========
-超级直播间任务赢京豆 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_super.js, cronexpr="40 21 * * *", timeout=3600, enable=true
+超级直播间任务赢京豆 = type=cron,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_super.js, cronexpr="40 21 * * *", timeout=3600, enable=true
  */
 const $ = new Env('超级直播间任务赢京豆');
 const notify = $.isNode() ? require('./sendNotify') : '';

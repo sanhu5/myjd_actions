@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: shylocks https://GIT_HUB.com/shylocks
  * @Date: 2021-01-17 16:25:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-18 18:25:41
@@ -12,17 +12,17 @@
 ============Quantumultx===============
 [task_local]
 #个护爱消除
-40 * * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl_gh.js, tag=个护爱消除, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_xxl_gh.png, enabled=true
+40 * * * * https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_xxl_gh.js, tag=个护爱消除, img-url=https://raw.GIT_HUBusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_xxl_gh.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "40 * * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl_gh.js,tag=个护爱消除
+cron "40 * * * *" script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_xxl_gh.js,tag=个护爱消除
 
 ===============Surge=================
-个护爱消除 = type=cron,cronexp="40 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl_gh.js
+个护爱消除 = type=cron,cronexp="40 * * * *",wake-system=1,timeout=20,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_xxl_gh.js
 
 ============小火箭=========
-个护爱消除 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl_gh.js, cronexpr="40 * * * *", timeout=200, enable=true
+个护爱消除 = type=cron,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_xxl_gh.js, cronexpr="40 * * * *", timeout=200, enable=true
 
  */
 const $ = new Env('个护爱消除');

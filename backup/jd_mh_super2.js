@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: shylocks https://GIT_HUB.com/shylocks
  * @Date: 2021-01-15 20:04:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-15 20:04:41
@@ -12,17 +12,17 @@
 ============Quantumultx===============
 [task_local]
 #超级直播间幸运值抽京豆
-10 20 15 1 * https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh_super.js, tag=超级直播间幸运值抽京豆, enabled=true
+10 20 15 1 * https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_mh_super.js, tag=超级直播间幸运值抽京豆, enabled=true
 
 ================Loon==============
 [Script]
-cron "10 20 15 1 *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh_super.js,tag=超级直播间幸运值抽京豆
+cron "10 20 15 1 *" script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_mh_super.js,tag=超级直播间幸运值抽京豆
 
 ===============Surge=================
-超级直播间幸运值抽京豆 = type=cron,cronexp="10 20 15 1 *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh_super.js
+超级直播间幸运值抽京豆 = type=cron,cronexp="10 20 15 1 *",wake-system=1,timeout=200,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_mh_super.js
 
 ============小火箭=========
-超级直播间幸运值抽京豆 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh_super.js, cronexpr="1 8,12,18* * *", timeout=200, enable=true
+超级直播间幸运值抽京豆 = type=cron,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_mh_super.js, cronexpr="1 8,12,18* * *", timeout=200, enable=true
  */
 const $ = new Env('超级直播间幸运值抽京豆');
 const notify = $.isNode() ? require('../sendNotify') : '';

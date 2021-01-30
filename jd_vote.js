@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: shylocks https://GIT_HUB.com/shylocks
  * @Date: 2021-01-19
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-19
@@ -14,17 +14,17 @@
 ============Quantumultx===============
 [task_local]
 #京年团圆pick
-5 0 19,20 1 * https://raw.githubusercontent.com/shylocks/Loon/main/jd_vote.js, tag=京年团圆pick, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_wechat_sign.jpg, enabled=true
+5 0 19,20 1 * https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_vote.js, tag=京年团圆pick, img-url=https://raw.GIT_HUBusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_wechat_sign.jpg, enabled=true
 
 ================Loon==============
 [Script]
-cron "5 0 19,20 1 *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_vote.js,tag=京年团圆pick
+cron "5 0 19,20 1 *" script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_vote.js,tag=京年团圆pick
 
 ===============Surge=================
-京年团圆pick = type=cron,cronexp="5 0 19,20 1 *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_vote.js
+京年团圆pick = type=cron,cronexp="5 0 19,20 1 *",wake-system=1,timeout=200,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_vote.js
 
 ============小火箭=========
-京年团圆pick = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_vote.js, cronexpr="5 0 19,20 1 *", timeout=200, enable=true
+京年团圆pick = type=cron,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_vote.js, cronexpr="5 0 19,20 1 *", timeout=200, enable=true
  */
 const $ = new Env('京年团圆pick');
 const notify = $.isNode() ? require('./sendNotify') : '';

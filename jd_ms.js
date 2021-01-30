@@ -1,5 +1,5 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: shylocks https://GIT_HUB.com/shylocks
  * @Date: 2021-01-13 22:01:41
  * @Last Modified by:   shylocks
  * @Last Modified time: 2021-01-13 22:11:41
@@ -12,17 +12,17 @@
 ============Quantumultx===============
 [task_local]
 #京东秒秒币
-10 7 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_ms.js, tag=京东秒秒币, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_ms.jpg, enabled=true
+10 7 * * * https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_ms.js, tag=京东秒秒币, img-url=https://raw.GIT_HUBusercontent.com/yogayyy/Scripts/master/Icon/shylocks/jd_ms.jpg, enabled=true
 
 ================Loon==============
 [Script]
-cron "10 7 * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_ms.js,tag=京东秒秒币
+cron "10 7 * * *" script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_ms.js,tag=京东秒秒币
 
 ===============Surge=================
-京东秒秒币 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_ms.js
+京东秒秒币 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=200,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_ms.js
 
 ============小火箭=========
-京东秒秒币 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_ms.js, cronexpr="10 7 * * *", timeout=200, enable=true
+京东秒秒币 = type=cron,script-path=https://raw.GIT_HUBusercontent.com/shylocks/Loon/main/jd_ms.js, cronexpr="10 7 * * *", timeout=200, enable=true
  */
 const $ = new Env('京东秒秒币');
 
