@@ -20,7 +20,9 @@
 5 1 * * * node /scripts/jd_immortal_answer.js >> /scripts/logs/jd_immortal_answer.log 2>&1
 # 5G狂欢城
 0 */6 * * * node /scripts/jd_5g.js >> /scripts/logs/jd_5g.log 2>&1
-
+0 */6 * * * node /scripts/jd_818.js >> /scripts/logs/jd_818.log 2>&1
+# 小鸽有礼2
+34 9 * * * node /scripts/jd_xgyl.js >> /scripts/logs/jd_jd_xgyl.log 2>&1
 
 ##############长期活动##############
 # 签到
