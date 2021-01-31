@@ -17,3 +17,5 @@
 [@adwktt](https://github.com/adwktt/adwktt) - 步步宝、一刻
 
 [@CenBoMin](https://github.com/CenBoMin/GithubSync) - 葱花视频
+
+[@chavyleung](https://github.com/chavyleung/scripts) - chavyleung
