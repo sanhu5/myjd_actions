@@ -225,6 +225,7 @@ async function jdCrazyJoy() {
 
   for (let i = 0; i < $.joyIds.length; ++i) {
     if (!$.canBuy) {
+      $.log(`金币不足，跳过购买`)
       break
     }
     if ($.joyIds[i] === 0) {
@@ -232,6 +233,7 @@ async function jdCrazyJoy() {
       await $.wait(1000)
       await getJoyList()
       await $.wait(1000)
+      await getCoin();
     }
   }
 
@@ -454,13 +456,13 @@ function mergeJoy(x, y) {
                     case 1006:
                       return '省钱JOY'
                     case 1007:
-                      return '咚咚JOY'
+                      return '东东JOY'
                     default:
                       return '未知JOY'
                   }
                 }
                 console.log(`合并成功，获得${level(data.data.newJoyId)}级Joy`)
-                if (level(data.data.newJoyId) === '咚咚JOY' && $.isNode()) await notify.sendNotify($.name, `京东账号${$.index} ${$.nickName}\n合并成功，获得${level(data.data.newJoyId)}级Joy`)
+                if (data.data.newJoyId === 1007 && $.isNode()) await notify.sendNotify($.name, `京东账号${$.index} ${$.nickName}\n合并成功，获得${level(data.data.newJoyId)}级Joy`)
               } else {
                 console.log(`合并成功，获得${data.data.newJoyId}级Joy`)
               }
@@ -607,6 +609,7 @@ function getCoin() {
             }
             if (data.data && data.data.totalCoinAmount) {
               $.coin = data.data.totalCoinAmount;
+              $.log(`当前金币:${$.coin}\n`)
             } else {
               $.coin = `获取当前金币数量失败`
             }
