@@ -6,7 +6,7 @@ name: 腾讯自选股养牛
 on:
   workflow_dispatch:
   schedule:
-    - cron: '16 30 7，14 * * *'
+    - cron: '35 7,14 * * *'
   watch:
     types: started
   repository_dispatch:
