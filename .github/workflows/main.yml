@@ -1,0 +1,100 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: 限时任务
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */2 * * *'
+  watch:
+    types: started
+  repository_dispatch:
+    types: jd_job
+jobs:
+  build:
+    env:
+      JD_COOKIE: ${{ secrets.JD_COOKIE }}
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - name: Checkout
+        if: env.JD_COOKIE
+        run: |
+          git clone https://github.com/zsh35/myjd_actions.git ~/jd_scripts
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        if: env.JD_COOKIE
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        if: env.JD_COOKIE
+        uses: actions/cache@v2 # 使用 GitHub 官方的缓存 Action。
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
+      - name: npm install
+        if: env.JD_COOKIE
+        run: |
+          cd ~/jd_scripts
+          git checkout jd
+          npm install
+      - name: '运行 【京东炸年兽】'
+        run: |
+          cd ~/jd_scripts
+          node jd_nian.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+
+
+      - name: '运行 【京东炸年兽签到任务🧨】'
+        run: |
+          cd ~/jd_scripts
+          node jd_nian_sign.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+
+
+      - name: '运行 【京东炸年兽AR🧨】'
+        run: |
+          cd ~/jd_scripts
+          node jd_nian_ar.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+      - name: '运行 【京东炸年兽小程序🧨】'
+        run: |
+          cd ~/jd_scripts
+          node jd_nian_wechat.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+
+      - name: '运行 【京东神仙书院】'
+        run: |
+          cd ~/jd_scripts
+          node jd_immortal.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+
+
+      - name: '运行 【京东手机年终奖】'
+        run: |
+          cd ~/jd_scripts
+          node jd_festival.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+
+
+      - name: '运行 【京东年货节】'
+        run: |
+          cd ~/jd_scripts
+          node jd_nh.js
+        env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
