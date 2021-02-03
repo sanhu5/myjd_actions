@@ -6,7 +6,7 @@ name: 笑谱视频
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/10 0-15 * * *' # UTC时间 倒推8个小时，北京时间8-23点执行
+    - cron: '5 0-15/6 * * *' # UTC时间 倒推8个小时，北京时间8-23点执行
   watch:
     types: started
   repository_dispatch:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/ziye12/JavaScript.git ~/JavaScript
+          git clone https://github.com/1217079729/TaskAction.git ~/TaskAction
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -32,18 +32,13 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       - name: npm install
         run: |
-          cd ~/JavaScript
+          cd ~/TaskAction
           git checkout main
           npm install
       - name: '运行 【笑谱视频】'
         run: |
-          cd ~/JavaScript/Task
+          cd ~/TaskAction/workflow
           node iboxpay.js
         env:
           TZ: Asia/shanghai
-          XP_CASH: ${{ secrets.XP_CASH }}
-          XP_live: ${{ secrets.XP_live }}
-          XP_iboxpayHEADER: ${{ secrets.XP_iboxpayHEADER }}
-          COOKIES_SPLIT: ${{ secrets.COOKIES_SPLIT }}
-          XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
