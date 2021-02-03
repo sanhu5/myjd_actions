@@ -1,0 +1,30 @@
+
+# File: .github/workflows/repozsh-sync.yml
+name: sync-zsh35-ac
+on:
+  schedule:
+    - cron: '1 0,15 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: repozsh-scripts
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: repo-zsh35-ac
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://gitee.com/lxk0301/jd_scripts.git"
+          source_branch: "master"
+          destination_branch: "jd"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
