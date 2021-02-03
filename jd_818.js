@@ -1,5 +1,5 @@
 /*
- * @Author: LXK9301 https://GIT_HUB.com/LXK9301
+ * @Author: LXK9301 https://github.com/LXK9301
  * @Date: 2020-11-03 09:25:47
  * @Last Modified by: LXK9301
  * @Last Modified time: 2020-11-23 12:27:07
@@ -839,10 +839,10 @@ function getListRank() {
     })
   })
 }
-function updateShareCodes(url = 'https://raw.GIT_HUBusercontent.com/LXK9301/updateTeam/master/jd_shareCodes.json') {
+function updateShareCodes(url = 'https://raw.githubusercontent.com/LXK9301/updateTeam/master/jd_shareCodes.json') {
   return new Promise(resolve => {
     //https://cdn.jsdelivr.net/gh/LXK9301/updateTeam@master/jd_shareCodes.json
-    //https://raw.GIT_HUBusercontent.com/LXK9301/updateTeam/master/jd_shareCodes.json
+    //https://raw.githubusercontent.com/LXK9301/updateTeam/master/jd_shareCodes.json
     $.get({url}, async (err, resp, data) => {
       try {
         if (err) {

@@ -14,8 +14,8 @@ exports.main_handler = async (event, context, callback) => {
           require('./'+v+'.js')
           break;
         case 'git':
-          //2.执行GIT_HUB远端的js文件(因GIT_HUB的raw类型的文件被墙,此方法云函数不推荐)
-          request(`https://raw.GIT_HUBusercontent.com/LXK9301/jd_scripts/master/${v}.js`, function (error, response, body) {
+          //2.执行github远端的js文件(因github的raw类型的文件被墙,此方法云函数不推荐)
+          request(`https://raw.githubusercontent.com/LXK9301/jd_scripts/master/${v}.js`, function (error, response, body) {
             eval(response.body)
           })
           break;

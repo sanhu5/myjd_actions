@@ -10,7 +10,7 @@ let shareCodes = [
   '',//账号一的好友shareCode,不同好友中间用@符号隔开
   '',//账号二的好友shareCode，不同好友中间用@符号隔开
 ]
-// 判断GIT_HUB action里面是否有东东工厂互助码
+// 判断github action里面是否有东东工厂互助码
 if (process.env.DDFACTORY_SHARECODES) {
   if (process.env.DDFACTORY_SHARECODES.indexOf('&') > -1) {
     console.log(`您的互助码选择的是用&隔开\n`)

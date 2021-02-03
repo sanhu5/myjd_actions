@@ -10,7 +10,7 @@
 ============Quantumultx===============
 [task_local]
 #小鸽有礼2
-30 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xgyl.js, tag=小鸽有礼2, img-url=https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jd_xgyl.png, enabled=true
+30 7 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xgyl.js, tag=小鸽有礼2, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_xgyl.png, enabled=true
 
 ================Loon==============
 [Script]

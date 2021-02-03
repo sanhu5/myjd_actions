@@ -1,5 +1,5 @@
 /**
-宠汪汪邀请助力与赛跑助力脚本，感谢GIT_HUB@Zero-S1提供帮助
+宠汪汪邀请助力与赛跑助力脚本，感谢github@Zero-S1提供帮助
 更新时间：2021-1-7（宠汪汪助力更新Token的配置正则表达式已改）
 活动入口：京东APP我的-更多工具-宠汪汪
 token时效很短，几个小时就失效了,闲麻烦的放弃就行
@@ -21,7 +21,7 @@ hostname = draw.jdfcloud.com
 ===================Quantumult X=====================
 [task_local]
 # 宠汪汪邀请助力与赛跑助力
-15 10 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_run.js, tag=宠汪汪邀请助力与赛跑助力, img-url=https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
+15 10 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_run.js, tag=宠汪汪邀请助力与赛跑助力, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png, enabled=true
 [rewrite_local]
 # 宠汪汪助力更新Token
 ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/addUser\?code= url script-response-body https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_run.js

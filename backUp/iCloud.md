@@ -48,7 +48,7 @@ exports.main_handler = async (event, context, callback) => {
 
 **优点**：同一时间下可以同时执行多个脚本，适合脚本种类少的repository，对脚本数量少的repository推荐使用此方案<br>**缺点**：多个脚本不同时间点运行无法满足
 
-方案二：同一个仓库下不同的时间点，分别执行不同的脚本（类似GIT_HUB Action执行机制）
+方案二：同一个仓库下不同的时间点，分别执行不同的脚本（类似GitHub Action执行机制）
 
 在项目文件夹内新建 `index.js`
 
@@ -67,7 +67,7 @@ exports.main_handler = async (event, context, callback) => {
 
 ```
 
-此时触发管理按照下图中进行设置，附加信息选择“是”，内容填写需要传递执行的具体脚本文件名，以回车键换行。触发器触发后，附加信息栏内的脚本会被执行，设置多个不同时间点的触发器达到类似GIT_HUB Action的效果
+此时触发管理按照下图中进行设置，附加信息选择“是”，内容填写需要传递执行的具体脚本文件名，以回车键换行。触发器触发后，附加信息栏内的脚本会被执行，设置多个不同时间点的触发器达到类似GitHub Action的效果
 
 **优点**：可以满足个性化需求，同一个repository下只需要设置不同的触发器，可以实现不同时间点分别执行不同的脚本<br>**缺点**：repository下脚本过多，如果需要设置多个触发器，实现个性化运行效果，由于云函数的限制，最多只能设置10个
 
@@ -76,7 +76,7 @@ exports.main_handler = async (event, context, callback) => {
 
 **注意：**<br>
 Ⅰ方案一与方案二不能混合到同一个index.js文件中使用，同一个仓库下，二者只能选择其一。<br>
-Ⅱ感谢[issues#115](https://GIT_HUB.com/LXK9301/jd_scripts/issues/115)中的解决方案，目前云函数连续测试已经可以规避热启动问题了。<br>
+Ⅱ感谢[issues#115](https://github.com/LXK9301/jd_scripts/issues/115)中的解决方案，目前云函数连续测试已经可以规避热启动问题了。<br>
 Ⅲ在确保完全按照本教程设置的情况下测试云函数运行情况，对于部分人运行日志中出现某些脚本运行失败其他正常，并且错误提示带有strict字样的，请自行删除index.js中的```'use strict';```，再做测试<br>
 
  **增加cookie**
@@ -116,7 +116,7 @@ let CookieJDs = [
 
 **函数名称**：可以自定义，比如为jd。<br>**运行环境**：选择 “Nodejs 12.16”。<br>**创建方式**：选择 “空白函数”。
 
-确保环境为Nodejs 12.16，执行方法改为：index.main_handler，提交方式建议选本地文件夹，然后从GIT_HUB项目克隆Zip压缩包，解压成文件夹，然后点击这个上传把文件夹上传进来（记得node_modules文件夹一并上传或者将node_modules文件夹上传到“层”，之后选择“函数管理”-“层管理”绑定上传好的层），完了后点击下面的高级设置。
+确保环境为Nodejs 12.16，执行方法改为：index.main_handler，提交方式建议选本地文件夹，然后从GitHub项目克隆Zip压缩包，解压成文件夹，然后点击这个上传把文件夹上传进来（记得node_modules文件夹一并上传或者将node_modules文件夹上传到“层”，之后选择“函数管理”-“层管理”绑定上传好的层），完了后点击下面的高级设置。
 
 ![iCloud3](../icon/iCloud3.png)
 

@@ -1,5 +1,5 @@
 /*
- * @Author: LXK9301 https://GIT_HUB.com/LXK9301
+ * @Author: LXK9301 https://github.com/LXK9301
  * @Date: 2020-11-20 11:42:03 
  * @Last Modified by: LXK9301
  * @Last Modified time: 2020-12-12 12:27:14
@@ -13,7 +13,7 @@
 ===============Quantumultx===============
 [task_local]
 #点点券
-10 0,20 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_necklace.js, tag=点点券, img-url=https://raw.GIT_HUBusercontent.com/Orz-3/task/master/jd.png, enabled=true
+10 0,20 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_necklace.js, tag=点点券, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
 
 ================Loon==============
 [Script]

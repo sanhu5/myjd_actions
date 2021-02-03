@@ -8,7 +8,7 @@
 ============Quantumultx===============
 [task_local]
 #超级直播间红包雨
-30 20-23/1 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_live_redrain2.js, tag=超级直播间红包雨, img-url=https://raw.GIT_HUBusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true
+30 20-23/1 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_live_redrain2.js, tag=超级直播间红包雨, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_redPacket.png, enabled=true
 
 ================Loon==============
 [Script]

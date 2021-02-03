@@ -1,4 +1,4 @@
-// Developed by Hackl0us (https://GIT_HUB.com/hackl0us)
+// Developed by Hackl0us (https://github.com/hackl0us)
 
 // STEP 1: 前往 https://aqicn.org/data-platform/token/ 注册账户，将申请的 API Token 填入下方
 let aqicnToken = ''

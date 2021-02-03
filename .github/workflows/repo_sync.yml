@@ -1,4 +1,4 @@
-# File: .GIT_HUB/workflows/repo-sync.yml
+# File: .github/workflows/repo-sync.yml
 name: sync-LXK9301-scripts
 on:
   schedule:
@@ -16,26 +16,26 @@ jobs:
       PAT: ${{ secrets.PAT }} #此处PAT需要申请，教程详见：https://www.jianshu.com/p/bb82b3ad1d11
       dst_key: ${{ secrets.GITEE_PRIVATE_KEY }} # 我自己同步到gitee使用，其他人可忽略
     runs-on: ubuntu-latest
-    if: GIT_HUB.event.repository.owner.id == GIT_HUB.event.sender.id
+    if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
 
       - name: sync LXK9301-scripts
-        uses: repo-sync/GIT_HUB-sync@v2
+        uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
           source_repo: "https://gitee.com/lxk0301/jd_scripts.git"
           source_branch: "master"
           destination_branch: "master"
-          GIT_HUB_token: ${{ secrets.PAT }}
+          github_token: ${{ secrets.PAT }}
       # 我自己同步到gitee使用，其他人可忽略
-      - name: sync GIT_HUB -> gitee
+      - name: sync github -> gitee
         uses: Yikun/hub-mirror-action@master
         if: env.dst_key
         with:
-          src: GIT_HUB/LXK9301
+          src: github/LXK9301
           dst: gitee/lxk0301
           static_list: "jd_scripts"
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
