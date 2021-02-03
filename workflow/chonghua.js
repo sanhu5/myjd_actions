@@ -190,15 +190,22 @@ if ($.isNode()) {
   }
 
   if (now.getHours() == 18){
-    await videoread();//自动刷视频
+  try { await videoread();}catch(e){ }
+//    await videoread();//自动刷视频
   }else if (now.getHours() == 20){
-    await videoread();//自动刷视频
+    try { await videoread();}catch(e){ }
+//    await videoread();//自动刷视频
   }else{
     console.log(`\n✅ 打印任务状态清单`)
-    await taskcenter(); //任务中心
+    try { await taskcenter();}catch(e){ }
+//    await taskcenter(); //任务中心
+
     console.log(`\n✅ 执行时段奖励任务`)
-    await timered(task); //时段奖励
-    await sharevideo();//分享任务
+    try { await timered(task);}catch(e){ }
+//    await timered(task); //时段奖励
+
+   try { await sharevideo();}catch(e){ }
+//    await sharevideo();//分享任务
   }
   await showmsg();
 
