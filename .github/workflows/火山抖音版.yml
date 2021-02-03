@@ -19,7 +19,6 @@ jobs:
       - name: Checkout
         run: |
           git clone https://github.com/1217079729/TaskAction.git ~/TaskAction
-#          git clone https://github.com/ZhiYi-N/Private-Script.git ~/Private-Script
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -39,7 +38,6 @@ jobs:
       - name: '运行 【抖音火山版】'
         run: |
           cd ~/TaskAction/workflow
-#          cd ~/Private-Script/Scriptsworkflow
           node huoshan.js
         env:
           TZ: Asia/shanghai
