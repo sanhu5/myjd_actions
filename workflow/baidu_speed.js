@@ -12,19 +12,22 @@ let CookieArr = [];
 let UA = `Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SP-engine/2.24.0 info baiduboxapp/5.1.0.10 (Baidu; P2 14.2)`
 
 if ($.isNode()) {
-  if (process.env.BAIDU_COOKIE && process.env.BAIDU_COOKIE.indexOf('&') > -1) {
-  StartBody = process.env.BAIDU_COOKIE.split('&');
-  }
- if (process.env.BAIDU_COOKIE && process.env.BAIDU_COOKIE.indexOf('\n') > -1) {
-  BDCookie = process.env.BAIDU_COOKIE.split('\n');
-  } else {
-  BDCookie = process.env.BAIDU_COOKIE.split()
-  }
-  Object.keys(BDCookie).forEach((item) => {
-        if (BDCookie[item]) {
-          CookieArr.push(BDCookie[item])
-        }
-    })
+//  if (process.env.BAIDU_COOKIE && process.env.BAIDU_COOKIE.indexOf('&') > -1) {
+//  StartBody = process.env.BAIDU_COOKIE.split('&');
+//  }
+// if (process.env.BAIDU_COOKIE && process.env.BAIDU_COOKIE.indexOf('\n') > -1) {
+//  BDCookie = process.env.BAIDU_COOKIE.split('\n');
+//  } else {
+//  BDCookie = process.env.BAIDU_COOKIE.split()
+//  }
+//  Object.keys(BDCookie).forEach((item) => {
+//        if (BDCookie[item]) {
+//          CookieArr.push(BDCookie[item])
+//        }
+//    })
+
+    CookieArr.push('SG_FW_VER=1.26.3; SP_FW_VER=3.230.35; BDUSS=jRGdnBSRktJLThJQ1YzaGt6VVlEZXBpQkVCbkhQM2JSMGFoY2ktbmxTN0Jxek5nRUFBQUFBJCQAAAAAAAAAAAEAAAAIfBkUcmxmemR3MjAxMQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMEeDGDBHgxgf; BAIDUID=C781250B00DD07183DA8C95EBA467760:FG=1')
+
 } else {
  CookieArr.push($.getdata(`chavy_cookie_tieba`)||$.getdata(`CookieTB`))
 }
@@ -38,8 +41,6 @@ if ($.isNode()) {
     console.log($.name, '【提示】请把百度Cookie填入Github 的 Secrets 中，请以&或者换行隔开')
     return;
   }
-
-
 
 
   console.log(`您共提供${CookieArr.length}个百度账号Cookie`)
